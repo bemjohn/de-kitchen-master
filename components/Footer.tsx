@@ -1,44 +1,10 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <>
-      {/* GLobally Repeated Sections (Clients & Community CTA) */}
-      <section className="py-24 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Clients we have worked with</h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-16"></div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto opacity-70">
-            <div className="text-2xl font-black text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default">Rose</div>
-            <div className="text-2xl font-black text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default">Tunde Adeyemi</div>
-            <div className="text-2xl font-black text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default">Daniel Mike</div>
-            <div className="text-2xl font-black text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default">Lagos Elite</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Call to Action / Follow us */}
-      <section className="bg-primary pt-16 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
-        <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Join our community to inspire your desires</h2>
-          <p className="text-orange-100 text-xl font-medium mb-12 max-w-2xl mx-auto">
-            Follow De Kitchen Master on Instagram and reach out to make your next event a resounding success.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="px-10 py-5 w-full sm:w-auto bg-white text-primary font-bold rounded-xl hover:-translate-y-1 transition-transform shadow-lg text-lg">
-              Follow DKM on Instagram
-            </a>
-            <Link href="/contact" className="px-10 py-5 w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-colors text-lg">
-              Make a Reservation
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <footer className="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 border-b border-gray-200 pb-12 mb-8">

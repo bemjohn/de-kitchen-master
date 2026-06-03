@@ -242,10 +242,10 @@ export default function Home() {
           }}>
             <div className="flex w-max gap-6 animate-infinite-scroll">
               {[
-                { name: "Midnight City", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
-                { name: "Solid Lounge", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" },
-                { name: "Tastybox", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop" },
-                { name: "Wildbird Restaurant", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
+                { name: "Rose", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" },
+                { name: "Tunde Adeyemi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
+                { name: "Daniel Mike", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop" },
+                { name: "Lagos Elite", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
               ].map((client) => (
                 <div key={client.name} className="relative h-48 w-72 flex-shrink-0 rounded-2xl overflow-hidden shadow-md group">
                   <img
@@ -260,10 +260,10 @@ export default function Home() {
                 </div>
               ))}
               {[
-                { name: "Midnight City", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
-                { name: "Solid Lounge", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" },
-                { name: "Tastybox", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop" },
-                { name: "Wildbird Restaurant", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
+                { name: "Rose", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" },
+                { name: "Tunde Adeyemi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
+                { name: "Daniel Mike", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop" },
+                { name: "Lagos Elite", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop" },
               ].map((client) => (
                 <div key={`${client.name}-dup`} className="relative h-48 w-72 flex-shrink-0 rounded-2xl overflow-hidden shadow-md group">
                   <img
