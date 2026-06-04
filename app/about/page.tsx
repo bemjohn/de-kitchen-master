@@ -218,12 +218,28 @@ export default function AboutPage() {
 
             <div className="lg:col-span-7 space-y-10">
               <div>
-                <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
-                  The Founder's Story
-                </span>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
-                  Chef Bishop is a respected hospitality consultant, professional chef, recruiter, trainer, mentor, and entrepreneur with over 10 years of hands-on experience. De KITCHEN MASTER emerged from firsthand industry challenges he observed, where ventures struggled with staffing shortages and operational inefficiencies. Rather than accept these challenges, Chef Bishop chose to be the solution. Over seven years, he has mentored hundreds of chefs, revived struggling eateries, and connected top-tier talent across Nigeria, Ghana, South Africa, and beyond.
-                </p>
+                <h3 className="text-2xl font-black text-gray-900 mb-2">MEET CHEF BISHOP</h3>
+                <p className="text-primary font-bold uppercase tracking-widest text-sm mb-8">Founder &amp; Chief Executive Officer (CEO)</p>
+                <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
+                  <p>
+                    Chef Bishop is a respected hospitality consultant, professional chef, recruiter, trainer, mentor, and entrepreneur with over 10 years of hands-on experience in the hospitality industry.
+                  </p>
+                  <p>
+                    Over the course of his career, he has built a reputation for excellence by supporting restaurants, hotels, lounges, catering businesses, event companies, corporate organizations, and private clients with practical solutions that improve operations, service delivery, staffing, profitability, and overall business performance.
+                  </p>
+                  <p>
+                    His expertise spans restaurant operations, kitchen management, hospitality consulting, menu engineering, food production, recruitment, staff training, catering management, business development, and culinary education.
+                  </p>
+                  <p>
+                    Beyond providing services, Chef Bishop has dedicated a significant part of his career to supporting the growth and development of hospitality professionals. Through recruitment, mentorship, training, networking opportunities, and career guidance, he has helped hundreds of chefs and culinary professionals secure meaningful employment opportunities and advance their careers within the hospitality industry.
+                  </p>
+                  <p>
+                    His influence extends beyond kitchens and restaurants. He has consulted on hospitality projects, supported business startups, contributed to workforce development, and helped organizations build stronger hospitality teams.
+                  </p>
+                  <p>
+                    As the founder of De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, Chef Bishop continues to lead with a vision of transforming hospitality standards while creating opportunities for professionals and delivering exceptional value to clients.
+                  </p>
+                </div>
               </div>
 
               <div>
