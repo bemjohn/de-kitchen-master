@@ -19,7 +19,7 @@ const slides = [
     id: 2,
     title: "Delicious Food just for You",
     subtitle: "Culinary Excellence",
-    description: "Explore our diverse menu carefully curated to satisfy your cravings and elevate your events.",
+    description: "We Recruit, Train, and Deploy Professional Chefs and Hospitality Teams for Restaurants, Hotels, Corporate Organizations, and Private Clients.",
     image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop",
     ctaText: "View Our Menu",
     ctaLink: "/services",
