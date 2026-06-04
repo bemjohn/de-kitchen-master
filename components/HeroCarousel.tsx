@@ -10,7 +10,7 @@ const slides = [
     id: 1,
     title: "Hire Top Chefs",
     subtitle: "De Kitchen Master",
-    description: "Premium culinary architecture, private dining, and expert kitchen setups tailored to deliver an unforgettable dining experience.",
+    description: "Your Trusted Partner for Culinary Excellence, Hospitality Solutions, Chef Recruitment, Catering Services, Restaurant Development, and Professional Hospitality Support in Lagos, Abuja Across Africa.",
     image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2677&auto=format&fit=crop",
     ctaText: "View Our Chefs",
     ctaLink: "/about",
@@ -78,7 +78,7 @@ export default function HeroCarousel() {
               <h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-white leading-tight drop-shadow-lg">
                 {slides[current].title}
               </h1>
-              <p className="text-xl md:text-2xl text-gray-200 font-medium max-w-2xl mx-auto drop-shadow-md">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 font-medium max-w-3xl mx-auto drop-shadow-md leading-relaxed">
                 {slides[current].description}
               </p>
               <div className="pt-8">

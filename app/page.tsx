@@ -165,9 +165,20 @@ export default function Home() {
                 ))}
               </div>
 
-              <p className="mt-8 pt-8 border-t border-gray-200 text-gray-600 font-medium leading-relaxed">
-                At De KITCHEN MASTER, our success is measured by the success of our clients. Every chef deployed, every restaurant supported, and every project completed reflects our dedication to professionalism, quality, and exceptional service.
-              </p>
+              <div className="mt-2 space-y-4 text-gray-600 font-medium leading-relaxed">
+                <p>
+                  At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, our success is defined by the success stories we help create. Every chef deployed, every hospitality professional recruited, every restaurant supported, every hotel assisted, every event executed, and every client served represents our commitment to excellence, professionalism, and meaningful results.
+                </p>
+                <p>
+                  For over seven years, we have worked alongside hospitality businesses, corporate organizations, event companies, and private clients, helping them build capable teams, improve operational performance, strengthen service delivery, and create memorable guest experiences. From chef recruitment and culinary staffing to catering services, hospitality consulting, restaurant setup, and professional training, every solution we provide is designed to help our clients achieve their goals with confidence.
+                </p>
+                <p>
+                  We believe hospitality is more than a service,  it is an experience, a responsibility, and a promise of quality. That is why we approach every project with dedication, attention to detail, and a genuine desire to exceed expectations. Our continued growth and reputation are built on trust, long-term relationships, and the consistent delivery of exceptional culinary and hospitality solutions.
+                </p>
+                <p>
+                  As we continue to expand across Nigeria and beyond, our commitment remains unchanged: to raise industry standards, create opportunities, support business growth, and deliver world-class hospitality services that leave a lasting impact.
+                </p>
+              </div>
             </div>
           </div>
         </div>
