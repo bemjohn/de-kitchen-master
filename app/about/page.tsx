@@ -112,13 +112,13 @@ export default function AboutPage() {
                   De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd is a full-fledged hospitality and culinary solutions company, renowned for delivering world-class service across the food, beverage, and hospitality industry. We specialize in a full spectrum of services, including professional chef recruitment, hospitality staffing, private chef services, corporate dining solutions, indoor and outdoor catering, restaurant and hotel setup, culinary training, menu development, operational consulting, and business development support.
                 </p>
                 <p>
-                  Founded on the principles of professionalism, innovation, integrity, and service excellence, De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd has grown into a respected partner for restaurants, hotels, lounges, resorts, event companies, corporate organizations, financial institutions, and private clients seeking bespoke hospitality solutions.
+                  Founded on the principles of professionalism, innovation, integrity, and service excellence, DE KITCHEN MASTER has grown into a respected partner for restaurants, hotels, lounges, resorts, event companies, corporate organizations, financial institutions, and private clients seeking bespoke hospitality solutions.
                 </p>
                 <p>
                   Our brand is built on the ability to handle diverse hospitality needs. From luxury hotel staffing and corporate meal plans to private dining events, weddings, and large-scale food operations, we deliver tailored solutions that meet the highest standards. Whether it’s a festive corporate lunch, a luxury hotel launch, or a high-profile private event, we bring unmatched expertise, creativity, and a commitment to excellence.
                 </p>
                 <p>
-                  Proudly registered with the Corporate Affairs Commission (CAC) in Nigeria, we operate with full legal accreditation, ensuring every service we provide is backed by professionalism, accountability, and a passion for excellence. With a strong foundation, an expansive network, and a reputation for reliability, De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd is your trusted partner for every culinary and hospitality need, anywhere in Nigeria and across Africa.
+                  Proudly registered with the Corporate Affairs Commission (CAC) in Nigeria, we operate with full legal accreditation, ensuring every service we provide is backed by professionalism, accountability, and a passion for excellence. With a strong foundation, an expansive network, and a reputation for reliability, DE KITCHEN MASTER is your trusted partner for every culinary and hospitality need, anywhere in Nigeria and across Africa.
                 </p>
               </div>
               <div className="pt-4 flex flex-wrap gap-3">
