@@ -3,6 +3,7 @@ import { ArrowRight, Utensils, Award, Briefcase, Coffee, UserPlus, ChefHat, MapP
 import HeroCarousel from "@/components/HeroCarousel";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceCard from "@/components/ServiceCard";
+import StatsCounter from "@/components/StatsCounter";
 
 export default function Home() {
   return (
@@ -97,34 +98,44 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-2">7+</div>
+              <div className="text-5xl md:text-6xl font-black text-primary mb-2">
+                <StatsCounter end={7} />
+              </div>
               <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Years</div>
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Of Excellence. Delivering professional hospitality solutions and supporting businesses across the food and beverage industry.</p>
             </div>
 
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-2">500+</div>
+              <div className="text-5xl md:text-6xl font-black text-primary mb-2">
+                <StatsCounter end={500} />
+              </div>
               <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Deployed</div>
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Chefs &amp; Hospitality Professionals Deployed. Successfully recruiting and deploying qualified culinary experts for restaurants, hotels, and private clients.</p>
             </div>
 
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-2">100+</div>
+              <div className="text-5xl md:text-6xl font-black text-primary mb-2">
+                <StatsCounter end={100} />
+              </div>
               <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Completed</div>
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Successful Projects Completed. Providing restaurant setup, kitchen development, consulting, menu engineering, and training.</p>
             </div>
 
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2 leading-tight">Nationwide</div>
-              <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Coverage</div>
+              <div className="text-5xl md:text-6xl font-black text-primary mb-2">
+                <StatsCounter end={36} suffix="+" /> <span className="text-3xl md:text-4xl">States</span>
+              </div>
+              <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Nationwide Coverage</div>
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Serving clients across Lagos, Abuja, and major cities throughout Nigeria while maintaining capacity to support projects beyond national borders.</p>
             </div>
 
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-2">10+</div>
-              <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Years</div>
+              <div className="text-5xl md:text-6xl font-black text-primary mb-2">
+                <StatsCounter end={10} />
+              </div>
+              <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Expertise</div>
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Of Industry Experience. Under the leadership of Chef Bishop, an experienced hospitality consultant with over a decade of practical industry expertise.</p>
             </div>
           </div>
