@@ -102,7 +102,7 @@ export default function AboutPage() {
       {/* 1. HERO — Split Layout */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
                 Who We Are
@@ -133,8 +133,8 @@ export default function AboutPage() {
                 </span>
               </div>
             </div>
-            <div className="lg:col-span-5">
-              <div className="relative h-[420px] lg:h-[560px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/20">
+            <div className="lg:col-span-5 h-full">
+              <div className="relative h-[420px] lg:h-full lg:min-h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
                 <img
                   src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop"
                   alt="Professional culinary team at work"
