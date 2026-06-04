@@ -148,6 +148,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-5">
+              {/* TODO: Replace placeholder image with the official profile asset of Chef Bishop. */}
               <div className="relative h-[480px] rounded-3xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2000&auto=format&fit=crop"
@@ -175,7 +176,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-black text-gray-900 mb-8">A 7-Year Journey of Impact</h3>
+                <h3 className="text-2xl font-black text-gray-900 mb-8">Our Journey</h3>
                 <ol className="relative border-l-2 border-primary/30 ml-2 space-y-10">
                   {timeline.map((item, i) => (
                     <li key={item.title} className="pl-8 relative">
