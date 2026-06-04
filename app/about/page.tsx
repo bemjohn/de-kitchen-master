@@ -154,36 +154,43 @@ export default function AboutPage() {
       {/* 2. OUR STORY */}
       <section className="bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto">
+          <div className="mb-12 lg:mb-16">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
-              The Beginning
+              The Foundation
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-10">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Our Story
             </h2>
-            <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
-              <p>Every great company begins with a vision.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+            <div className="md:col-span-2 space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
               <p>
-                De KITCHEN MASTER was born from a deep passion for hospitality and a desire to raise professional standards within the culinary industry. Founded by Chef Bishop, a visionary hospitality professional with over a decade of experience, the company emerged from firsthand industry challenges. Chef Bishop observed that many restaurants, hotels, and hospitality ventures struggled due to staffing shortages, operational inefficiencies, and limited professional development.
+                Every great company begins with a vision. De KITCHEN MASTER was born from a deep passion for hospitality and a desire to raise professional standards within the culinary industry. Founded by Chef Bishop, a visionary hospitality professional with over a decade of experience, the company emerged from firsthand industry challenges.
               </p>
-              <p>Rather than accept these challenges, Chef Bishop chose to be the solution.</p>
+              <p>
+                Chef Bishop observed that many restaurants, hotels, and hospitality ventures struggled due to staffing shortages, operational inefficiencies, and limited professional development. Rather than accept these challenges, Chef Bishop chose to be the solution.
+              </p>
               <p>
                 What began as a vision to uplift chefs and hospitality businesses has grown into a full-service hospitality powerhouse. Over seven years, De KITCHEN MASTER has not only provided staffing solutions but has been instrumental in turning around struggling restaurants, launching new hotels, and providing bespoke culinary services for private clients and corporate organizations.
               </p>
               <p>
-                Chef Bishop&apos;s reputation is built on results. In his 10+ years of industry experience, he has mentored hundreds of chefs, connecting them to top-tier jobs across Nigeria, Ghana, South Africa, and beyond. His vision, leadership, and hands-on approach have helped revive struggling eateries, elevate dining experiences, and transform hospitality operations.
-              </p>
-              <p>
-                Under his guidance, De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd has become a benchmark for professionalism, innovation, and excellence within the hospitality industry.
-              </p>
-              <p>
                 Today, De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd stands as a trusted hospitality partner serving clients across multiple sectors. Our journey continues to be driven by a commitment to raising standards, creating opportunities, developing talent, and helping hospitality businesses achieve sustainable success.
               </p>
-              <p>
-                From a single vision to a growing hospitality brand, our story is one of passion, resilience, growth, and an unwavering dedication to excellence.
-              </p>
             </div>
+
+            <aside className="md:col-span-1">
+              <div className="md:sticky md:top-28 bg-gray-900 text-white rounded-2xl p-8 shadow-xl border-l-4 border-primary">
+                <p className="text-lg leading-relaxed font-medium text-gray-100">
+                  Chef Bishop’s reputation is built on results. In his 10+ years of industry experience, he has mentored hundreds of chefs, connecting them to top-tier jobs across Nigeria, Ghana, South Africa, and beyond. His vision, leadership, and hands-on approach have helped revive struggling eateries, elevate dining experiences, and transform hospitality operations.
+                </p>
+              </div>
+            </aside>
           </div>
+
+          <p className="mt-16 lg:mt-20 text-2xl md:text-3xl lg:text-4xl font-medium italic text-gray-900 leading-snug text-center max-w-4xl mx-auto">
+            From a single vision to a growing hospitality brand, our story is one of passion, resilience, growth, and an unwavering dedication to excellence.
+          </p>
         </div>
       </section>
 
