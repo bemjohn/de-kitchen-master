@@ -98,7 +98,7 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6">
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-black text-primary mb-2">
                 <StatsCounter end={7} />
@@ -123,11 +123,9 @@ export default function Home() {
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Successful Projects Completed. Providing restaurant setup, kitchen development, consulting, menu engineering, and training.</p>
             </div>
 
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-2">
-                <StatsCounter end={36} suffix="+" /> <span className="text-3xl md:text-4xl">States</span>
-              </div>
-              <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Nationwide Coverage</div>
+            <div className="text-center min-w-0">
+              <div className="text-3xl md:text-4xl font-black text-primary mb-2 leading-tight break-words">Nationwide</div>
+              <div className="text-primary-light font-bold uppercase tracking-wider text-sm mb-3">Coverage</div>
               <p className="text-gray-300 font-medium text-sm leading-relaxed">Serving clients across Lagos, Abuja, and major cities throughout Nigeria while maintaining capacity to support projects beyond national borders.</p>
             </div>
 

@@ -12,7 +12,7 @@ type StatsCounterProps = {
 export default function StatsCounter({
   end,
   suffix = "+",
-  duration = 1800,
+  duration = 3000,
   className,
 }: StatsCounterProps) {
   const [value, setValue] = useState(0);
