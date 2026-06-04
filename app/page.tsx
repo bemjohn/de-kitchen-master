@@ -194,8 +194,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center text-primary mx-auto mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                 <Award className="w-8 h-8" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">10+ Years Industry Experience</h3>
-              <p className="text-gray-600 font-medium text-sm leading-relaxed">A decade of culinary placements, events, and kitchen launches behind every engagement.</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">7+ Years Industry Experience</h3>
+              <p className="text-gray-600 font-medium text-sm leading-relaxed">Over seven years of culinary placements, events, and kitchen launches behind every engagement.</p>
             </div>
 
             <div className="text-center group">
