@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -26,20 +26,29 @@ const slides = [
   },
   {
     id: 3,
-    title: "Catering that works",
+    title: "Catering that delivers",
     subtitle: "Unforgettable Events",
-    description: "Bespoke dining setups tailored solely for you and your loved ones. Book us today for flawless execution.",
+    description: "Bespoke culinary experiences and seamless service execution tailored for private events, corporate gatherings, and exclusive dining moments. Every detail is handled with precision, excellence, and professionalism.",
     image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2670&auto=format&fit=crop",
     ctaText: "Make a Reservation Today",
     ctaLink: "/contact",
   }
 ];
 
+const AUTOPLAY_MS = 20000;
+
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, AUTOPLAY_MS);
+    return () => clearInterval(id);
+  }, [current]);
 
   return (
     <section className="relative h-[85vh] min-h-[600px] w-full bg-gray-900 overflow-hidden group">
