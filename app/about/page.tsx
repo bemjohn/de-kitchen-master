@@ -151,7 +151,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. FOUNDER STORY + 7-YEAR TIMELINE */}
+      {/* 2. OUR STORY */}
+      <section className="bg-gray-50 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              The Beginning
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-10">
+              Our Story
+            </h2>
+            <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
+              <p>Every great company begins with a vision.</p>
+              <p>
+                De KITCHEN MASTER was born from a deep passion for hospitality and a desire to raise professional standards within the culinary industry. Founded by Chef Bishop, a visionary hospitality professional with over a decade of experience, the company emerged from firsthand industry challenges. Chef Bishop observed that many restaurants, hotels, and hospitality ventures struggled due to staffing shortages, operational inefficiencies, and limited professional development.
+              </p>
+              <p>Rather than accept these challenges, Chef Bishop chose to be the solution.</p>
+              <p>
+                What began as a vision to uplift chefs and hospitality businesses has grown into a full-service hospitality powerhouse. Over seven years, De KITCHEN MASTER has not only provided staffing solutions but has been instrumental in turning around struggling restaurants, launching new hotels, and providing bespoke culinary services for private clients and corporate organizations.
+              </p>
+              <p>
+                Chef Bishop&apos;s reputation is built on results. In his 10+ years of industry experience, he has mentored hundreds of chefs, connecting them to top-tier jobs across Nigeria, Ghana, South Africa, and beyond. His vision, leadership, and hands-on approach have helped revive struggling eateries, elevate dining experiences, and transform hospitality operations.
+              </p>
+              <p>
+                Under his guidance, De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd has become a benchmark for professionalism, innovation, and excellence within the hospitality industry.
+              </p>
+              <p>
+                Today, De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd stands as a trusted hospitality partner serving clients across multiple sectors. Our journey continues to be driven by a commitment to raising standards, creating opportunities, developing talent, and helping hospitality businesses achieve sustainable success.
+              </p>
+              <p>
+                From a single vision to a growing hospitality brand, our story is one of passion, resilience, growth, and an unwavering dedication to excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. FOUNDER STORY + 7-YEAR TIMELINE */}
       <section className="bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -203,7 +239,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. VISION & MISSION */}
+      {/* 4. VISION & MISSION */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
           <span className="text-[14rem] md:text-[22rem] font-black text-white/[0.04] tracking-tighter leading-none">
@@ -248,7 +284,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. CORE VALUES SCROLLER */}
+      {/* 5. CORE VALUES SCROLLER */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-24 pb-12">
           <div className="text-center">
@@ -302,7 +338,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. WHY WE ARE DIFFERENT */}
+      {/* 6. WHY WE ARE DIFFERENT */}
       <section className="bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
