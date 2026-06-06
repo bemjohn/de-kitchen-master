@@ -1,4 +1,4 @@
-import { Award, ShieldCheck, Briefcase, Lightbulb, Users, ThumbsUp, Check } from "lucide-react";
+import { Award, ShieldCheck, Briefcase, Lightbulb, Users, ThumbsUp, Check, Compass, ChefHat, GraduationCap, UserPlus, Settings } from "lucide-react";
 import DistinctivesAccordion, { type Distinctive } from "@/components/About/DistinctivesAccordion";
 
 export const metadata = {
@@ -56,6 +56,15 @@ const values = [
     icon: ThumbsUp,
     gloss: "Our clients remain at the center of everything we do. Their success is our success.",
   },
+];
+
+const leadershipRoles = [
+  { title: "Hospitality Consultants", label: "Strategic Advisory", Icon: Compass },
+  { title: "Professional Chefs", label: "Culinary Masters", Icon: ChefHat },
+  { title: "Elite Trainers", label: "Standard Bearers", Icon: GraduationCap },
+  { title: "Talent Recruiters", label: "People Finders", Icon: UserPlus },
+  { title: "Operational Specialists", label: "Systems Driven", Icon: Settings },
+  { title: "Industry Experts", label: "Expertise Driven", Icon: Lightbulb },
 ];
 
 const distinctives: Distinctive[] = [
@@ -180,10 +189,14 @@ export default function AboutPage() {
             </div>
 
             <aside className="md:col-span-1">
-              <div className="md:sticky md:top-28 bg-gray-900 text-white rounded-2xl p-8 shadow-xl border-l-4 border-primary">
-                <p className="text-lg leading-relaxed font-medium text-gray-100">
-                  Chef Bishop’s reputation is built on results. In his 10+ years of industry experience, he has mentored hundreds of chefs, connecting them to top-tier jobs across Nigeria, Ghana, South Africa, and beyond. His vision, leadership, and hands-on approach have helped revive struggling eateries, elevate dining experiences, and transform hospitality operations.
-                </p>
+              <div className="md:sticky md:top-28 relative rounded-2xl overflow-hidden shadow-xl border-l-4 border-primary min-h-[420px]">
+                <img
+                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop"
+                  alt="Luxury hospitality atmosphere"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
               </div>
             </aside>
           </div>
@@ -280,6 +293,28 @@ export default function AboutPage() {
                 The leadership team at De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd consists of hospitality consultants, professional chefs, trainers, recruiters, operational specialists, and industry experts who work together to deliver exceptional results for our clients. Our combined experience allows us to understand hospitality challenges from multiple perspectives and develop practical solutions that create measurable value.
               </p>
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12 max-w-6xl mx-auto">
+            {leadershipRoles.map((role) => {
+              const Icon = role.Icon;
+              return (
+                <div
+                  key={role.title}
+                  className="group relative bg-slate-50 border border-slate-100 rounded-xl p-6 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:bg-white hover:border-primary/30"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-4 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                    <Icon className="w-6 h-6" strokeWidth={2.25} />
+                  </div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">
+                    {role.label}
+                  </p>
+                  <h3 className="text-lg md:text-xl font-black text-gray-900 leading-tight">
+                    {role.title}
+                  </h3>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
