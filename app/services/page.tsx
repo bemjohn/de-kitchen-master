@@ -15,7 +15,6 @@ import {
   Utensils,
   Apple,
   Heart,
-  Sparkles,
   ArrowRight,
   Users,
 } from "lucide-react";
@@ -633,16 +632,18 @@ export default function ServicesPage() {
       </section>
 
       {/* ============================================================ */}
-      {/* PHASE 7C — CENTERED FOOTER STATEMENT                          */}
+      {/* PHASE 7C — ASYMMETRIC CLOSING BANNER                           */}
       {/* ============================================================ */}
-      <section className="bg-gray-50 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-6">
-            <Sparkles className="w-7 h-7" strokeWidth={2.25} />
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="bg-slate-50 border border-slate-100 rounded-3xl p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <h2 className="lg:col-span-5 text-3xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we don't simply provide services.
+            </h2>
+            <p className="lg:col-span-7 text-xl text-slate-600 leading-relaxed pl-0 lg:pl-8 lg:border-l lg:border-slate-200">
+              We create solutions that help hospitality businesses thrive, professionals succeed, and clients experience excellence at every level.
+            </p>
           </div>
-          <p className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-snug tracking-tight">
-            At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we don't simply provide services—we create solutions that help hospitality businesses thrive, professionals succeed, and clients experience excellence at every level.
-          </p>
         </div>
       </section>
 
