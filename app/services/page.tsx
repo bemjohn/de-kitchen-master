@@ -1,99 +1,674 @@
-import { ChefHat, GlassWater, CookingPot, Users, Briefcase, GraduationCap } from "lucide-react";
+import {
+  Check,
+  ChefHat,
+  Briefcase,
+  BookOpen,
+  FileText,
+  GraduationCap,
+  Calendar,
+  Truck,
+  ClipboardList,
+  DollarSign,
+  Package,
+  ShoppingCart,
+  Compass,
+  Utensils,
+  Apple,
+  Heart,
+  Sparkles,
+  ArrowRight,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
-import ServiceCard from "@/components/ServiceCard";
 
 export const metadata = {
-  title: "Services | De Kitchen Master",
-  description: "Explore our premium culinary and hospitality services.",
+  title: "Services | De KITCHEN MASTER Culinary & Hospitality Services Ltd",
+  description:
+    "Comprehensive culinary and hospitality solutions — chef recruitment, restaurant consultancy, private chef services, catering, training, menu engineering, and business transformation across Africa.",
 };
 
+const recruitmentPositions = [
+  "Executive Chefs",
+  "Cooks",
+  "Head Chefs",
+  "Kitchen Assistants",
+  "Sous Chefs",
+  "Stewards",
+  "Chef de Partie",
+  "Front-of-House Personnel",
+  "Pastry Chefs",
+  "Hospitality Supervisors",
+  "Bakers",
+];
+
+const trainingAreas = [
+  "Culinary Skills Development",
+  "Restaurant Service Standards",
+  "Kitchen Operations",
+  "Teamwork & Communication",
+  "Food Safety & Hygiene",
+  "Professional Conduct",
+  "Customer Service Excellence",
+  "Hospitality Operations Management",
+];
+
+const nutritionPrograms = [
+  "Weight Management Meal Plans",
+  "Healthy Lifestyle Meal Plans",
+  "Fitness & Wellness Nutrition Plans",
+  "Family Meal Planning",
+  "Customized Dietary Programs",
+  "Corporate Wellness Meal Solutions",
+];
+
 export default function ServicesPage() {
-  const allServices = [
-    {
-      id: "private-chef",
-      title: "Private Chef Services",
-      description: "Enjoy restaurant-quality meals in the comfort of your own home. Our private chef services are completely customized to your dietary needs and preferences, offering breakfast, lunch, dinner, or special multi-course tasting menus for you and your guests.",
-      icon: <ChefHat className="w-6 h-6" />
-    },
-    {
-      id: "catering",
-      title: "Event Catering",
-      description: "From intimate birthday parties to large-scale corporate events and weddings, our catering service delivers flawlessly executed menus. We handle everything from food preparation to presentation, ensuring your guests are wowed.",
-      icon: <GlassWater className="w-6 h-6" />
-    },
-    {
-      id: "kitchen-setup",
-      title: "Kitchen Setup & Design",
-      description: "Opening a new restaurant or upgrading your home kitchen? We provide expert consultation on kitchen layout, equipment sourcing, and workflow optimization to maximize efficiency and safety.",
-      icon: <CookingPot className="w-6 h-6" />
-    },
-    {
-      id: "recruitment",
-      title: "Staff Recruitment",
-      description: "Finding the right culinary talent is difficult. We leverage our extensive network to recruit highly skilled chefs, line cooks, and hospitality staff tailored precisely to your restaurant's specific culture and requirements.",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      id: "consulting",
-      title: "Restaurant Consulting",
-      description: "Comprehensive advisory services for hospitality businesses. From menu engineering and cost analysis to brand development and operations management, we help your restaurant achieve its full potential.",
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      id: "training",
-      title: "Culinary Training",
-      description: "Professional development programs for aspiring chefs and existing kitchen teams. We offer hands-on training in culinary techniques, food safety, hygiene, and kitchen management to elevate your staff's capabilities.",
-      icon: <GraduationCap className="w-6 h-6" />
-    }
-  ];
-
   return (
-    <div className="pt-20 pb-24 bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">What We Do</h2>
-          <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wider">
-            Premium <span className="text-primary">Services</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
-            De Kitchen Master offers a comprehensive suite of culinary and hospitality solutions designed to meet the highest industry standards. 
-          </p>
-        </div>
+    <div className="pt-20 bg-white">
+      {/* ============================================================ */}
+      {/* PHASE 1 — PAGE INTRO & STRATEGIC OVERVIEW                     */}
+      {/* ============================================================ */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center mb-14">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              OUR SERVICES
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight max-w-3xl mx-auto">
+              Strategic Overview
+            </h2>
+          </div>
 
-        {/* Services Grid (Using the Card Component for consistency) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-          {allServices.map((service) => (
-            <div key={service.id} id={service.id} className="scroll-mt-32">
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                href={`/services#${service.id}`}
-              />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            <div>
+              <p className="text-lg md:text-xl text-gray-900 leading-relaxed font-medium">
+                At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we provide comprehensive culinary and hospitality solutions designed to support businesses, organizations, institutions, and private clients across every stage of the hospitality journey.
+              </p>
             </div>
-          ))}
-        </div>
 
-        {/* Detailed Service Banner Section */}
-        <div className="bg-primary border border-primary-light rounded-3xl p-8 md:p-16 mb-24 flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden group shadow-2xl shadow-primary/20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2674&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-1000" />
-          <div className="relative z-10 max-w-2xl">
-            <h3 className="text-3xl font-bold text-white mb-4">Need a Custom Culinary Package?</h3>
-            <p className="text-orange-50 text-lg leading-relaxed mb-8 font-medium">
-              Every client is unique. If you require a bespoke combination of our services, such as event catering paired with a specialized private chef experience, our team is ready to curate a customized package tailored strictly to your event's demands.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white hover:bg-gray-100 text-primary font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
-            >
-              Discuss Your Project
-            </Link>
+            <div className="space-y-6">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
+                With a combination of industry expertise, practical experience, and a commitment to excellence, we deliver professional services that help clients build stronger teams, improve operations, create exceptional dining experiences, and achieve sustainable business growth.
+              </p>
+              <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
+                Whether you are launching a new hospitality venture, strengthening an existing operation, recruiting skilled professionals, or seeking expert culinary support, our team is equipped to deliver tailored solutions that meet your specific needs.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
+      {/* ============================================================ */}
+      {/* PHASE 2 — CHEF RECRUITMENT & STAFFING                          */}
+      {/* ============================================================ */}
+      <section className="bg-gray-50 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+            <div className="lg:col-span-6 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
+                <Users className="w-4 h-4" strokeWidth={2.5} />
+                <span>Talent Acquisition</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight mb-6">
+                Chef Recruitment &amp; Hospitality Staffing
+              </h2>
+              <div className="space-y-5 text-base md:text-lg text-gray-700 leading-relaxed font-medium mb-8">
+                <p>
+                  We specialize in sourcing, screening, recruiting, and deploying qualified chefs and hospitality professionals for restaurants, hotels, lounges, resorts, catering companies, corporate organizations, and private clients.
+                </p>
+                <p>
+                  Our recruitment process focuses on professionalism, experience, technical competence, work ethics, and operational efficiency to ensure every candidate meets the highest industry standards.
+                </p>
+              </div>
+
+              <p className="text-primary font-bold uppercase tracking-widest text-sm mb-5">Positions We Recruit:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                {recruitmentPositions.map((position) => (
+                  <div key={position} className="flex items-center gap-2.5">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-orange-50 flex-shrink-0">
+                      <Check className="w-3 h-3 text-primary" strokeWidth={3.5} />
+                    </span>
+                    <span className="text-sm md:text-base text-gray-800 font-medium">{position}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="relative h-[420px] lg:h-full lg:min-h-[560px] rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2000&auto=format&fit=crop"
+                  alt="Professional executive chef team in a commercial kitchen"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <p className="text-xs uppercase tracking-widest text-primary font-bold mb-1">Our Network</p>
+                  <p className="text-gray-900 font-black text-lg">Qualified Professionals, Ready to Deploy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 3 — BUSINESS & RESTAURANT CONSULTANCY (DARK)             */}
+      {/* ============================================================ */}
+      <section className="relative bg-gray-900 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center mb-16">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              Consultancy
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">
+              Business &amp; Restaurant Consultancy
+            </h2>
+          </div>
+
+          {/* Row A — Restaurant & Lounge Consultancy (text left, image right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20">
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
+                <Briefcase className="w-4 h-4" strokeWidth={2.5} />
+                <span>Row A</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight mb-6">
+                Restaurant &amp; Lounge Consultancy
+              </h3>
+              <div className="space-y-5 text-base md:text-lg text-gray-300 leading-relaxed font-medium">
+                <p>
+                  Our consultancy service helps hospitality businesses develop strong operational foundations and achieve long-term success.
+                </p>
+                <p>
+                  We provide expert guidance on concept development, operational planning, staff structure, service delivery, profitability improvement, customer experience, and business growth strategies.
+                </p>
+                <p>
+                  Whether you are opening a new establishment or improving an existing one, our consultants help position your business for sustainable success.
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+                <img
+                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop"
+                  alt="Elegant high-end dining area layout"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+              </div>
+            </div>
+          </div>
+
+          {/* Row B — Kitchen Setup & Restaurant Development (image left, text right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-5">
+              <div className="relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+                <img
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop"
+                  alt="Modern professional industrial kitchen with stainless steel setup"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
+                <ChefHat className="w-4 h-4" strokeWidth={2.5} />
+                <span>Row B</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight mb-6">
+                Kitchen Setup &amp; Restaurant Development
+              </h3>
+              <div className="space-y-5 text-base md:text-lg text-gray-300 leading-relaxed font-medium">
+                <p>
+                  We assist entrepreneurs, investors, and hospitality businesses in planning, designing, and establishing fully functional professional kitchens and food service operations.
+                </p>
+                <p>
+                  Our services cover kitchen workflow design, equipment planning, staffing structure, operational systems, production flow, and pre-opening support to ensure efficiency, safety, and profitability from day one.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 4 — BESPOKE CULINARY & CONTRACT SERVICES (3 CARDS)      */}
+      {/* ============================================================ */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              Bespoke Service
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
+              Culinary &amp; Contract Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 — Private Chef Services */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-8 rounded-2xl flex flex-col">
+              <div className="relative h-40 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2000&auto=format&fit=crop"
+                  alt="Artfully plated private dining dish"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                  <ChefHat className="w-5 h-5" strokeWidth={2.25} />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4 tracking-tight">Private Chef Services</h3>
+              <div className="space-y-3 text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                <p>
+                  We provide professional private chefs for individuals, families, executives, expatriates, VIP clients, residences, and private households.
+                </p>
+                <p>
+                  Whether you require a full-time chef, live-in chef, personal chef, vacation chef, or chef for a special occasion, we carefully match clients with experienced culinary professionals who meet their specific requirements.
+                </p>
+                <p>
+                  Our private chefs deliver personalized culinary services while maintaining the highest standards of professionalism, confidentiality, hygiene, and food quality.
+                </p>
+              </div>
+            </article>
+
+            {/* Card 2 — Chef Rentage */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-8 rounded-2xl flex flex-col">
+              <div className="relative h-40 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop"
+                  alt="Chef plating a dish in active service"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                  <Calendar className="w-5 h-5" strokeWidth={2.25} />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4 tracking-tight">Chef Rentage (Contract Chef Services)</h3>
+              <div className="space-y-3 text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                <p>
+                  Our Chef Rentage Service provides businesses and private clients with access to skilled chefs on a temporary, contract, seasonal, or project basis.
+                </p>
+                <p>
+                  This service is ideal for restaurants experiencing staffing shortages, hotels requiring additional support, corporate events, private functions, festive periods, and hospitality projects requiring short-term culinary expertise.
+                </p>
+              </div>
+            </article>
+
+            {/* Card 3 — Nutrition & Healthy Meal Planning */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-8 rounded-2xl flex flex-col">
+              <div className="relative h-40 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2000&auto=format&fit=crop"
+                  alt="Fresh healthy ingredients for meal planning"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                  <Apple className="w-5 h-5" strokeWidth={2.25} />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4 tracking-tight">Nutrition &amp; Healthy Meal Planning</h3>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium mb-5">
+                We provide customized meal planning solutions designed to support healthy living, weight management, fitness goals, and overall wellness.
+              </p>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium mb-5">
+                Our meal plans are tailored to individual dietary needs, lifestyle preferences, and health objectives, ensuring a balanced approach to nutrition without compromising taste and quality.
+              </p>
+              <ul className="space-y-2.5 mb-5">
+                {nutritionPrograms.map((program) => (
+                  <li key={program} className="flex items-start gap-2.5">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-orange-50 flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-primary" strokeWidth={3.5} />
+                    </span>
+                    <span className="text-sm text-gray-800 font-medium">{program}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-auto pt-5 border-t border-slate-100 text-sm italic text-gray-600 leading-relaxed font-medium">
+                At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we help clients achieve their health and wellness goals through practical, enjoyable, and professionally planned nutrition solutions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 5 — FINE DINING, CORPORATE, MENU, RECIPE (2x2 BENTO)    */}
+      {/* ============================================================ */}
+      <section className="bg-gray-50 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              Engineered Experiences
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
+              Dining, Menus &amp; Recipe Engineering
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card A — Fine Dining */}
+            <article className="group relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 rounded-2xl">
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2000&auto=format&fit=crop"
+                  alt="Premium fine dining plating"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                <div className="absolute bottom-4 left-6 right-6 flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                    <Utensils className="w-5 h-5" strokeWidth={2.25} />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">Fine Dining Services</h3>
+                </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                  We create premium fine dining experiences designed for luxury events, private dinners, executive gatherings, exclusive celebrations, and high-end hospitality engagements. From menu creation and food preparation to service coordination and presentation, our team delivers exceptional culinary experiences that combine elegance, creativity, and world-class service.
+                </p>
+              </div>
+            </article>
+
+            {/* Card B — Corporate Lunch */}
+            <article className="group relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 rounded-2xl">
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop"
+                  alt="Corporate meeting lunch setup"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                <div className="absolute bottom-4 left-6 right-6 flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                    <Briefcase className="w-5 h-5" strokeWidth={2.25} />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">Corporate Lunch Services</h3>
+                </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                  We provide structured meal solutions for corporate organizations, banks, offices, institutions, and workplace environments. Our services include executive lunches, staff meal programs, corporate catering, canteen support, and ongoing meal service management designed to ensure consistency, nutrition, quality, and professional service delivery.
+                </p>
+              </div>
+            </article>
+
+            {/* Card C — Menu Development */}
+            <article className="group relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 rounded-2xl">
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2000&auto=format&fit=crop"
+                  alt="Menu and bar setup"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                <div className="absolute bottom-4 left-6 right-6 flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                    <BookOpen className="w-5 h-5" strokeWidth={2.25} />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">Menu Development</h3>
+                </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                  We create professionally engineered menus designed to improve customer satisfaction, enhance brand identity, and maximize profitability. Our menu development process combines culinary creativity, market research, operational efficiency, and pricing strategy to deliver menus that are attractive, practical, and commercially successful.
+                </p>
+              </div>
+            </article>
+
+            {/* Card D — Recipe Development */}
+            <article className="group relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 rounded-2xl">
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=2000&auto=format&fit=crop"
+                  alt="Recipe development and food preparation"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                <div className="absolute bottom-4 left-6 right-6 flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg">
+                    <FileText className="w-5 h-5" strokeWidth={2.25} />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">Recipe Development</h3>
+                </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                  We develop standardized recipes that promote consistency, quality control, efficiency, and profitability across food service operations. Each recipe is professionally documented with precise measurements, preparation procedures, plating guidelines, and production standards to ensure consistent results every time.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 6 — TRAINING, EVENTS, CATERING, SOPS (2x2 DARK)          */}
+      {/* ============================================================ */}
+      <section className="relative bg-gray-900 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center mb-16">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              Operational Ecosystem
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">
+              Training, Events, Catering &amp; SOPs
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Panel 1 — Staff Training */}
+            <article className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-primary/30">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                  <GraduationCap className="w-6 h-6" strokeWidth={2.25} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-black tracking-tight">Staff Training (BOH &amp; FOH)</h3>
+              </div>
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed font-medium mb-6">
+                Our training programs are designed to improve the skills, professionalism, productivity, and service standards of hospitality teams.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                {trainingAreas.map((area) => (
+                  <div key={area} className="flex items-start gap-2.5">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/15 flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-primary" strokeWidth={3.5} />
+                    </span>
+                    <span className="text-sm text-gray-200 font-medium">{area}</span>
+                  </div>
+                ))}
+              </div>
+            </article>
+
+            {/* Panel 2 — Event Planning & Hospitality Execution */}
+            <article className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-primary/30">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-6 h-6" strokeWidth={2.25} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-black tracking-tight">Event Planning &amp; Hospitality Execution</h3>
+              </div>
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed font-medium">
+                We provide hospitality-focused event planning and execution services for weddings, corporate events, private celebrations, product launches, conferences, and social gatherings. Our team coordinates food service operations, staffing, logistics, hospitality management, and guest experience delivery to ensure successful event execution.
+              </p>
+            </article>
+
+            {/* Panel 3 — Outdoor Catering Services */}
+            <article className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-primary/30">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                  <Truck className="w-6 h-6" strokeWidth={2.25} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-black tracking-tight">Outdoor Catering Services</h3>
+              </div>
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed font-medium">
+                We offer professional outdoor catering services for events of all sizes. From intimate gatherings to large-scale celebrations, our catering solutions include menu planning, food production, event catering logistics, service staff deployment, and complete hospitality management. Our goal is to deliver exceptional food and memorable dining experiences for every event.
+              </p>
+            </article>
+
+            {/* Panel 4 — SOP Development */}
+            <article className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-primary/30">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                  <ClipboardList className="w-6 h-6" strokeWidth={2.25} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-black tracking-tight">SOP Development</h3>
+              </div>
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed font-medium">
+                We develop customized Standard Operating Procedures (SOPs) that help hospitality businesses establish consistency, accountability, efficiency, and quality control. Our SOP systems cover kitchen operations, food production, service standards, hygiene procedures, inventory control, staff responsibilities, and operational workflows. These systems help businesses improve performance while maintaining professional standards across all departments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 7A — FOOD COSTING / INVENTORY / PROCUREMENT / CONSULT  */}
+      {/* ============================================================ */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              Financial &amp; Operational Systems
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
+              Costing, Inventory, Sourcing &amp; Consultation
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card A — Food Costing */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-6 rounded-2xl flex flex-col">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                <DollarSign className="w-6 h-6" strokeWidth={2.25} />
+              </div>
+              <h3 className="text-lg font-black text-gray-900 mb-3 tracking-tight">Food Costing &amp; Control Systems</h3>
+              <p className="text-sm text-gray-700 leading-relaxed font-medium">
+                We help hospitality businesses implement effective food costing and cost-control systems that improve profitability and reduce waste. Our services include recipe costing, menu pricing, portion control, purchasing analysis, profit margin evaluation, and cost monitoring systems designed to maximize financial performance.
+              </p>
+            </article>
+
+            {/* Card B — Inventory */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-6 rounded-2xl flex flex-col">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                <Package className="w-6 h-6" strokeWidth={2.25} />
+              </div>
+              <h3 className="text-lg font-black text-gray-900 mb-3 tracking-tight">Inventory Management</h3>
+              <p className="text-sm text-gray-700 leading-relaxed font-medium">
+                We design and implement inventory management systems that help businesses monitor stock levels, minimize losses, improve accountability, and maintain operational efficiency. Our structured inventory solutions support accurate stock tracking, usage control, supplier management, and waste reduction.
+              </p>
+            </article>
+
+            {/* Card C — Procurement */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-6 rounded-2xl flex flex-col">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                <ShoppingCart className="w-6 h-6" strokeWidth={2.25} />
+              </div>
+              <h3 className="text-lg font-black text-gray-900 mb-3 tracking-tight">Procurement Services</h3>
+              <p className="text-sm text-gray-700 leading-relaxed font-medium">
+                We assist businesses with the sourcing and procurement of quality ingredients, kitchen equipment, operational supplies, and hospitality resources. Our procurement services focus on quality assurance, supplier reliability, cost efficiency, and sustainable supply chain management.
+              </p>
+            </article>
+
+            {/* Card D — Food Business Consultation */}
+            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-6 rounded-2xl flex flex-col">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                <Compass className="w-6 h-6" strokeWidth={2.25} />
+              </div>
+              <h3 className="text-lg font-black text-gray-900 mb-3 tracking-tight">Food Business Consultation</h3>
+              <p className="text-sm text-gray-700 leading-relaxed font-medium">
+                We provide strategic consulting services for entrepreneurs, investors, startups, and existing food businesses. Our consultation services cover business planning, operational structure, kitchen design, staffing strategy, menu development, growth planning, profitability improvement, and market positioning. We help clients transform ideas into successful hospitality ventures.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 7B — RESTAURANT REVAMP & BUSINESS TRANSFORMATION         */}
+      {/* ============================================================ */}
+      <section className="bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+                Transformation
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-6">
+                Restaurant Revamp &amp; Business Transformation
+              </h2>
+              <div className="space-y-5 text-base md:text-lg text-gray-700 leading-relaxed font-medium">
+                <p>
+                  We help underperforming restaurants, lounges, and hospitality businesses identify operational challenges and implement practical solutions for improvement.
+                </p>
+                <p>
+                  Our Restaurant Revamp &amp; Business Transformation service evaluates every aspect of the business, including operations, staffing, menus, food quality, customer experience, cost management, and service delivery.
+                </p>
+                <p>
+                  Through strategic restructuring and operational improvements, we help businesses increase efficiency, improve customer satisfaction, strengthen brand positioning, and achieve sustainable growth.
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="relative h-[420px] lg:h-full lg:min-h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+                <img
+                  src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=80&w=2000&auto=format&fit=crop"
+                  alt="Dramatic luxury restaurant renovation showcase"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <p className="text-xs uppercase tracking-widest text-primary font-bold mb-1">Transformation</p>
+                  <p className="text-gray-900 font-black text-lg">From Struggling to Thriving</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PHASE 7C — CENTERED FOOTER STATEMENT                          */}
+      {/* ============================================================ */}
+      <section className="bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-6">
+            <Sparkles className="w-7 h-7" strokeWidth={2.25} />
+          </div>
+          <p className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-snug tracking-tight">
+            At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we don't simply provide services—we create solutions that help hospitality businesses thrive, professionals succeed, and clients experience excellence at every level.
+          </p>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* BANNER — CUSTOM CULINARY PACKAGE CTA (PRESERVED)               */}
+      {/* ============================================================ */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28">
+          <div className="bg-primary border border-primary-light rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden group shadow-2xl shadow-primary/20">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2674&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-1000" />
+            <div className="relative z-10 max-w-2xl">
+              <h3 className="text-3xl font-bold text-white mb-4">Need a Custom Culinary Package?</h3>
+              <p className="text-orange-50 text-lg leading-relaxed mb-8 font-medium">
+                Every client is unique. If you require a bespoke combination of our services, such as event catering paired with a specialized private chef experience, our team is ready to curate a customized package tailored strictly to your event's demands.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white hover:bg-gray-100 text-primary font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              >
+                Discuss Your Project
+                <ArrowRight className="w-5 h-5 ml-2" strokeWidth={2.5} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
