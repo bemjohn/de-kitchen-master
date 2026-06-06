@@ -221,12 +221,6 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
               </div>
-              <div className="mt-6">
-                <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
-                  Meet Chef Bishop — Founder &amp; CEO
-                </h2>
-                <p className="mt-1 text-primary font-bold uppercase tracking-widest text-sm">De KITCHEN MASTER</p>
-              </div>
             </div>
 
             <div className="lg:col-span-7 space-y-10">
