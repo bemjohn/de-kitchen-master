@@ -229,7 +229,7 @@ export default function AboutPage() {
                 <p className="text-primary font-bold uppercase tracking-widest text-sm mb-8">Founder &amp; Chief Executive Officer (CEO)</p>
                 <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed font-medium">
                   <p>
-                    Chef Bishop is a respected hospitality consultant, professional chef, recruiter, trainer, mentor, and entrepreneur with over 10 years of hands-on experience in the hospitality industry.
+                    EZEKIEL E. OTON, Popularly known as Chef Bishop is a respected Culinary &amp; Hospitality consultant, professional chef, recruiter, trainer, mentor, and entrepreneur with over 10 years of hands-on experience in the hospitality industry.
                   </p>
                   <p>
                     Over the course of his career, he has built a reputation for excellence by supporting restaurants, hotels, lounges, catering businesses, event companies, corporate organizations, and private clients with practical solutions that improve operations, service delivery, staffing, profitability, and overall business performance.
