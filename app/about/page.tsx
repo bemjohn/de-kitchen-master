@@ -262,7 +262,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. VISION & MISSION */}
+      {/* 4. LEADERSHIP TEAM */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              OUR PEOPLE
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-8">
+              Leadership Team
+            </h2>
+            <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
+              <p>
+                Behind every successful hospitality project is a team of experienced professionals committed to excellence.
+              </p>
+              <p>
+                The leadership team at De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd consists of hospitality consultants, professional chefs, trainers, recruiters, operational specialists, and industry experts who work together to deliver exceptional results for our clients. Our combined experience allows us to understand hospitality challenges from multiple perspectives and develop practical solutions that create measurable value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. VISION & MISSION */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
           <span className="text-[14rem] md:text-[22rem] font-black text-white/[0.04] tracking-tighter leading-none">
@@ -307,7 +329,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. CORE VALUES SCROLLER */}
+      {/* 6. CORE VALUES SCROLLER */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-24 pb-12">
           <div className="text-center">
@@ -361,7 +383,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6. WHY WE ARE DIFFERENT */}
+      {/* 7. WHY WE ARE DIFFERENT */}
       <section className="bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
