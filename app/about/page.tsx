@@ -195,7 +195,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. FOUNDER STORY + 7-YEAR TIMELINE */}
-      <section className="bg-gray-50 border-y border-gray-100">
+      <section className="relative bg-gray-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-5">
@@ -209,7 +209,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
               </div>
               <div className="mt-6">
-                <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
                   Meet Chef Bishop — Founder &amp; CEO
                 </h2>
                 <p className="mt-1 text-primary font-bold uppercase tracking-widest text-sm">De KITCHEN MASTER</p>
@@ -218,9 +218,9 @@ export default function AboutPage() {
 
             <div className="lg:col-span-7 space-y-10">
               <div>
-                <h3 className="text-2xl font-black text-gray-900 mb-2">MEET CHEF BISHOP</h3>
+                <h3 className="text-2xl font-black text-white mb-2">MEET CHEF BISHOP</h3>
                 <p className="text-primary font-bold uppercase tracking-widest text-sm mb-8">Founder &amp; Chief Executive Officer (CEO)</p>
-                <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
+                <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed font-medium">
                   <p>
                     Chef Bishop is a respected hospitality consultant, professional chef, recruiter, trainer, mentor, and entrepreneur with over 10 years of hands-on experience in the hospitality industry.
                   </p>
@@ -243,7 +243,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-black text-gray-900 mb-8">Our Journey</h3>
+                <h3 className="text-2xl font-black text-white mb-8">Our Journey</h3>
                 <ol className="relative border-l-2 border-primary/30 ml-2 space-y-10">
                   {timeline.map((item, i) => (
                     <li key={item.title} className="pl-8 relative">
@@ -251,8 +251,8 @@ export default function AboutPage() {
                       <p className="text-primary font-black uppercase tracking-wider text-sm mb-1">
                         Milestone {i + 1}
                       </p>
-                      <h4 className="text-xl font-black text-gray-900 mb-2">{item.title}</h4>
-                      <p className="text-gray-700 font-medium leading-relaxed">{item.description}</p>
+                      <h4 className="text-xl font-black text-white mb-2">{item.title}</h4>
+                      <p className="text-gray-300 font-medium leading-relaxed">{item.description}</p>
                     </li>
                   ))}
                 </ol>
