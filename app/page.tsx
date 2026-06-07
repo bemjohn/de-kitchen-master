@@ -1,9 +1,39 @@
 import Link from "next/link";
-import { ArrowRight, Utensils, Award, Briefcase, Coffee, UserPlus, ChefHat, MapPin, Globe2, ShieldCheck, ThumbsUp, Check } from "lucide-react";
+import { ArrowRight, Award, Briefcase, UserPlus, ChefHat, MapPin, Globe2, ShieldCheck, ThumbsUp, Check, Compass, Sparkles } from "lucide-react";
 import HeroCarousel from "@/components/HeroCarousel";
 import TestimonialCard from "@/components/TestimonialCard";
-import ServiceCard from "@/components/ServiceCard";
 import StatsCounter from "@/components/StatsCounter";
+
+const servicesSummary = [
+  {
+    title: "Staffing & Recruitment",
+    content:
+      "Sourcing, screening, and deploying qualified chefs and hospitality professionals to ensure the highest industry standards.",
+    highlights: ["Executive Chefs", "Head Chefs", "Sous Chefs", "Front-of-House Personnel"],
+    Icon: UserPlus,
+  },
+  {
+    title: "Hospitality Consultancy",
+    content:
+      "Strategic operational planning, kitchen workflow design, and equipment planning to build strong foundations for long-term business success.",
+    highlights: ["Concept Development", "Kitchen Setup", "SOP Systems"],
+    Icon: Compass,
+  },
+  {
+    title: "Bespoke Culinary Services",
+    content:
+      "Personalized culinary experiences for individuals, families, corporate organizations, and exclusive luxury events.",
+    highlights: ["Private Chef Services", "Contract Chef Rentage", "Fine Dining"],
+    Icon: ChefHat,
+  },
+  {
+    title: "Business Transformation",
+    content:
+      "Implementing food costing controls, inventory systems, staff training, and restructuring underperforming hospitality venues to achieve sustainable growth.",
+    highlights: ["Staff Training", "Food Costing", "Restaurant Revamps"],
+    Icon: Sparkles,
+  },
+];
 
 export default function Home() {
   return (
@@ -11,48 +41,58 @@ export default function Home() {
       {/* 1. Hero Section */}
       <HeroCarousel />
 
-      {/* 2. Featured Services */}
+      {/* 2. Services Summary */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">Featured Services</h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-            <p className="mt-6 text-gray-600 font-medium max-w-2xl mx-auto">
-              Comprehensive culinary solutions for hospitality businesses, private clients, and ambitious chefs across every scale.
+          <div className="text-center mb-12">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+              WHAT WE DO
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
+              Our Services
+            </h2>
+            <p className="max-w-3xl mx-auto text-slate-600 mt-4 mb-12 text-base md:text-lg leading-relaxed font-medium">
+              At De KITCHEN MASTER, we provide comprehensive culinary and hospitality solutions designed to support businesses, organizations, institutions, and private clients across every stage of the hospitality journey.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              title="Chef Recruitment"
-              description="Source, vet, and deploy top-tier culinary talent matched to your kitchen culture and service standards."
-              icon={<UserPlus className="w-7 h-7" />}
-            />
-            <ServiceCard
-              title="Private Chef Services"
-              description="Bespoke in-home and on-site dining experiences crafted by vetted private chefs for any occasion."
-              icon={<ChefHat className="w-7 h-7" />}
-            />
-            <ServiceCard
-              title="Hospitality Consulting"
-              description="Strategic advisory on operations, branding, and service design to elevate hospitality businesses."
-              icon={<Briefcase className="w-7 h-7" />}
-            />
-            <ServiceCard
-              title="Restaurant Setup"
-              description="End-to-end kitchen and front-of-house design, layout, equipment sourcing, and launch support."
-              icon={<Utensils className="w-7 h-7" />}
-            />
-            <ServiceCard
-              title="Catering Services"
-              description="Flawless catering execution for weddings, corporate events, and private celebrations of any scale."
-              icon={<Coffee className="w-7 h-7" />}
-            />
-            <ServiceCard
-              title="Culinary Training"
-              description="Hands-on coaching and curriculum design that sharpen technique, leadership, and kitchen performance."
-              icon={<Award className="w-7 h-7" />}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+            {servicesSummary.map((service) => {
+              const Icon = service.Icon;
+              return (
+                <article
+                  key={service.title}
+                  className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 rounded-2xl p-6 flex flex-col"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                    <Icon className="w-6 h-6" strokeWidth={2.25} />
+                  </div>
+                  <h3 className="text-lg font-black text-gray-900 mb-3 tracking-tight">{service.title}</h3>
+                  <p className="text-sm text-gray-700 leading-relaxed font-medium mb-5">{service.content}</p>
+                  <div className="mt-auto pt-4 border-t border-slate-100">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Highlight</p>
+                    <ul className="space-y-1.5">
+                      {service.highlights.map((highlight) => (
+                        <li key={highlight} className="flex items-start gap-2">
+                          <Check className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" strokeWidth={3.5} />
+                          <span className="text-xs text-gray-800 font-medium">{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/services"
+              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-lg"
+            >
+              Explore All Services
+              <ArrowRight className="w-5 h-5 ml-2" strokeWidth={2.5} />
+            </Link>
           </div>
         </div>
       </section>
