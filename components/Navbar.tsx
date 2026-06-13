@@ -206,6 +206,12 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-start h-screen w-full overflow-y-auto bg-white pt-20 pb-10">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-6 right-6 z-[60] p-2 rounded-full hover:bg-slate-100 transition-colors"
+          >
+            <X className="block h-6 w-6 text-gray-500" />
+          </button>
           <div className="flex flex-col items-center gap-6 w-full min-h-max text-base font-medium text-slate-700 text-center">
             <Link href="/" onClick={() => setIsOpen(false)} className="block w-full text-center">
               Home
