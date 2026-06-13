@@ -41,9 +41,9 @@ export default function PrivateResidenceBenefitsPage() {
               <Image
                 src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"
                 alt="Professional private chef in kitchen"
-                fill
+                width={600}
+                height={800}
                 className="w-full h-full object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
           </div>
