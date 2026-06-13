@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, ArrowRight } from "lucide-react";
 
 const faqs = [
   {
@@ -87,34 +88,47 @@ export default function FAQPage() {
 
   return (
     <div className="pt-20 bg-white">
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="text-center mb-4">
-            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
+      <section className="relative overflow-hidden bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto px-6 py-16">
+          {/* Left Column: Sticky Header & Support Block */}
+          <div className="lg:col-span-4 lg:sticky lg:top-24">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
               FREQUENTLY ASKED QUESTIONS (FAQ)
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-left font-extrabold text-slate-950 text-3xl lg:text-4xl leading-tight mt-3 mb-6">
               Everything you need to know about De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd
             </h1>
+            <div className="bg-amber-50/60 p-5 rounded-2xl border border-amber-100">
+              <p className="text-slate-700 font-semibold mb-3">
+                Still have questions?
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline"
+              >
+                Contact Support Team <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-12 space-y-4">
+          {/* Right Column: Premium Accordion Board */}
+          <div className="lg:col-span-8 w-full space-y-4">
             {faqs.map((faq, i) => {
               const isOpen = openIndex === i;
               return (
                 <div
                   key={i}
-                  className="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden transition-all duration-300"
+                  className={`bg-white border border-slate-100 shadow-sm rounded-xl overflow-hidden transition-all duration-200 hover:shadow-md ${
+                    isOpen ? "border-l-4 border-l-amber-500" : ""
+                  }`}
                 >
                   <button
                     onClick={() => toggle(i)}
-                    className="w-full flex items-start justify-between gap-4 p-5 text-left"
+                    className="p-5 flex items-center justify-between cursor-pointer w-full text-left font-semibold text-slate-900 text-lg"
                   >
-                    <span className="text-base md:text-lg font-bold text-gray-900 leading-snug flex-1">
-                      {faq.q}
-                    </span>
+                    <span className="flex-1">{faq.q}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-primary flex-shrink-0 mt-1 transition-transform duration-300 ${
+                      className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -131,15 +145,16 @@ export default function FAQPage() {
                 </div>
               );
             })}
-          </div>
 
-          <div className="mt-16 p-8 md:p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center max-w-4xl mx-auto">
-            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
-              FINAL NOTE
-            </span>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
-              De KITCHEN MASTER is a full-scale culinary and hospitality solutions company committed to delivering professionalism, structure, and excellence across every service we provide.
-            </p>
+            {/* Final Note */}
+            <div className="mt-8 p-6 md:p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center">
+              <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-2">
+                FINAL NOTE
+              </span>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
+                De KITCHEN MASTER is a full-scale culinary and hospitality solutions company committed to delivering professionalism, structure, and excellence across every service we provide.
+              </p>
+            </div>
           </div>
         </div>
       </section>
