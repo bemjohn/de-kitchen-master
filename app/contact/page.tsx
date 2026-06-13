@@ -320,42 +320,42 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
             <SocialCard
               name="De KITCHEN MASTER"
-              platform="Instagram"
+              icon={InstagramIcon}
               href="https://www.instagram.com/dekitchenmaster?igsh=ZjM5ajBqa3ppZnU="
             />
             <SocialCard
               name="Chef Bishop (@dee_youngbishop)"
-              platform="Instagram"
+              icon={InstagramIcon}
               href="https://www.instagram.com/dee_youngbishop?igsh=dHZtM2NzZjJ2cG84"
             />
             <SocialCard
               name="De Kitchen Master Culinary & Hospitality Service Ltd"
-              platform="Facebook"
+              icon={FacebookIcon}
               href="https://www.facebook.com/share/18mimAGsTL/"
             />
             <SocialCard
               name="Chef Bishop"
-              platform="TikTok"
+              icon={TikTokIcon}
               href="https://www.tiktok.com/@young_bishop25?_r=1&_t=ZS-979MnjDdpSr"
             />
             <SocialCard
               name="Chef Bishop"
-              platform="LinkedIn"
+              icon={LinkedInIcon}
               href="https://www.linkedin.com/in/chef-bishop-b88953273"
             />
             <SocialCard
               name="Dee_Youngbishop"
-              platform="X (Twitter)"
+              icon={XIcon}
               href="https://x.com/Dee_youngbishop"
             />
             <SocialCard
               name="Dee_Youngbishop"
-              platform="Threads"
+              icon={ThreadsIcon}
               href="https://www.threads.com/@dee_youngbishop?invite=0"
             />
             <SocialCard
               name="Young_b1281"
-              platform="Snapchat"
+              icon={SnapchatIcon}
               href="https://www.snapchat.com/add/young_b1281?share_id=vwA2JhFEARc&locale=en-GB"
             />
           </div>
@@ -363,7 +363,7 @@ export default function ContactPage() {
           <div className="mt-6 flex justify-center">
             <SocialCard
               name="Chef Bishop"
-              platform="YouTube"
+              icon={YouTubeIcon}
               href="https://youtube.com/@chefbishop001?si=J4dlQO1ZLwttRk5M"
             />
           </div>
@@ -423,11 +423,11 @@ export default function ContactPage() {
 
 function SocialCard({
   name,
-  platform,
+  icon: Icon,
   href,
 }: {
   name: string;
-  platform: string;
+  icon: React.ComponentType<{ className?: string }>;
   href: string;
 }) {
   return (
@@ -437,12 +437,74 @@ function SocialCard({
       rel="noopener noreferrer"
       className="group relative p-5 rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.06]"
     >
-      <p className="text-[11px] uppercase tracking-[0.15em] text-primary font-bold mb-1">
-        {platform}
-      </p>
+      <Icon className="w-6 h-6 text-primary mb-3" />
       <p className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors leading-snug">
         {name}
       </p>
     </a>
+  );
+}
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+function ThreadsIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.08 0C8.81 0 6.12 1.88 4.65 4.22 3.29 6.38 2.5 9.2 2.5 12c0 2.8.79 5.62 2.15 7.78C6.12 22.12 8.81 24 12.08 24c3.27 0 5.96-1.88 7.43-4.22 1.36-2.16 2.15-4.98 2.15-7.78 0-2.8-.79-5.62-2.15-7.78C18.04 1.88 15.35 0 12.08 0zm0 4.5c2.79 0 4.54 1.83 5.38 3.66.56 1.22.85 2.69.94 4.08-1.08-.25-2.22-.38-3.34-.38-1.72 0-3.09.34-4.06 1.02a3.97 3.97 0 00-1.56 2.4c-.35 1.48-.11 2.92.67 4.07.79 1.16 2.05 1.9 3.55 2.08 1.53.18 2.9-.22 3.97-1.17.8-.71 1.3-1.63 1.49-2.68h-2.2c-.45 0-.82-.37-.82-.82s.37-.82.82-.82h3.79c.3 0 .55.2.62.48.2.85.16 1.8-.15 2.75-.45 1.36-1.33 2.58-2.58 3.44-1.47 1.01-3.25 1.49-5.1 1.33-1.86-.16-3.52-1.02-4.71-2.48-1.17-1.44-1.67-3.19-1.41-4.95.2-1.38.8-2.63 1.73-3.64.96-1.04 2.2-1.78 3.64-2.14 1.29-.32 2.66-.37 3.98-.14 0-.74-.1-1.5-.31-2.23-.68-2.32-2.3-3.9-4.87-3.9-2.91 0-4.91 2.21-5.85 4.54-.7 1.74-.93 3.85-.93 6.05 0 2.2.23 4.31.93 6.05.94 2.33 2.94 4.54 5.85 4.54 2.58 0 5.06-1.39 6.51-3.7 1.15-1.83 1.7-4.13 1.65-6.53v-.04c.03-2.92-.69-5.51-2.15-7.32-1.53-1.89-3.81-2.99-6.47-2.99z" />
+    </svg>
+  );
+}
+
+function SnapchatIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.986 15.82c-.184.38-.474.67-.844.84-.146.066-.31.115-.48.154-.06.014-.064.052-.062.116.006.244.003.49-.013.733-.008.112-.065.157-.176.162-.396.02-.783.148-1.139.352-.426.243-.78.571-1.155.87-.178.142-.373.262-.575.368-.684.36-1.43.382-2.17.173-.237-.067-.465-.159-.68-.27-.23-.12-.448-.26-.663-.402-.46-.303-.93-.59-1.463-.731-.27-.07-.545-.094-.823-.077-.114.007-.17-.042-.177-.158-.018-.26-.006-.524.004-.786.002-.036-.016-.07-.056-.082-.27-.08-.523-.195-.746-.35-.632-.44-.998-1.026-1.109-1.805a1.39 1.39 0 01.104-.7c.07-.166.22-.243.396-.22.447.06.89.02 1.32-.117.496-.158.91-.441 1.278-.8.16-.158.17-.25.018-.418-.424-.468-.727-1.003-.917-1.596-.106-.33-.173-.67-.2-1.015-.018-.232.044-.4.267-.496.075-.032.153-.06.23-.087.056-.02.075-.056.078-.116.023-.468.154-.901.386-1.295.515-.874 1.35-1.33 2.36-1.47.345-.048.7-.04 1.05-.003.527.056 1.016.24 1.449.57.26.2.49.43.696.686.232.287.375.617.45.98.05.244.093.49.104.74.004.087.039.13.128.14.303.036.586.144.837.31.42.28.72.672.9 1.162.134.366.185.75.207 1.135.004.072.026.127.108.148.223.058.432.15.625.27.371.232.632.56.792.97.058.15.1.305.114.467.043.485-.14.901-.538 1.232-.313.26-.685.418-1.09.506-.039.008-.048.03-.036.066.059.163.072.332.060.502-.03.409-.164.79-.384 1.134z" />
+    </svg>
+  );
+}
+
+function YouTubeIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
   );
 }
