@@ -88,31 +88,27 @@ export default function FAQPage() {
 
   return (
     <div className="pt-20 bg-white">
-      <section className="relative overflow-hidden bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto px-6 py-16">
-          {/* Left Column: Sticky Header & Support Block */}
-          <div className="lg:col-span-4 lg:sticky lg:top-24">
-            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
-              FREQUENTLY ASKED QUESTIONS (FAQ)
-            </span>
-            <h1 className="text-left font-extrabold text-slate-950 text-3xl lg:text-4xl leading-tight mt-3 mb-6">
-              Everything you need to know about De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd
-            </h1>
-            <div className="bg-amber-50/60 p-5 rounded-2xl border border-amber-100">
-              <p className="text-slate-700 font-semibold mb-3">
-                Still have questions?
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline"
-              >
-                Contact Support Team <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-          </div>
+      {/* Top Section: Full-Width Banner */}
+      <div className="w-full h-[250px] md:h-[300px] relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=2000&auto=format&fit=crop"
+          alt="Culinary kitchen background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="bg-black/20 absolute inset-0" />
+      </div>
 
-          {/* Right Column: Premium Accordion Board */}
-          <div className="lg:col-span-8 w-full space-y-4">
+      {/* Bottom Section: Stacked Content */}
+      <section className="relative bg-white">
+        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+          <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
+            FREQUENTLY ASKED QUESTIONS (FAQ)
+          </span>
+          <h1 className="font-extrabold text-slate-950 text-3xl md:text-4xl leading-tight mt-3 mb-10 mx-auto max-w-3xl">
+            Everything you need to know about De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd
+          </h1>
+
+          <div className="w-full space-y-4 text-left">
             {faqs.map((faq, i) => {
               const isOpen = openIndex === i;
               return (
@@ -145,16 +141,29 @@ export default function FAQPage() {
                 </div>
               );
             })}
+          </div>
 
-            {/* Final Note */}
-            <div className="mt-8 p-6 md:p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-              <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-2">
-                FINAL NOTE
-              </span>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
-                De KITCHEN MASTER is a full-scale culinary and hospitality solutions company committed to delivering professionalism, structure, and excellence across every service we provide.
-              </p>
-            </div>
+          {/* Support Card at Bottom */}
+          <div className="bg-amber-50/60 p-5 rounded-2xl border border-amber-100 mt-8 inline-block text-left">
+            <p className="text-slate-700 font-semibold mb-3">
+              Still have questions?
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline"
+            >
+              Contact Support Team <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          {/* Final Note */}
+          <div className="mt-10 p-6 md:p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center">
+            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-2">
+              FINAL NOTE
+            </span>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
+              De KITCHEN MASTER is a full-scale culinary and hospitality solutions company committed to delivering professionalism, structure, and excellence across every service we provide.
+            </p>
           </div>
         </div>
       </section>
