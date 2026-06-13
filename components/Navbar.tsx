@@ -207,42 +207,42 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 shadow-lg absolute w-full left-0">
           <div className="overflow-y-auto h-full py-8 px-6">
-            <div className="flex flex-col gap-4 text-base font-medium text-slate-700">
-              <Link href="/" onClick={() => setIsOpen(false)} className="block">
+            <div className="flex flex-col items-center justify-center w-full h-full gap-6 text-base font-medium text-slate-700 text-center">
+              <Link href="/" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 Home
               </Link>
-              <Link href="/about" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/about" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 About Us
               </Link>
-              <Link href="/services" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/services" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 Services
               </Link>
-              <Link href="/training-academy" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/training-academy" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 Training Academy
               </Link>
-              <Link href="/blog" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/blog" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 Blog
               </Link>
-              <Link href="/careers" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/careers" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 Careers
               </Link>
-              <Link href="/faq" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/faq" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 FAQ
               </Link>
-              <Link href="/contact" onClick={() => setIsOpen(false)} className="block">
+              <Link href="/contact" onClick={() => setIsOpen(false)} className="block w-full text-center">
                 Contact Us
               </Link>
 
-              <div>
+              <div className="flex flex-col items-center justify-center w-full">
                 <button
                   onClick={() => setMobileHireOpen(!mobileHireOpen)}
-                  className="flex items-center justify-between w-full text-left"
+                  className="flex items-center justify-center gap-2"
                 >
                   Hire a Chef
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
                 </button>
                 {mobileHireOpen && (
-                  <div className="mt-3 ml-4 flex flex-col gap-3 border-l-2 border-primary/20 pl-4">
+                  <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
                     <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
                       Hire a Chef
                     </Link>
@@ -256,16 +256,16 @@ export default function Navbar() {
                 )}
               </div>
 
-              <div>
+              <div className="flex flex-col items-center justify-center w-full">
                 <button
                   onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
-                  className="flex items-center justify-between w-full text-left"
+                  className="flex items-center justify-center gap-2"
                 >
                   Portfolio
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
                 </button>
                 {mobilePortfolioOpen && (
-                  <div className="mt-3 ml-4 flex flex-col gap-3 border-l-2 border-primary/20 pl-4">
+                  <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
                     <Link href="/portfolio" onClick={() => setIsOpen(false)}>
                       Featured Projects
                     </Link>
