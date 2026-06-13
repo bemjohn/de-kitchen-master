@@ -13,7 +13,7 @@ export default function PrivateResidenceBenefitsPage() {
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
               PRIVATE RESIDENCE CHEF BENEFITS
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-10">
+            <h1 className="font-extrabold text-slate-950 text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-10">
               What You Get When You Hire a Private Chef From De KITCHEN MASTER
             </h1>
             <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
