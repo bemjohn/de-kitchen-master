@@ -58,15 +58,12 @@ export default function ContactPage() {
           <h1 className="font-extrabold text-slate-950 text-3xl md:text-5xl leading-tight mt-3 mb-10 mx-auto max-w-4xl">
             Let&apos;s Discuss Your Next Culinary or Hospitality Project
           </h1>
-          <div className="w-full max-w-7xl mx-auto text-left space-y-6 text-slate-600 text-lg leading-relaxed">
+          <div className="w-full max-w-7xl mx-auto text-center space-y-6 text-slate-600 text-lg leading-relaxed">
             <p>
               Whether you&apos;re looking to hire a private chef, recruit hospitality professionals, set up a restaurant, develop a menu, organize a catering event, train your team, or explore a business partnership, our team is ready to assist.
             </p>
             <p>
-              At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we combine culinary expertise with hospitality excellence to deliver solutions that help individuals, businesses, and organizations succeed.
-            </p>
-            <p>
-              From private homes and corporate offices to restaurants, lounges, hotels, and large-scale food operations, we provide professional support backed by experience, structure, and results.
+              At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we combine culinary expertise with hospitality excellence to deliver solutions that help individuals, businesses, and organizations succeed. From private homes and corporate offices to restaurants, lounges, hotels, and large-scale food operations, we provide professional support backed by experience, structure, and results.
             </p>
           </div>
         </div>
