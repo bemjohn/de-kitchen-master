@@ -167,44 +167,32 @@ export default function HireAChefPage() {
       {/* PHASE 1 — HERO BANNER & INTRO                                    */}
       {/* ============================================================ */}
       <section className="bg-white">
-        <div className="w-full h-[250px] md:h-[300px] relative overflow-hidden">
+        <div className="w-full h-[250px] md:h-[300px] relative overflow-hidden bg-slate-900">
           <Image
             src="/images/chef-hero-banner.jpg"
             alt="Professional chef service"
             fill
-            className="object-cover"
+            className="object-cover w-full h-full absolute inset-0"
             sizes="100vw"
             priority
           />
           <div className="bg-black/20 absolute inset-0" />
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+        <div className="w-full px-6 py-12 text-center">
           <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
             HIRE A CHEF &amp; CULINARY PROFESSIONALS
           </span>
-          <h1 className="font-extrabold text-slate-950 text-3xl md:text-5xl leading-tight mt-3 mb-10 mx-auto max-w-3xl">
+          <h1 className="font-extrabold text-slate-950 text-3xl md:text-5xl leading-tight mt-3 mb-10 mx-auto">
             Professional Chef Recruitment &amp; Deployment Services
           </h1>
-          <div className="max-w-3xl mx-auto space-y-6 text-slate-600 text-lg leading-relaxed text-center">
+          <div className="w-full max-w-7xl mx-auto space-y-6 text-slate-600 text-lg leading-relaxed text-center">
             <p>
               Finding the right chef can transform your kitchen, improve service delivery, elevate food quality, and create exceptional dining experiences.
             </p>
             <p>
-              At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we specialize in recruiting, screening, and deploying highly skilled chefs and culinary professionals for private residences, restaurants, hotels, lounges, corporate organizations, catering companies, and hospitality businesses across Nigeria and beyond. Whether you need a live-in family chef, an Executive Chef for a hotel, a Sous Chef for your restaurant, or an entire kitchen team for a new hospitality project, we provide qualified professionals carefully matched.
+              At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we specialize in recruiting, screening, and deploying highly skilled chefs and culinary professionals for private residences, restaurants, hotels, lounges, corporate organizations, catering companies, and hospitality businesses across Nigeria and beyond. Whether you need a live-in family chef, an Executive Chef for a hotel, a Sous Chef for your restaurant, or an entire kitchen team for a new hospitality project, we provide qualified professionals carefully matched. With over 7 years of industry experience and hundreds of successful placements, we have built a reputation for connecting clients with dependable, experienced, and professionally vetted culinary talent.
             </p>
-          </div>
-
-          <div className="mt-16 lg:mt-20">
-            <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-10" />
-            <div className="text-center max-w-4xl mx-auto space-y-5">
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed font-medium">
-                With over 7 years of industry experience and hundreds of successful placements, we have built a reputation for connecting clients with dependable, experienced, and professionally vetted culinary talent.
-              </p>
-              <p className="text-2xl md:text-3xl font-black text-primary tracking-tight">
-                Hire With Confidence. Hire With Excellence.
-              </p>
-            </div>
           </div>
         </div>
       </section>
