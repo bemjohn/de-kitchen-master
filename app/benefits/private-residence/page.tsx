@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Private Residence Chef Benefits | De KITCHEN MASTER",
   description:
@@ -8,12 +10,12 @@ export default function PrivateResidenceBenefitsPage() {
   return (
     <div className="pt-20 bg-white">
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto px-6 py-12">
+          <div className="lg:col-span-7">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
               PRIVATE RESIDENCE CHEF BENEFITS
             </span>
-            <h1 className="font-extrabold text-slate-950 text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-10">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-950 leading-tight tracking-tight mb-8">
               What You Get When You Hire a Private Chef From De KITCHEN MASTER
             </h1>
             <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
@@ -32,6 +34,17 @@ export default function PrivateResidenceBenefitsPage() {
               <p>
                 This ensures flexibility, comfort, and complete satisfaction while maintaining high service standards throughout the engagement.
               </p>
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="w-full aspect-[3/4] relative rounded-3xl overflow-hidden border-4 border-amber-600 shadow-2xl">
+              <Image
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"
+                alt="Professional private chef in kitchen"
+                fill
+                className="w-full h-full object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
           </div>
         </div>
