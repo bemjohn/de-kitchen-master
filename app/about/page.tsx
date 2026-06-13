@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Award, ShieldCheck, Briefcase, Lightbulb, Users, ThumbsUp, Check, Compass, ChefHat, GraduationCap, UserPlus, Settings } from "lucide-react";
 import DistinctivesAccordion, { type Distinctive } from "@/components/About/DistinctivesAccordion";
 
@@ -430,6 +431,29 @@ export default function AboutPage() {
           <DistinctivesAccordion items={distinctives} />
         </div>
       </section>
+
+      {/* 8. PARTNERSHIP TRANSITION */}
+      <div className="w-full border-t border-slate-100 bg-slate-50/50 py-16 px-6 mt-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
+            COLLABORATION
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight mb-6">
+            Build Strategic Hospitality Partnerships with De KITCHEN MASTER
+          </h2>
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium max-w-3xl mx-auto">
+            We partner with individuals, businesses, and organizations across the hospitality ecosystem to deliver world-class culinary and staffing solutions. Whether you are a hospitality business, corporate organization, food service brand, or international client, we provide structured partnership opportunities designed for growth, efficiency, and excellence.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 max-w-md mx-auto">
+            <Link
+              href="/partner"
+              className="inline-block bg-primary hover:bg-primary/90 text-white font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+            >
+              EXPLORE PARTNERSHIP OPPORTUNITIES
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
