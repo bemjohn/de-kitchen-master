@@ -73,24 +73,20 @@ export default function TrainingAcademyPage() {
   return (
     <div className="pt-20 bg-white">
       {/* ───── SECTION 1: HERO & INTRO ───── */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="text-center mb-12">
+      <section className="relative overflow-hidden bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-6 py-16">
+          {/* Left Column: Text */}
+          <div>
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
               DKM PROFESSIONAL CHEF TRAINING
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
               A Professional Chef Mentorship Program by Chef Bishop
             </h1>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-            <div className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
                 At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we believe that great chefs are not born, they are developed through proper training, mentorship, discipline, practical experience, and continuous growth.
               </p>
-            </div>
-            <div className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium space-y-4">
               <p>
                 The DKM Professional Chef Training Program is a specialized chef development and mentorship initiative created by Chef Bishop to train, equip, and prepare aspiring and existing chefs for successful careers within the culinary and hospitality industry.
               </p>
@@ -100,7 +96,26 @@ export default function TrainingAcademyPage() {
             </div>
           </div>
 
-          <div className="mt-12 p-8 md:p-10 rounded-3xl bg-primary/5 border border-primary/20 text-center max-w-5xl mx-auto">
+          {/* Right Column: Media Frame */}
+          <div>
+            <div className="relative bg-amber-50 p-4 border border-amber-200/60 rounded-2xl shadow-md rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="relative overflow-hidden rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=1200&auto=format&fit=crop"
+                  alt="Chef Bishop in a professional kitchen"
+                  className="w-full h-auto object-cover sepia-[.3] brightness-90 contrast-125"
+                />
+                <div className="absolute inset-0 bg-amber-900/10 mix-blend-overlay pointer-events-none" />
+              </div>
+            </div>
+            <p className="mt-3 text-center text-sm text-slate-500 font-medium italic">
+              The Journey of Excellence — Chef Bishop
+            </p>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 pb-16">
+          <div className="p-8 md:p-10 rounded-3xl bg-primary/5 border border-primary/20 text-center max-w-5xl mx-auto">
             <p className="text-lg md:text-2xl font-bold text-gray-900 leading-relaxed">
               Our goal is simple: To develop competent, confident, professional, and industry ready chefs capable of meeting the standards expected by restaurants, hotels, private clients, corporate organizations, and hospitality businesses.
             </p>
