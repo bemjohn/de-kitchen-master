@@ -51,14 +51,14 @@ export default function ContactPage() {
       </div>
 
       <section className="relative bg-white">
-        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+        <div className="w-full max-w-7xl mx-auto px-6 py-12 text-center">
           <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
             CONTACT US
           </span>
-          <h1 className="font-extrabold text-slate-950 text-3xl md:text-5xl leading-tight mt-3 mb-10 mx-auto max-w-3xl">
+          <h1 className="font-extrabold text-slate-950 text-3xl md:text-5xl leading-tight mt-3 mb-10 mx-auto max-w-4xl">
             Let&apos;s Discuss Your Next Culinary or Hospitality Project
           </h1>
-          <div className="max-w-2xl mx-auto space-y-6 text-slate-600 text-lg leading-relaxed text-left">
+          <div className="w-full max-w-7xl mx-auto text-left space-y-6 text-slate-600 text-lg leading-relaxed">
             <p>
               Whether you&apos;re looking to hire a private chef, recruit hospitality professionals, set up a restaurant, develop a menu, organize a catering event, train your team, or explore a business partnership, our team is ready to assist.
             </p>
