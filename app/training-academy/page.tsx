@@ -83,11 +83,11 @@ export default function TrainingAcademyPage() {
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
               A Professional Chef Mentorship Program by Chef Bishop
             </h1>
-            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
-              <p>
+            <div className="text-slate-600 text-lg leading-relaxed">
+              <p className="mb-6">
                 At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we believe that great chefs are not born, they are developed through proper training, mentorship, discipline, practical experience, and continuous growth.
               </p>
-              <p>
+              <p className="mb-6">
                 The DKM Professional Chef Training Program is a specialized chef development and mentorship initiative created by Chef Bishop to train, equip, and prepare aspiring and existing chefs for successful careers within the culinary and hospitality industry.
               </p>
               <p>
