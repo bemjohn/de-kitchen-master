@@ -64,24 +64,20 @@ export default function CareersPage() {
   return (
     <div className="pt-20 bg-white">
       {/* ───── SECTION 1: HERO & CORE VALUE THESIS ───── */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="text-center mb-12">
+      <section className="relative overflow-hidden bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-7xl mx-auto px-6 py-12">
+          {/* Left Column: Text (5 cols) */}
+          <div className="lg:col-span-5">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
               CAREERS
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-left font-extrabold tracking-tight text-slate-950 leading-tight text-4xl lg:text-4xl xl:text-5xl mb-6">
               Build Your Culinary &amp; Hospitality Career With De KITCHEN MASTER
             </h1>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-            <div className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
                 At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we are passionate about creating opportunities for talented culinary and hospitality professionals.
               </p>
-            </div>
-            <div className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium space-y-4">
               <p>
                 We work closely with private residences, restaurants, hotels, lounges, catering companies, corporate organizations, and hospitality businesses that require skilled and dependable professionals.
               </p>
@@ -92,6 +88,23 @@ export default function CareersPage() {
                 Whether you are an experienced Executive Chef, a Private Chef, a Pastry Chef, a Cook, a Kitchen Assistant, or a hospitality professional looking for your next opportunity, we invite you to become part of our growing talent network.
               </p>
             </div>
+          </div>
+
+          {/* Right Column: Media Frame (7 cols) */}
+          <div className="lg:col-span-7 w-full h-full lg:-mt-6 lg:-mr-6">
+            <div className="w-full h-[450px] md:h-[500px] relative bg-amber-50 p-4 border border-amber-200/60 rounded-3xl shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="relative w-full h-full overflow-hidden rounded-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200&auto=format&fit=crop"
+                  alt="DKM hospitality team"
+                  className="absolute inset-0 w-full h-full object-cover sepia-[.3] brightness-90 contrast-125"
+                />
+                <div className="absolute inset-0 bg-amber-900/10 mix-blend-overlay pointer-events-none" />
+              </div>
+            </div>
+            <p className="mt-3 text-center text-sm text-slate-500 font-medium italic">
+              Join the Elite Hospitality Network — DKM
+            </p>
           </div>
         </div>
       </section>
