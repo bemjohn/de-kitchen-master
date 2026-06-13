@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   Check,
@@ -163,35 +164,35 @@ export default function HireAChefPage() {
   return (
     <div className="pt-20 bg-white">
       {/* ============================================================ */}
-      {/* PHASE 1 — HERO & INTRO                                          */}
+      {/* PHASE 1 — HERO BANNER & INTRO                                    */}
       {/* ============================================================ */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center mb-14">
-            <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
-              HIRE A CHEF &amp; CULINARY PROFESSIONALS
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight max-w-5xl mx-auto">
-              Professional Chef Recruitment &amp; Deployment Services
-            </h1>
-          </div>
+        <div className="w-full h-[250px] md:h-[300px] relative overflow-hidden">
+          <Image
+            src="/images/chef-hero-banner.jpg"
+            alt="Professional chef service"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="bg-black/20 absolute inset-0" />
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div>
-              <p className="text-lg md:text-xl text-gray-900 leading-relaxed font-medium">
-                Finding the right chef can transform your kitchen, improve service delivery, elevate food quality, and create exceptional dining experiences.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
-                At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we specialize in recruiting, screening, and deploying highly skilled chefs and culinary professionals for private residences, restaurants, hotels, lounges, corporate organizations, catering companies, and hospitality businesses across Nigeria and beyond.
-              </p>
-              <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
-                Whether you need a live-in family chef, an Executive Chef for a hotel, a Sous Chef for your restaurant, or an entire kitchen team for a new hospitality project, we provide qualified professionals carefully matched to your specific requirements.
-              </p>
-            </div>
+        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+          <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs">
+            HIRE A CHEF &amp; CULINARY PROFESSIONALS
+          </span>
+          <h1 className="font-extrabold text-slate-950 text-3xl md:text-5xl leading-tight mt-3 mb-10 mx-auto max-w-3xl">
+            Professional Chef Recruitment &amp; Deployment Services
+          </h1>
+          <div className="max-w-3xl mx-auto space-y-6 text-slate-600 text-lg leading-relaxed text-center">
+            <p>
+              Finding the right chef can transform your kitchen, improve service delivery, elevate food quality, and create exceptional dining experiences.
+            </p>
+            <p>
+              At De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd, we specialize in recruiting, screening, and deploying highly skilled chefs and culinary professionals for private residences, restaurants, hotels, lounges, corporate organizations, catering companies, and hospitality businesses across Nigeria and beyond. Whether you need a live-in family chef, an Executive Chef for a hotel, a Sous Chef for your restaurant, or an entire kitchen team for a new hospitality project, we provide qualified professionals carefully matched.
+            </p>
           </div>
 
           <div className="mt-16 lg:mt-20">
