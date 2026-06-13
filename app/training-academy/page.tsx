@@ -80,7 +80,7 @@ export default function TrainingAcademyPage() {
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
               DKM PROFESSIONAL CHEF TRAINING
             </span>
-            <h1 className="text-left font-bold tracking-tight text-slate-900 leading-tight md:text-5xl lg:text-4xl xl:text-5xl mb-6">
+            <h1 className="text-left font-black tracking-tight text-black leading-tight md:text-5xl lg:text-4xl xl:text-5xl mb-6">
               A Professional Chef Mentorship Program by Chef Bishop
             </h1>
             <div className="text-slate-600 text-lg leading-relaxed">
