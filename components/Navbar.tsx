@@ -205,49 +205,49 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-start h-screen w-full overflow-y-auto bg-white pt-20 pb-10">
+        <div className="fixed inset-0 z-50 flex flex-col items-start justify-start w-full h-screen overflow-y-auto bg-white pt-20 px-8 pb-10">
           <button
             onClick={() => setIsOpen(false)}
             className="absolute top-6 right-6 z-[60] p-2 rounded-full hover:bg-slate-100 transition-colors"
           >
             <X className="block h-6 w-6 text-gray-500" />
           </button>
-          <div className="flex flex-col items-center gap-6 w-full min-h-max text-base font-medium text-slate-700 text-center">
-            <Link href="/" onClick={() => setIsOpen(false)} className="block w-full text-center">
+          <div className="flex flex-col items-start gap-6 w-full min-h-max text-base font-medium text-slate-700 text-left">
+            <Link href="/" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Home
             </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/about" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               About Us
             </Link>
-            <Link href="/services" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/services" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Services
             </Link>
-            <Link href="/training-academy" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/training-academy" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Training Academy
             </Link>
-            <Link href="/blog" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Blog
             </Link>
-            <Link href="/careers" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/careers" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Careers
             </Link>
-            <Link href="/faq" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/faq" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               FAQ
             </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="block w-full text-center">
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Contact Us
             </Link>
 
-            <div className="flex flex-col items-center justify-center w-full">
+            <div className="flex flex-col items-start w-full">
               <button
                 onClick={() => setMobileHireOpen(!mobileHireOpen)}
-                className="flex items-center justify-center gap-2"
+                className="flex items-center justify-start gap-2"
               >
                 Hire a Chef
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
               </button>
               {mobileHireOpen && (
-                <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left">
                   <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
                     Hire a Chef
                   </Link>
@@ -261,16 +261,16 @@ export default function Navbar() {
               )}
             </div>
 
-            <div className="flex flex-col items-center justify-center w-full">
+            <div className="flex flex-col items-start w-full">
               <button
                 onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
-                className="flex items-center justify-center gap-2"
+                className="flex items-center justify-start gap-2"
               >
                 Portfolio
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
               </button>
               {mobilePortfolioOpen && (
-                <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left">
                   <Link href="/portfolio" onClick={() => setIsOpen(false)}>
                     Featured Projects
                   </Link>
