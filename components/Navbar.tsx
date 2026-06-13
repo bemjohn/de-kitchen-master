@@ -205,76 +205,74 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 shadow-lg absolute w-full left-0">
-          <div className="overflow-y-auto h-full py-8 px-6">
-            <div className="flex flex-col items-center justify-center w-full h-full gap-6 text-base font-medium text-slate-700 text-center">
-              <Link href="/" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                Home
-              </Link>
-              <Link href="/about" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                About Us
-              </Link>
-              <Link href="/services" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                Services
-              </Link>
-              <Link href="/training-academy" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                Training Academy
-              </Link>
-              <Link href="/blog" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                Blog
-              </Link>
-              <Link href="/careers" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                Careers
-              </Link>
-              <Link href="/faq" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                FAQ
-              </Link>
-              <Link href="/contact" onClick={() => setIsOpen(false)} className="block w-full text-center">
-                Contact Us
-              </Link>
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-start h-screen w-full overflow-y-auto bg-white pt-20 pb-10">
+          <div className="flex flex-col items-center gap-6 w-full min-h-max text-base font-medium text-slate-700 text-center">
+            <Link href="/" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              Home
+            </Link>
+            <Link href="/about" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              About Us
+            </Link>
+            <Link href="/services" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              Services
+            </Link>
+            <Link href="/training-academy" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              Training Academy
+            </Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              Blog
+            </Link>
+            <Link href="/careers" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              Careers
+            </Link>
+            <Link href="/faq" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              FAQ
+            </Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="block w-full text-center">
+              Contact Us
+            </Link>
 
-              <div className="flex flex-col items-center justify-center w-full">
-                <button
-                  onClick={() => setMobileHireOpen(!mobileHireOpen)}
-                  className="flex items-center justify-center gap-2"
-                >
-                  Hire a Chef
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
-                </button>
-                {mobileHireOpen && (
-                  <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
-                    <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
-                      Hire a Chef
-                    </Link>
-                    <Link href="/benefits/private-residence" onClick={() => setIsOpen(false)}>
-                      Private Chef Benefits
-                    </Link>
-                    <Link href="/benefits/full-setup" onClick={() => setIsOpen(false)}>
-                      Full Setup Benefits
-                    </Link>
-                  </div>
-                )}
-              </div>
+            <div className="flex flex-col items-center justify-center w-full">
+              <button
+                onClick={() => setMobileHireOpen(!mobileHireOpen)}
+                className="flex items-center justify-center gap-2"
+              >
+                Hire a Chef
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileHireOpen && (
+                <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
+                  <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
+                    Hire a Chef
+                  </Link>
+                  <Link href="/benefits/private-residence" onClick={() => setIsOpen(false)}>
+                    Private Chef Benefits
+                  </Link>
+                  <Link href="/benefits/full-setup" onClick={() => setIsOpen(false)}>
+                    Full Setup Benefits
+                  </Link>
+                </div>
+              )}
+            </div>
 
-              <div className="flex flex-col items-center justify-center w-full">
-                <button
-                  onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
-                  className="flex items-center justify-center gap-2"
-                >
-                  Portfolio
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
-                </button>
-                {mobilePortfolioOpen && (
-                  <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
-                    <Link href="/portfolio" onClick={() => setIsOpen(false)}>
-                      Featured Projects
-                    </Link>
-                    <Link href="/chefs" onClick={() => setIsOpen(false)}>
-                      Our Chefs
-                    </Link>
-                  </div>
-                )}
-              </div>
+            <div className="flex flex-col items-center justify-center w-full">
+              <button
+                onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
+                className="flex items-center justify-center gap-2"
+              >
+                Portfolio
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobilePortfolioOpen && (
+                <div className="mt-3 flex flex-col items-center justify-center w-full gap-3 text-center">
+                  <Link href="/portfolio" onClick={() => setIsOpen(false)}>
+                    Featured Projects
+                  </Link>
+                  <Link href="/chefs" onClick={() => setIsOpen(false)}>
+                    Our Chefs
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
