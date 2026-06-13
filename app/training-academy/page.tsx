@@ -74,13 +74,13 @@ export default function TrainingAcademyPage() {
     <div className="pt-20 bg-white">
       {/* ───── SECTION 1: HERO & INTRO ───── */}
       <section className="relative overflow-hidden bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-6 py-16">
-          {/* Left Column: Text */}
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-7xl mx-auto px-6 py-12">
+          {/* Left Column: Text (5 cols) */}
+          <div className="lg:col-span-5">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
               DKM PROFESSIONAL CHEF TRAINING
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+            <h1 className="text-left font-bold tracking-tight text-slate-900 leading-tight md:text-5xl lg:text-4xl xl:text-5xl mb-6">
               A Professional Chef Mentorship Program by Chef Bishop
             </h1>
             <div className="text-slate-600 text-lg leading-relaxed">
@@ -96,14 +96,14 @@ export default function TrainingAcademyPage() {
             </div>
           </div>
 
-          {/* Right Column: Media Frame */}
-          <div>
-            <div className="relative bg-amber-50 p-4 border border-amber-200/60 rounded-2xl shadow-md rotate-1 hover:rotate-0 transition-transform duration-300">
-              <div className="relative overflow-hidden rounded-xl">
+          {/* Right Column: Media Frame (7 cols) */}
+          <div className="lg:col-span-7 w-full h-full lg:-mt-12 lg:-mr-6">
+            <div className="w-full h-[450px] md:h-[500px] relative bg-amber-50 p-4 border border-amber-200/60 rounded-3xl shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="relative w-full h-full overflow-hidden rounded-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=1200&auto=format&fit=crop"
                   alt="Chef Bishop in a professional kitchen"
-                  className="w-full h-auto object-cover sepia-[.3] brightness-90 contrast-125"
+                  className="absolute inset-0 w-full h-full object-cover sepia-[.3] brightness-90 contrast-125"
                 />
                 <div className="absolute inset-0 bg-amber-900/10 mix-blend-overlay pointer-events-none" />
               </div>
