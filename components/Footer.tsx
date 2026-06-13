@@ -45,6 +45,7 @@ export default function Footer() {
                 <li><Link href="/training-academy" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium flex items-center">Training Academy</Link></li>
                 <li><Link href="/blog" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium flex items-center">Blog</Link></li>
                 <li><Link href="/careers" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium flex items-center">Careers</Link></li>
+                <li><Link href="/faq" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium flex items-center">FAQ</Link></li>
                 <li><Link href="/contact" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium flex items-center">Contact Us</Link></li>
               </ul>
             </div>
