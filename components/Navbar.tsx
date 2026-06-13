@@ -10,6 +10,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [hireOpen, setHireOpen] = useState(false);
+  const [mobileHireOpen, setMobileHireOpen] = useState(false);
+  const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
   const portfolioRef = useRef<HTMLDivElement>(null);
   const hireRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -204,73 +206,75 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 shadow-lg absolute w-full left-0">
-          <div className="px-4 pt-2 pb-6 space-y-2 sm:px-3 max-h-[calc(100vh-5rem)] overflow-y-auto">
-            {/* Hire a Chef sub-links */}
-            <div className="border-t border-gray-100 pt-2 mt-2">
-              <p className="px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-                Hire a Chef
-              </p>
-              <Link
-                href="/hire-a-chef"
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-base font-medium ${
-                  pathname === "/hire-a-chef"
-                    ? "text-primary bg-primary/10"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`}
-              >
-                Hire a Chef
+          <div className="overflow-y-auto h-full py-8 px-6">
+            <div className="flex flex-col gap-4 text-base font-medium text-slate-700">
+              <Link href="/" onClick={() => setIsOpen(false)} className="block">
+                Home
               </Link>
-              <Link
-                href="/benefits/private-residence"
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-base font-medium ${
-                  pathname === "/benefits/private-residence"
-                    ? "text-primary bg-primary/10"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`}
-              >
-                Private Chef Benefits
+              <Link href="/about" onClick={() => setIsOpen(false)} className="block">
+                About Us
               </Link>
-              <Link
-                href="/benefits/full-setup"
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-base font-medium ${
-                  pathname === "/benefits/full-setup"
-                    ? "text-primary bg-primary/10"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`}
-              >
-                Full Setup Benefits
+              <Link href="/services" onClick={() => setIsOpen(false)} className="block">
+                Services
               </Link>
-            </div>
+              <Link href="/training-academy" onClick={() => setIsOpen(false)} className="block">
+                Training Academy
+              </Link>
+              <Link href="/blog" onClick={() => setIsOpen(false)} className="block">
+                Blog
+              </Link>
+              <Link href="/careers" onClick={() => setIsOpen(false)} className="block">
+                Careers
+              </Link>
+              <Link href="/faq" onClick={() => setIsOpen(false)} className="block">
+                FAQ
+              </Link>
+              <Link href="/contact" onClick={() => setIsOpen(false)} className="block">
+                Contact Us
+              </Link>
 
-            <div className="border-t border-gray-100 pt-2 mt-2">
-              <p className="px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-                Portfolio
-              </p>
-              <Link
-                href="/portfolio"
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-base font-medium ${
-                  pathname === "/portfolio"
-                    ? "text-primary bg-primary/10"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`}
-              >
-                Featured Projects
-              </Link>
-              <Link
-                href="/chefs"
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-base font-medium ${
-                  pathname === "/chefs"
-                    ? "text-primary bg-primary/10"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`}
-              >
-                Our Chefs
-              </Link>
+              <div>
+                <button
+                  onClick={() => setMobileHireOpen(!mobileHireOpen)}
+                  className="flex items-center justify-between w-full text-left"
+                >
+                  Hire a Chef
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobileHireOpen && (
+                  <div className="mt-3 ml-4 flex flex-col gap-3 border-l-2 border-primary/20 pl-4">
+                    <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
+                      Hire a Chef
+                    </Link>
+                    <Link href="/benefits/private-residence" onClick={() => setIsOpen(false)}>
+                      Private Chef Benefits
+                    </Link>
+                    <Link href="/benefits/full-setup" onClick={() => setIsOpen(false)}>
+                      Full Setup Benefits
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <button
+                  onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
+                  className="flex items-center justify-between w-full text-left"
+                >
+                  Portfolio
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobilePortfolioOpen && (
+                  <div className="mt-3 ml-4 flex flex-col gap-3 border-l-2 border-primary/20 pl-4">
+                    <Link href="/portfolio" onClick={() => setIsOpen(false)}>
+                      Featured Projects
+                    </Link>
+                    <Link href="/chefs" onClick={() => setIsOpen(false)}>
+                      Our Chefs
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
