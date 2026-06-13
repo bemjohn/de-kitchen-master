@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: "Training Academy", href: "/training-academy" },
     { name: "Blog", href: "/blog" },
     { name: "Careers", href: "/careers" },
+    { name: "Partner With Us", href: "/partner" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact Us", href: "/contact" },
   ];
