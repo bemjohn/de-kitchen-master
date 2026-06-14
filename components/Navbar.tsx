@@ -83,63 +83,68 @@ export default function Navbar() {
               ))}
 
               {/* Hire a Chef Dropdown */}
-              <div ref={hireRef} className="relative">
-                <button
-                  onClick={() => setHireOpen(!hireOpen)}
-                  className={`inline-flex items-center gap-1 px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
-                    isHireActive
-                      ? "text-primary bg-primary/5"
-                      : "text-gray-600 hover:text-primary hover:bg-gray-50"
+              <div ref={hireRef} className="relative group">
+                <div className="flex items-center">
+                  <Link
+                    href="/hire-a-chef"
+                    className={`px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      isHireActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Hire a Chef
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setHireOpen(!hireOpen);
+                    }}
+                    className={`p-2 rounded-md text-sm font-semibold transition-colors ${
+                      isHireActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                    aria-label="Toggle Hire a Chef sub-menu"
+                  >
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        hireOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div
+                  className={`absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1 transition-all duration-200 ${
+                    hireOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                   }`}
                 >
-                  Hire a Chef
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      hireOpen ? "rotate-180" : ""
+                  <Link
+                    href="/benefits/private-residence"
+                    onClick={() => setHireOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/benefits/private-residence"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
                     }`}
-                  />
-                </button>
-
-                {hireOpen && (
-                  <div
-                    className="absolute right-0 mt-2 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1"
-                    onMouseLeave={() => setHireOpen(false)}
                   >
-                    <Link
-                      href="/hire-a-chef"
-                      onClick={() => setHireOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                        pathname === "/hire-a-chef"
-                          ? "text-primary bg-primary/5"
-                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                      }`}
-                    >
-                      Hire a Chef
-                    </Link>
-                    <Link
-                      href="/benefits/private-residence"
-                      onClick={() => setHireOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                        pathname === "/benefits/private-residence"
-                          ? "text-primary bg-primary/5"
-                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                      }`}
-                    >
-                      Private Chef Benefits
-                    </Link>
-                    <Link
-                      href="/benefits/full-setup"
-                      onClick={() => setHireOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                        pathname === "/benefits/full-setup"
-                          ? "text-primary bg-primary/5"
-                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                      }`}
-                    >
-                      Full Setup Benefits
-                    </Link>
-                  </div>
-                )}
+                    Private Chef Benefits
+                  </Link>
+                  <Link
+                    href="/benefits/full-setup"
+                    onClick={() => setHireOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/benefits/full-setup"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Full Setup Benefits
+                  </Link>
+                </div>
               </div>
 
               {/* Portfolio Dropdown */}
@@ -239,18 +244,19 @@ export default function Navbar() {
             </Link>
 
             <div className="flex flex-col items-start w-full">
-              <button
-                onClick={() => setMobileHireOpen(!mobileHireOpen)}
-                className="flex items-center justify-start gap-2"
-              >
-                Hire a Chef
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
-              </button>
+              <div className="flex items-center justify-start gap-2">
+                <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
+                  Hire a Chef
+                </Link>
+                <button
+                  onClick={() => setMobileHireOpen(!mobileHireOpen)}
+                  aria-label="Toggle Hire a Chef sub-menu"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHireOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
               {mobileHireOpen && (
-                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left">
-                  <Link href="/hire-a-chef" onClick={() => setIsOpen(false)}>
-                    Hire a Chef
-                  </Link>
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
                   <Link href="/benefits/private-residence" onClick={() => setIsOpen(false)}>
                     Private Chef Benefits
                   </Link>
