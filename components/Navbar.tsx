@@ -148,52 +148,68 @@ export default function Navbar() {
               </div>
 
               {/* Portfolio Dropdown */}
-              <div ref={portfolioRef} className="relative">
-                <button
-                  onClick={() => setPortfolioOpen(!portfolioOpen)}
-                  className={`inline-flex items-center gap-1 px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
-                    isPortfolioActive
-                      ? "text-primary bg-primary/5"
-                      : "text-gray-600 hover:text-primary hover:bg-gray-50"
+              <div ref={portfolioRef} className="relative group">
+                <div className="flex items-center">
+                  <Link
+                    href="/portfolio"
+                    className={`px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      isPortfolioActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Portfolio
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setPortfolioOpen(!portfolioOpen);
+                    }}
+                    className={`p-2 rounded-md text-sm font-semibold transition-colors ${
+                      isPortfolioActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                    aria-label="Toggle Portfolio sub-menu"
+                  >
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        portfolioOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div
+                  className={`absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1 transition-all duration-200 ${
+                    portfolioOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                   }`}
                 >
-                  Portfolio
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      portfolioOpen ? "rotate-180" : ""
+                  <Link
+                    href="/portfolio"
+                    onClick={() => setPortfolioOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/portfolio"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
                     }`}
-                  />
-                </button>
-
-                {portfolioOpen && (
-                  <div
-                    className="absolute right-0 mt-2 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1"
-                    onMouseLeave={() => setPortfolioOpen(false)}
                   >
-                    <Link
-                      href="/portfolio"
-                      onClick={() => setPortfolioOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                        pathname === "/portfolio"
-                          ? "text-primary bg-primary/5"
-                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                      }`}
-                    >
-                      Featured Projects
-                    </Link>
-                    <Link
-                      href="/chefs"
-                      onClick={() => setPortfolioOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                        pathname === "/chefs"
-                          ? "text-primary bg-primary/5"
-                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                      }`}
-                    >
-                      Our Chefs
-                    </Link>
-                  </div>
-                )}
+                    Featured Projects
+                  </Link>
+                  <Link
+                    href="/chefs"
+                    onClick={() => setPortfolioOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/chefs"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Our Chefs
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -268,15 +284,19 @@ export default function Navbar() {
             </div>
 
             <div className="flex flex-col items-start w-full">
-              <button
-                onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
-                className="flex items-center justify-start gap-2"
-              >
-                Portfolio
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
-              </button>
+              <div className="flex items-center justify-start gap-2">
+                <Link href="/portfolio" onClick={() => setIsOpen(false)}>
+                  Portfolio
+                </Link>
+                <button
+                  onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
+                  aria-label="Toggle Portfolio sub-menu"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePortfolioOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
               {mobilePortfolioOpen && (
-                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left">
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
                   <Link href="/portfolio" onClick={() => setIsOpen(false)}>
                     Featured Projects
                   </Link>
