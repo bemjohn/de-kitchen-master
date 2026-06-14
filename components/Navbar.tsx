@@ -27,7 +27,7 @@ export default function Navbar() {
     { name: "Contact Us", href: "/contact" },
   ];
 
-  const isPortfolioActive = pathname === "/portfolio" || pathname === "/chefs";
+  const isPortfolioActive = pathname === "/portfolio" || pathname === "/chefs" || pathname === "/partner";
   const isHireActive =
     pathname === "/hire-a-chef" ||
     pathname === "/benefits/private-residence" ||
@@ -188,15 +188,15 @@ export default function Navbar() {
                   }`}
                 >
                   <Link
-                    href="/portfolio"
+                    href="/partner"
                     onClick={() => setPortfolioOpen(false)}
                     className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                      pathname === "/portfolio"
+                      pathname === "/partner"
                         ? "text-primary bg-primary/5"
                         : "text-gray-600 hover:text-primary hover:bg-gray-50"
                     }`}
                   >
-                    Featured Projects
+                    Partner With Us
                   </Link>
                   <Link
                     href="/chefs"
@@ -297,8 +297,8 @@ export default function Navbar() {
               </div>
               {mobilePortfolioOpen && (
                 <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
-                  <Link href="/portfolio" onClick={() => setIsOpen(false)}>
-                    Featured Projects
+                  <Link href="/partner" onClick={() => setIsOpen(false)}>
+                    Partner With Us
                   </Link>
                   <Link href="/chefs" onClick={() => setIsOpen(false)}>
                     Our Chefs
