@@ -20,10 +20,9 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Training Academy", href: "/training-academy" },
-    { name: "Blog", href: "/blog" },
     { name: "Careers", href: "/careers" },
     { name: "FAQ", href: "/faq" },
+    { name: "Training Academy", href: "/training-academy" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -68,7 +67,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:block">
             <div className="flex items-center space-x-4">
-              {links.map((link) => (
+              {links.slice(0, 3).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -211,6 +210,19 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
+              {links.slice(3).map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
+                    pathname === link.href
+                      ? "text-primary bg-primary/5"
+                      : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -242,21 +254,6 @@ export default function Navbar() {
             </Link>
             <Link href="/services" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Services
-            </Link>
-            <Link href="/training-academy" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Training Academy
-            </Link>
-            <Link href="/blog" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Blog
-            </Link>
-            <Link href="/careers" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Careers
-            </Link>
-            <Link href="/faq" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              FAQ
-            </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Contact Us
             </Link>
 
             <div className="flex flex-col items-start w-full">
@@ -306,6 +303,19 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link href="/careers" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
+              Careers
+            </Link>
+            <Link href="/faq" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
+              FAQ
+            </Link>
+            <Link href="/training-academy" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
+              Training Academy
+            </Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
+              Contact Us
+            </Link>
           </div>
         </div>
       )}
