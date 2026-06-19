@@ -10,23 +10,26 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [hireOpen, setHireOpen] = useState(false);
+  const [careersOpen, setCareersOpen] = useState(false);
   const [mobileHireOpen, setMobileHireOpen] = useState(false);
   const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
+  const [mobileCareersOpen, setMobileCareersOpen] = useState(false);
   const portfolioRef = useRef<HTMLDivElement>(null);
   const hireRef = useRef<HTMLDivElement>(null);
+  const careersRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Careers", href: "/careers" },
     { name: "FAQ", href: "/faq" },
     { name: "DKM Chef Training", href: "/training-academy" },
     { name: "Contact Us", href: "/contact" },
   ];
 
   const isPortfolioActive = pathname === "/portfolio" || pathname === "/chefs" || pathname === "/partner";
+  const isCareersActive = pathname === "/careers" || pathname === "/events-community" || pathname === "/uniform-collection";
   const isHireActive =
     pathname === "/hire-a-chef" ||
     pathname === "/benefits/private-residence" ||
@@ -46,6 +49,16 @@ export default function Navbar() {
     function handleClickOutside(event: MouseEvent) {
       if (hireRef.current && !hireRef.current.contains(event.target as Node)) {
         setHireOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (careersRef.current && !careersRef.current.contains(event.target as Node)) {
+        setCareersOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -210,6 +223,71 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
+
+              {/* Careers Dropdown */}
+              <div ref={careersRef} className="relative group">
+                <div className="flex items-center">
+                  <Link
+                    href="/careers"
+                    className={`px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      isCareersActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Careers
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCareersOpen(!careersOpen);
+                    }}
+                    className={`p-2 rounded-md text-sm font-semibold transition-colors ${
+                      isCareersActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                    aria-label="Toggle Careers sub-menu"
+                  >
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        careersOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div
+                  className={`absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1 transition-all duration-200 ${
+                    careersOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                  }`}
+                >
+                  <Link
+                    href="/events-community"
+                    onClick={() => setCareersOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/events-community"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    DKM EVENTS & COMMUNITY
+                  </Link>
+                  <Link
+                    href="/uniform-collection"
+                    onClick={() => setCareersOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/uniform-collection"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    DKM CHEF UNIFORM COLLECTION
+                  </Link>
+                </div>
+              </div>
               {links.slice(3).map((link) => (
                 <Link
                   key={link.name}
@@ -304,9 +382,29 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/careers" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Careers
-            </Link>
+            <div className="flex flex-col items-start w-full">
+              <div className="flex items-center justify-start gap-2">
+                <Link href="/careers" onClick={() => setIsOpen(false)}>
+                  Careers
+                </Link>
+                <button
+                  onClick={() => setMobileCareersOpen(!mobileCareersOpen)}
+                  aria-label="Toggle Careers sub-menu"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileCareersOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {mobileCareersOpen && (
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
+                  <Link href="/events-community" onClick={() => setIsOpen(false)}>
+                    DKM EVENTS & COMMUNITY
+                  </Link>
+                  <Link href="/uniform-collection" onClick={() => setIsOpen(false)}>
+                    DKM CHEF UNIFORM COLLECTION
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link href="/faq" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               FAQ
             </Link>
