@@ -273,7 +273,7 @@ export default function Navbar() {
                         : "text-gray-600 hover:text-primary hover:bg-gray-50"
                     }`}
                   >
-                    DKM EVENTS & COMMUNITY
+                    DKM Events & Community
                   </Link>
                   <Link
                     href="/uniform-collection"
@@ -284,7 +284,7 @@ export default function Navbar() {
                         : "text-gray-600 hover:text-primary hover:bg-gray-50"
                     }`}
                   >
-                    DKM CHEF UNIFORM COLLECTION
+                    DKM Chef Uniform Collection
                   </Link>
                 </div>
               </div>
@@ -397,10 +397,10 @@ export default function Navbar() {
               {mobileCareersOpen && (
                 <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
                   <Link href="/events-community" onClick={() => setIsOpen(false)}>
-                    DKM EVENTS & COMMUNITY
+                    DKM Events & Community
                   </Link>
                   <Link href="/uniform-collection" onClick={() => setIsOpen(false)}>
-                    DKM CHEF UNIFORM COLLECTION
+                    DKM Chef Uniform Collection
                   </Link>
                 </div>
               )}
