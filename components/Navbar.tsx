@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Careers", href: "/careers" },
     { name: "FAQ", href: "/faq" },
-    { name: "Training Academy", href: "/training-academy" },
+    { name: "DKM Chef Training", href: "/training-academy" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -311,7 +311,7 @@ export default function Navbar() {
               FAQ
             </Link>
             <Link href="/training-academy" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Training Academy
+              DKM Chef Training
             </Link>
             <Link href="/contact" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Contact Us
