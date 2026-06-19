@@ -134,15 +134,15 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 1: HERO                                                */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-zinc-950">
+      <section className="relative overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=2000&auto=format&fit=crop"
             alt="Professional chef uniform"
             className="w-full h-full object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/85 to-zinc-950/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/85 to-gray-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900/30" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-44">
           <div className="max-w-3xl">
@@ -152,7 +152,7 @@ export default function UniformCollectionPage() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight mb-6">
               DKM Chef Uniform Collection
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-zinc-400 leading-relaxed font-medium max-w-2xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium max-w-2xl">
               Designed by Chefs. Built for Professionals.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -165,7 +165,7 @@ export default function UniformCollectionPage() {
               </Link>
               <Link
                 href="#collections"
-                className="inline-flex items-center px-6 py-3 border-2 border-zinc-600 hover:border-primary text-zinc-300 hover:text-white font-bold rounded-xl transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center px-6 py-3 border-2 border-gray-600 hover:border-primary text-gray-300 hover:text-white font-bold rounded-xl transition-all duration-300 hover:-translate-y-1"
               >
                 View Collections
               </Link>
@@ -178,17 +178,17 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 2: BRAND INTRODUCTION (SPLIT LAYOUT)                   */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-t border-zinc-800">
+      <section className="bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
                 About the Collection
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight mb-6">
                 Uniforms Built on Experience
               </h2>
-              <div className="space-y-5 text-base md:text-lg text-zinc-400 leading-relaxed font-medium">
+              <div className="space-y-5 text-base md:text-lg text-gray-600 leading-relaxed font-medium">
                 <p>
                   At De KITCHEN MASTER, we understand that the right uniform is more than just clothing — it is a statement of professionalism, discipline, and pride. With years of practical kitchen experience, we have developed a collection of chef uniforms and hospitality apparel that prioritizes comfort, functionality, and a polished professional appearance.
                 </p>
@@ -200,7 +200,7 @@ export default function UniformCollectionPage() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-3">
-                  <div className="relative overflow-hidden rounded-2xl aspect-square bg-zinc-800 group">
+                  <div className="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=crop"
                       alt="Chef in professional uniform"
@@ -208,7 +208,7 @@ export default function UniformCollectionPage() {
                     />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
                   </div>
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-800 group">
+                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=600&auto=format&fit=crop"
                       alt="Kitchen team in uniform"
@@ -218,7 +218,7 @@ export default function UniformCollectionPage() {
                   </div>
                 </div>
                 <div className="space-y-3 pt-6">
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-800 group">
+                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600&auto=format&fit=crop"
                       alt="Chef apron detail"
@@ -226,7 +226,7 @@ export default function UniformCollectionPage() {
                     />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
                   </div>
-                  <div className="relative overflow-hidden rounded-2xl aspect-square bg-zinc-800 group">
+                  <div className="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1604329430698-7e6e1eb0f45a?q=80&w=600&auto=format&fit=crop"
                       alt="Chef cap"
@@ -244,13 +244,13 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 3: OUR COLLECTIONS (DYNAMIC GRID)                      */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section id="collections" className="bg-zinc-900 border-t border-zinc-800">
+      <section id="collections" className="bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
               Our Catalog
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Our Collections
             </h2>
           </div>
@@ -258,21 +258,21 @@ export default function UniformCollectionPage() {
             {collectionItems.map((item) => (
               <div
                 key={item.title}
-                className="group bg-zinc-800/50 border border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
               >
-                <div className="relative overflow-hidden aspect-[4/3] bg-zinc-700">
+                <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-black text-white mb-2 tracking-tight">
+                  <h3 className="text-lg font-black text-gray-900 mb-2 tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-zinc-400 leading-relaxed font-medium">
+                  <p className="text-sm text-gray-600 leading-relaxed font-medium">
                     {item.description}
                   </p>
                 </div>
@@ -285,17 +285,17 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 4: CUSTOM BRANDING & PERSONALIZATION                   */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-zinc-950 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-zinc-950 to-zinc-950" />
+      <section className="relative bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-gray-50 to-gray-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
               Make It Yours
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Custom Branding &amp; Personalization
             </h2>
-            <p className="mt-4 text-lg text-zinc-400 font-medium max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-gray-600 font-medium max-w-2xl mx-auto">
               Every uniform can be customized to reflect your brand identity and professional standards.
             </p>
           </div>
@@ -303,17 +303,17 @@ export default function UniformCollectionPage() {
             {customizationFeatures.map((feature) => (
               <div
                 key={feature}
-                className="group relative px-6 py-3 bg-zinc-800/60 border border-zinc-700 rounded-xl text-zinc-300 font-bold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-zinc-800 hover:text-primary"
+                className="group relative px-6 py-3 bg-gray-100 border border-gray-200 rounded-xl text-gray-600 font-bold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-gray-200 hover:text-primary"
               >
                 <span className="relative z-10">{feature}</span>
               </div>
             ))}
           </div>
           <div className="mt-12 max-w-4xl mx-auto">
-            <div className="relative h-2 bg-zinc-800 rounded-full overflow-hidden">
+            <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary to-primary/20 rounded-full animate-pulse" style={{ width: "65%" }} />
             </div>
-            <div className="flex justify-between mt-2 text-xs text-zinc-500 font-medium px-1">
+            <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium px-1">
               <span>Basic</span>
               <span>Standard</span>
               <span>Premium</span>
@@ -326,13 +326,13 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 5: WHY CHOOSE DKM (VALUE MATRIX)                       */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="bg-zinc-900 border-t border-zinc-800">
+      <section className="bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
               Why DKM
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Why Choose DKM
             </h2>
           </div>
@@ -342,13 +342,13 @@ export default function UniformCollectionPage() {
               return (
                 <div
                   key={item.title}
-                  className="group bg-zinc-800/30 border border-zinc-700/50 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-zinc-800/60"
+                  className="group bg-white border border-gray-100 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-gray-50"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">
                     <Icon className="w-6 h-6" strokeWidth={2} />
                   </div>
-                  <h3 className="text-base font-black text-white mb-2">{item.title}</h3>
-                  <p className="text-xs text-zinc-400 leading-relaxed font-medium">{item.description}</p>
+                  <h3 className="text-base font-black text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed font-medium">{item.description}</p>
                 </div>
               );
             })}
@@ -359,36 +359,36 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 6: SPECIAL BENEFITS (TWO-COLUMN DUAL CARDS)            */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-t border-zinc-800">
+      <section className="bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
               Exclusive to DKM Clients
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Special Benefits
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div className="group relative bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+            <div className="group relative bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5">
                 <Star className="w-7 h-7" strokeWidth={2} />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4">
+              <h3 className="text-2xl font-black text-gray-900 mb-4">
                 Private Chef Deployment Package
               </h3>
-              <p className="text-zinc-400 leading-relaxed font-medium text-base">
+              <p className="text-gray-600 leading-relaxed font-medium text-base">
                 Private residential clients receive professionally presented chefs dressed in DKM-standard uniforms. Every chef deployed through our private chef service arrives in premium DKM attire, ensuring a polished and professional presentation from day one.
               </p>
             </div>
-            <div className="group relative bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+            <div className="group relative bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5">
                 <Award className="w-7 h-7" strokeWidth={2} />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4">
+              <h3 className="text-2xl font-black text-gray-900 mb-4">
                 Full Kitchen Setup Consultancy Package
               </h3>
-              <p className="text-zinc-400 leading-relaxed font-medium text-base">
+              <p className="text-gray-600 leading-relaxed font-medium text-base">
                 Businesses engaging De KITCHEN MASTER for complete kitchen setup and development projects receive a complimentary kitchen team uniform package for operational readiness from day one. From concept to launch, your team arrives in coordinated DKM uniforms.
               </p>
             </div>
@@ -399,13 +399,13 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 7: WHO WE SERVE (SCROLLING TAG CLOUD)                  */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="bg-zinc-900 border-t border-zinc-800 overflow-hidden">
+      <section className="bg-gray-50 border-t border-gray-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
               Our Clientele
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Who We Serve
             </h2>
           </div>
@@ -413,7 +413,7 @@ export default function UniformCollectionPage() {
             {whoWeServeItems.map((item) => (
               <div
                 key={item}
-                className="px-5 py-2.5 bg-zinc-800/50 border border-zinc-700 rounded-full text-zinc-300 font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-zinc-800 hover:text-primary hover:shadow-lg hover:shadow-primary/10"
+                className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-gray-600 font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-gray-100 hover:text-primary hover:shadow-lg hover:shadow-primary/10"
               >
                 {item}
               </div>
@@ -425,13 +425,13 @@ export default function UniformCollectionPage() {
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 8: GALLERY (PRODUCTION GRID)                           */}
       {/* ════════════════════════════════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-t border-zinc-800">
+      <section className="bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="text-center mb-14">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
               Visual Showcase
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
               Gallery
             </h2>
           </div>
@@ -439,19 +439,19 @@ export default function UniformCollectionPage() {
             {galleryItems.map((item) => (
               <div
                 key={item.label}
-                className={`group relative overflow-hidden rounded-2xl bg-zinc-800 border border-zinc-700 ${item.aspect}`}
+                className={`group relative overflow-hidden rounded-2xl bg-gray-100 border border-gray-200 ${item.aspect}`}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-4">
-                    <div className="w-12 h-12 rounded-xl bg-zinc-700 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors duration-300">
-                      <Eye className="w-6 h-6 text-zinc-500 group-hover:text-primary transition-colors duration-300" strokeWidth={2} />
+                    <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors duration-300">
+                      <Eye className="w-6 h-6 text-gray-400 group-hover:text-primary transition-colors duration-300" strokeWidth={2} />
                     </div>
-                    <p className="text-sm font-bold text-zinc-500 group-hover:text-primary transition-colors duration-300">
+                    <p className="text-sm font-bold text-gray-400 group-hover:text-primary transition-colors duration-300">
                       {item.label}
                     </p>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-zinc-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                   <span className="text-xs font-bold text-primary">{item.label}</span>
                 </div>
