@@ -130,7 +130,7 @@ const customizationFeatures = [
 
 export default function UniformCollectionPage() {
   return (
-    <div className="pt-20 bg-zinc-950">
+    <div className="pt-20 bg-white">
       {/* ════════════════════════════════════════════════════════════════ */}
       {/* SECTION 1: HERO                                                */}
       {/* ════════════════════════════════════════════════════════════════ */}
