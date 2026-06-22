@@ -8,12 +8,14 @@ export default defineType({
     defineField({
       name: "title",
       title: "Title",
+      description: "The display name for this category (e.g., 'Recipes', 'Kitchen Tips').",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "slug",
-      title: "Slug",
+      title: "Web Address Link",
+      description: "Click 'Generate' to create the link from the category name, then feel free to shorten it.",
       type: "slug",
       options: {
         source: "title",
@@ -24,7 +26,9 @@ export default defineType({
     defineField({
       name: "description",
       title: "Description",
+      description: "A brief explanation of what this category covers.",
       type: "text",
+      rows: 3,
     }),
   ],
 });

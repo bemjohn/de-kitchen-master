@@ -23,7 +23,8 @@ export default defineType({
     }),
     defineField({
       name: "image",
-      title: "Image",
+      title: "Profile Image",
+      description: "A professional headshot or portrait — square aspect ratio recommended.",
       type: "image",
       options: {
         hotspot: true,
@@ -31,12 +32,15 @@ export default defineType({
     }),
     defineField({
       name: "bio",
-      title: "Bio",
+      title: "Biography",
+      description: "A brief professional background, credentials, and area of expertise.",
       type: "text",
+      rows: 4,
     }),
     defineField({
       name: "role",
-      title: "Role",
+      title: "Role / Title",
+      description: "E.g., Head Chef, Food Writer, Pastry Specialist.",
       type: "string",
     }),
   ],
