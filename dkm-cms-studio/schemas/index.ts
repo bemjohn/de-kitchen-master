@@ -1,5 +1,5 @@
-import post from "./post";
-import author from "./author";
-import category from "./category";
+import post from "./post.tsx";
+import author from "./author.tsx";
+import category from "./category.tsx";
 
 export const schemaTypes = [post, author, category];
