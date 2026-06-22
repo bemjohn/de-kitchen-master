@@ -2,18 +2,21 @@ import { defineType, defineField } from "sanity";
 
 export default defineType({
   name: "author",
-  title: "Author",
+  title: "Writers & Chefs",
   type: "document",
+  icon: () => <span style={{ fontSize: "1.25em" }}>👨‍🍳</span>,
   fields: [
     defineField({
       name: "name",
       title: "Name",
+      description: "The full name of the writer or chef.",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "slug",
       title: "Slug",
+      description: "The URL-friendly identifier — auto-generated from the name.",
       type: "slug",
       options: {
         source: "name",
@@ -23,7 +26,8 @@ export default defineType({
     }),
     defineField({
       name: "image",
-      title: "Image",
+      title: "Profile Image",
+      description: "A professional headshot or portrait — square aspect ratio recommended.",
       type: "image",
       options: {
         hotspot: true,
@@ -31,12 +35,15 @@ export default defineType({
     }),
     defineField({
       name: "bio",
-      title: "Bio",
+      title: "Biography",
+      description: "A brief professional background, credentials, and area of expertise.",
       type: "text",
+      rows: 4,
     }),
     defineField({
       name: "role",
-      title: "Role",
+      title: "Role / Title",
+      description: "E.g., Head Chef, Food Writer, Pastry Specialist.",
       type: "string",
     }),
   ],
