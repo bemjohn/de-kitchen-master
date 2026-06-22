@@ -9,14 +9,14 @@ export default defineType({
     defineField({
       name: "title",
       title: "Title",
-      description: "The headline of the blog article — keep it clear and engaging.",
+      description: "The headline of your blog article — keep it clear and engaging.",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "slug",
-      title: "Slug",
-      description: "The URL-friendly identifier — auto-generated from the title.",
+      title: "Web Address Link",
+      description: "Click 'Generate' to create the link from your title, then feel free to shorten it (e.g., change 'how-to-bake-the-perfect-cake' to just 'how-to-bake').",
       type: "slug",
       options: {
         source: "title",
@@ -26,8 +26,8 @@ export default defineType({
     }),
     defineField({
       name: "mainImage",
-      title: "Main Image",
-      description: "The hero image displayed at the top of the article (16:9 ratio recommended).",
+      title: "Main Article Photo",
+      description: "Upload the main cover picture that people will see first when they open this article.",
       type: "image",
       options: {
         hotspot: true,
@@ -35,15 +35,15 @@ export default defineType({
     }),
     defineField({
       name: "excerpt",
-      title: "Excerpt",
-      description: "A short summary shown on blog listing cards.",
+      title: "Short Summary",
+      description: "Write a 1-2 sentence preview to show on the main blog page to catch a reader's attention.",
       type: "text",
       rows: 3,
     }),
     defineField({
       name: "body",
-      title: "Body",
-      description: "The full article content.",
+      title: "Write Your Story Here",
+      description: "Type the full recipe, steps, and article content freely here with bolding, links, and text formatting tools...",
       type: "array",
       of: [{ type: "block" }],
     }),
@@ -91,4 +91,18 @@ export default defineType({
       type: "datetime",
     }),
   ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "author.name",
+      media: "mainImage",
+    },
+    prepare({ title, subtitle, media }) {
+      return {
+        title,
+        subtitle: subtitle ? `by ${subtitle}` : "",
+        media,
+      };
+    },
+  },
 });
