@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 
 export default function Footer() {
@@ -16,20 +18,20 @@ export default function Footer() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed max-w-sm font-medium">
-                Premium Nigerian culinary and hospitality brand dedicated to delivering exceptional dining experiences.
+                De KITCHEN MASTER is a premier culinary and hospitality company specializing in professional chef services, hospitality consultancy, training, and exceptional dining experiences.
               </p>
               <div className="flex space-x-4 pt-2">
                 <a href="#" className="text-gray-500 hover:text-primary transition-colors">
                   <span className="sr-only">Instagram</span>
-                  <span className="text-sm font-black">IG</span>
+                  <FaInstagram className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-gray-500 hover:text-primary transition-colors">
                   <span className="sr-only">Facebook</span>
-                  <span className="text-sm font-black">FB</span>
+                  <FaFacebookF className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-gray-500 hover:text-primary transition-colors">
-                  <span className="sr-only">Twitter</span>
-                  <span className="text-sm font-black">X</span>
+                  <span className="sr-only">X</span>
+                  <FaXTwitter className="w-5 h-5" />
                 </a>
               </div>
             </div>

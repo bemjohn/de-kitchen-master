@@ -14,17 +14,6 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "slug",
-      title: "Slug",
-      description: "The URL-friendly identifier — auto-generated from the name.",
-      type: "slug",
-      options: {
-        source: "name",
-        maxLength: 96,
-      },
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: "image",
       title: "Profile Image",
       description: "A professional headshot or portrait — square aspect ratio recommended.",

@@ -21,7 +21,7 @@ interface PostDetail {
     bio: string;
     role: string;
   } | null;
-  categories: { title: string; slug: string }[];
+  categories: { _id: string; title: string }[];
 }
 
 interface RelatedPost {
@@ -82,19 +82,19 @@ export default async function BlogPostPage({
       estimatedReadingTime,
       featured,
       tags,
-      "author": author-> { name, "slug": slug.current, image, bio, role },
-      "categories": categories[]-> { title, "slug": slug.current }
+      "author": author-> { name, image, bio, role },
+      "categories": categories[]-> { _id, title }
     }`,
     { slug }
   );
 
   if (!post) notFound();
 
-  const categoryIds = post.categories?.map((c) => c.slug) || [];
+  const categoryIds = post.categories?.map((c) => c._id) || [];
 
   const relatedPosts = categoryIds.length > 0
     ? await client.fetch<RelatedPost[]>(
-        `*[_type == "post" && _id != $currentId && count(categories[@->slug.current in $categorySlugs]) > 0] | order(publishedAt desc) [0...3]{
+        `*[_type == "post" && _id != $currentId && count(categories[@->_id in $categoryIds]) > 0] | order(publishedAt desc) [0...3]{
           _id,
           title,
           "slug": slug.current,
@@ -102,7 +102,7 @@ export default async function BlogPostPage({
           publishedAt,
           "categories": categories[]-> { title }
         }`,
-        { currentId: post._id, categorySlugs: categoryIds }
+        { currentId: post._id, categoryIds }
       )
     : [];
 
@@ -121,7 +121,7 @@ export default async function BlogPostPage({
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 {post.categories?.map((cat) => (
                   <span
-                    key={cat.slug}
+                    key={cat._id}
                     className="text-xs font-bold text-primary uppercase tracking-widest bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full"
                   >
                     {cat.title}

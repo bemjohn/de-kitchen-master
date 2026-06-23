@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "FAQ", href: "/faq" },
     { name: "DKM Chef Training", href: "/training-academy" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -67,7 +68,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-none px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-3">
@@ -410,6 +411,9 @@ export default function Navbar() {
             </Link>
             <Link href="/training-academy" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               DKM Chef Training
+            </Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
+              Blog
             </Link>
             <Link href="/contact" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Contact Us

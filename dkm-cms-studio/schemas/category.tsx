@@ -14,17 +14,6 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "slug",
-      title: "Slug",
-      description: "The URL-friendly identifier — auto-generated from the title.",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: "description",
       title: "Description",
       description: "A brief explanation of what this category covers.",

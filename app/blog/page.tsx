@@ -17,8 +17,8 @@ interface PostSummary {
   excerpt: string;
   publishedAt: string;
   estimatedReadingTime: number | null;
-  author: { name: string; slug: string; image: any; role: string } | null;
-  categories: { title: string; slug: string }[];
+  author: { name: string; image: any; role: string } | null;
+  categories: { title: string }[];
 }
 
 function formatDate(dateString: string) {
@@ -66,8 +66,8 @@ export default async function BlogPage({
         excerpt,
         publishedAt,
         estimatedReadingTime,
-        "author": author-> { name, "slug": slug.current, image, role },
-        "categories": categories[]-> { title, "slug": slug.current }
+        "author": author-> { name, image, role },
+        "categories": categories[]-> { title }
       },
       "total": count(*[_type == "post"])
     }`,
@@ -123,7 +123,7 @@ export default async function BlogPage({
                         <span className="text-gray-300">·</span>
                         {post.categories.map((cat) => (
                           <span
-                            key={cat.slug}
+                            key={cat.title}
                             className="text-xs font-bold text-primary uppercase tracking-wider"
                           >
                             {cat.title}
