@@ -32,6 +32,7 @@ yarn-error.log*
 
 # sanity studio (standalone)
 dkm-cms-studio/node_modules
+dkm-cms-studio/package.json
 dkm-cms-studio/package-lock.json
 dkm-cms-studio/.sanity
 
