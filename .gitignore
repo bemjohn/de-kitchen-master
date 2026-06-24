@@ -30,11 +30,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# sanity studio (standalone)
-dkm-cms-studio/node_modules
-dkm-cms-studio/package.json
-dkm-cms-studio/package-lock.json
-dkm-cms-studio/.sanity
+# sanity studio (standalone) — kept locally, not deployed
+dkm-cms-studio/
 
 # env files (can opt-in for committing if needed)
 .env*
