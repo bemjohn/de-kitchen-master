@@ -30,14 +30,6 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", service: "", details: "" });
-    }, 1000);
-  };
-
   return (
     <div className="pt-20 bg-white">
       {/* ───── SECTION 1: HERO ───── */}
@@ -99,7 +91,7 @@ export default function ContactPage() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form action="https://formsubmit.co/dekitchenmasterltd@gmail.com" method="POST" className="space-y-5">
                     <div>
                       <label htmlFor="name" className="text-sm font-bold text-gray-700 mb-1 block">
                         Full Name
@@ -184,7 +176,7 @@ export default function ContactPage() {
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-widest rounded-xl px-8 py-5 transition-all duration-300 shadow-lg shadow-primary/20 hover:-translate-y-1 flex items-center justify-center"
+                      className="w-full bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-widest rounded-xl px-8 py-5 transition-all duration-300 shadow-lg shadow-primary/20 hover:-translate-y-1 flex items-center justify-center gap-3"
                     >
                       SUBMIT ENQUIRY
                     </button>

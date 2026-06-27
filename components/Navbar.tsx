@@ -5,15 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { servicePackages } from "@/data/servicePackages";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [hireOpen, setHireOpen] = useState(false);
   const [careersOpen, setCareersOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileHireOpen, setMobileHireOpen] = useState(false);
   const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
   const [mobileCareersOpen, setMobileCareersOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLDivElement>(null);
   const hireRef = useRef<HTMLDivElement>(null);
   const careersRef = useRef<HTMLDivElement>(null);
@@ -22,12 +26,16 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
     { name: "FAQ", href: "/faq" },
     { name: "DKM Chef Training", href: "/training-academy" },
     { name: "Blog", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
   ];
+
+  const isServicesActive =
+    pathname === "/services" ||
+    pathname === "/service-packages" ||
+    servicePackages.some((p) => pathname.includes(p.slug));
 
   const isPortfolioActive = pathname === "/portfolio" || pathname === "/chefs" || pathname === "/partner";
   const isCareersActive = pathname === "/careers" || pathname === "/events-community" || pathname === "/uniform-collection";
@@ -35,6 +43,16 @@ export default function Navbar() {
     pathname === "/hire-a-chef" ||
     pathname === "/benefits/private-residence" ||
     pathname === "/benefits/full-setup";
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -81,7 +99,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:block">
             <div className="flex items-center space-x-4">
-              {links.slice(0, 3).map((link) => (
+              {links.slice(0, 2).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -94,6 +112,74 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+
+              {/* Services Dropdown */}
+              <div ref={servicesRef} className="relative group">
+                <div className="flex items-center">
+                  <Link
+                    href="/services"
+                    className={`px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      isServicesActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Services
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setServicesOpen(!servicesOpen);
+                    }}
+                    className={`p-2 rounded-md text-sm font-semibold transition-colors ${
+                      isServicesActive
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                    aria-label="Toggle Services sub-menu"
+                  >
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        servicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div
+                  className={`absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1 transition-all duration-200 ${
+                    servicesOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                  }`}
+                >
+                  {servicePackages.map((pkg) => (
+                    <Link
+                      key={pkg.id}
+                      href={`/service-packages#${pkg.slug}`}
+                      onClick={() => setServicesOpen(false)}
+                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                        pathname.includes(pkg.slug)
+                          ? "text-primary bg-primary/5"
+                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                      }`}
+                    >
+                      {pkg.title}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/services"
+                    onClick={() => setServicesOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/services"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    View All Services
+                  </Link>
+                </div>
+              </div>
 
               {/* Hire a Chef Dropdown */}
               <div ref={hireRef} className="relative group">
@@ -289,7 +375,7 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
-              {links.slice(3).map((link) => (
+              {links.slice(2).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -331,9 +417,40 @@ export default function Navbar() {
             <Link href="/about" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               About Us
             </Link>
-            <Link href="/services" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              Services
-            </Link>
+            <div className="flex flex-col items-start w-full">
+              <div className="flex items-center justify-start gap-2">
+                <Link href="/services" onClick={() => setIsOpen(false)}>
+                  Services
+                </Link>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  aria-label="Toggle Services sub-menu"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {mobileServicesOpen && (
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
+                  {servicePackages.map((pkg) => (
+                    <Link
+                      key={pkg.id}
+                      href={`/service-packages#${pkg.slug}`}
+                      onClick={() => setIsOpen(false)}
+                      className="text-sm font-medium text-gray-600 hover:text-primary"
+                    >
+                      {pkg.title}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/services"
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm font-bold text-primary"
+                  >
+                    View All Services
+                  </Link>
+                </div>
+              )}
+            </div>
 
             <div className="flex flex-col items-start w-full">
               <div className="flex items-center justify-start gap-2">
