@@ -153,23 +153,20 @@ export default function Navbar() {
                       : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                   }`}
                 >
-                  {servicePackages.filter(p => p !== 'View All Services').map((pkg) => {
-                    const slug = pkg.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-');
-                    return (
-                      <Link
-                        key={pkg}
-                        href={`/service-packages#${slug}`}
-                        onClick={() => setServicesOpen(false)}
-                        className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                          pathname.includes(slug)
-                            ? "text-primary bg-primary/5"
-                            : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                        }`}
-                      >
-                        {pkg}
-                      </Link>
-                    );
-                  })}
+                  {servicePackages.filter(p => p !== 'View All Services').map((pkg) => (
+                    <Link
+                      key={pkg}
+                      href="/services"
+                      onClick={() => setServicesOpen(false)}
+                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                        pathname === "/services"
+                          ? "text-primary bg-primary/5"
+                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                      }`}
+                    >
+                      {pkg}
+                    </Link>
+                  ))}
                   <Link
                     href="/services"
                     onClick={() => setServicesOpen(false)}
@@ -434,19 +431,16 @@ export default function Navbar() {
               </div>
               {mobileServicesOpen && (
                 <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
-                  {servicePackages.filter(p => p !== 'View All Services').map((pkg) => {
-                    const slug = pkg.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-');
-                    return (
-                      <Link
-                        key={pkg}
-                        href={`/service-packages#${slug}`}
-                        onClick={() => setIsOpen(false)}
-                        className="text-sm font-medium text-gray-600 hover:text-primary"
-                      >
-                        {pkg}
-                      </Link>
-                    );
-                  })}
+                  {servicePackages.filter(p => p !== 'View All Services').map((pkg) => (
+                    <Link
+                      key={pkg}
+                      href="/services"
+                      onClick={() => setIsOpen(false)}
+                      className="text-sm font-medium text-gray-600 hover:text-primary"
+                    >
+                      {pkg}
+                    </Link>
+                  ))}
                   <Link
                     href="/services"
                     onClick={() => setIsOpen(false)}
