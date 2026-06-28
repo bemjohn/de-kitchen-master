@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { servicePackages } from "@/data/servicePackages";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,10 +31,11 @@ export default function Navbar() {
     { name: "Contact Us", href: "/contact" },
   ];
 
+  const servicePackages = ['Premium Catering & Event Packages', 'Chef Rental Packages', 'Food Service Packages', 'View All Services'];
+
   const isServicesActive =
     pathname === "/services" ||
-    pathname === "/service-packages" ||
-    servicePackages.some((p) => pathname.includes(p.slug));
+    pathname === "/service-packages";
 
   const isPortfolioActive = pathname === "/portfolio" || pathname === "/chefs" || pathname === "/partner";
   const isCareersActive = pathname === "/careers" || pathname === "/events-community" || pathname === "/uniform-collection";
@@ -153,20 +153,23 @@ export default function Navbar() {
                       : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                   }`}
                 >
-                  {servicePackages.map((pkg) => (
-                    <Link
-                      key={pkg.id}
-                      href={`/service-packages#${pkg.slug}`}
-                      onClick={() => setServicesOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                        pathname.includes(pkg.slug)
-                          ? "text-primary bg-primary/5"
-                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
-                      }`}
-                    >
-                      {pkg.title}
-                    </Link>
-                  ))}
+                  {servicePackages.filter(p => p !== 'View All Services').map((pkg) => {
+                    const slug = pkg.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-');
+                    return (
+                      <Link
+                        key={pkg}
+                        href={`/service-packages#${slug}`}
+                        onClick={() => setServicesOpen(false)}
+                        className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                          pathname.includes(slug)
+                            ? "text-primary bg-primary/5"
+                            : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                        }`}
+                      >
+                        {pkg}
+                      </Link>
+                    );
+                  })}
                   <Link
                     href="/services"
                     onClick={() => setServicesOpen(false)}
@@ -431,16 +434,19 @@ export default function Navbar() {
               </div>
               {mobileServicesOpen && (
                 <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
-                  {servicePackages.map((pkg) => (
-                    <Link
-                      key={pkg.id}
-                      href={`/service-packages#${pkg.slug}`}
-                      onClick={() => setIsOpen(false)}
-                      className="text-sm font-medium text-gray-600 hover:text-primary"
-                    >
-                      {pkg.title}
-                    </Link>
-                  ))}
+                  {servicePackages.filter(p => p !== 'View All Services').map((pkg) => {
+                    const slug = pkg.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-');
+                    return (
+                      <Link
+                        key={pkg}
+                        href={`/service-packages#${slug}`}
+                        onClick={() => setIsOpen(false)}
+                        className="text-sm font-medium text-gray-600 hover:text-primary"
+                      >
+                        {pkg}
+                      </Link>
+                    );
+                  })}
                   <Link
                     href="/services"
                     onClick={() => setIsOpen(false)}
