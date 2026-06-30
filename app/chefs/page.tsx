@@ -8,9 +8,9 @@ const chefCategories = [
     description:
       "Experienced culinary leaders responsible for managing kitchen operations, menu development, quality control, and team leadership across multiple establishments.",
     chefs: [
-      { name: "Chef David", role: "Senior Sous Chef", experience: "17 Years", specialty: "Nigerian, Continental & International Cuisine", location: "Ibadan, Nigeria", availability: "Available", image: "/images/chefs/Chef_David.jpg", fullDescription: "An accomplished Senior Sous Chef with 17 years of culinary expertise in Nigerian, Continental, and International cuisines. Recognized for strong kitchen leadership, culinary excellence, team development, and delivering exceptional dining experiences across hotels and restaurants." },
-      { name: "Chef Tosin", role: "Sous Chef", experience: "10 Years", specialty: "Multi-Establishment Guest Experiences & Kitchen Leadership", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Tosin.jpg", fullDescription: "Chef Tosin is a dedicated Sous Chef with a decade of experience managing kitchen operations across multiple high-volume establishments. He excels at coordinating brigade teams, maintaining consistency across service periods, and elevating guest experiences through meticulous attention to flavour, presentation, and kitchen discipline." },
-      { name: "Chef Adedeji Samuel Popoola", role: "Executive Sous Chef", experience: "18 Years", specialty: "Nigerian & Continental Cuisine Leadership", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Adedeji_Samuel_Popoola.jpg", fullDescription: "Chef Adedeji Samuel Popoola brings eighteen years of deep culinary wisdom to every kitchen he leads. As an Executive Sous Chef, he has overseen large-scale operations in premier Lagos hotels, mentored scores of junior chefs, and built a reputation for uncompromising standards in both Nigerian and Continental cuisine execution." },
+      { name: "Chef David", role: "Senior Sous Chef", experience: "17 Years", specialty: "Nigerian, Continental & International Cuisine", location: "Ibadan, Nigeria", availability: "Available", image: "/images/chefs/Chef_David.jpeg", fullDescription: "An accomplished Senior Sous Chef with 17 years of culinary expertise in Nigerian, Continental, and International cuisines. Recognized for strong kitchen leadership, culinary excellence, team development, and delivering exceptional dining experiences across hotels and restaurants." },
+      { name: "Chef Tosin", role: "Sous Chef", experience: "10 Years", specialty: "Multi-Establishment Guest Experiences & Kitchen Leadership", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Tosin.jpeg", fullDescription: "Chef Tosin is a dedicated Sous Chef with a decade of experience managing kitchen operations across multiple high-volume establishments. He excels at coordinating brigade teams, maintaining consistency across service periods, and elevating guest experiences through meticulous attention to flavour, presentation, and kitchen discipline." },
+      { name: "Chef Adedeji Samuel Popoola", role: "Executive Sous Chef", experience: "18 Years", specialty: "Nigerian & Continental Cuisine Leadership", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Adedeji_Samuel_Popoola.jpeg", fullDescription: "Chef Adedeji Samuel Popoola brings eighteen years of deep culinary wisdom to every kitchen he leads. As an Executive Sous Chef, he has overseen large-scale operations in premier Lagos hotels, mentored scores of junior chefs, and built a reputation for uncompromising standards in both Nigerian and Continental cuisine execution." },
     ],
   },
   {
@@ -18,10 +18,10 @@ const chefCategories = [
     description:
       "Specialists in luxury dining experiences, premium menu execution, and elevated culinary presentation with a continental flair.",
     chefs: [
-      { name: "Pretty Chef", role: "Sous Chef | Private Fine Dining Chef", experience: "5 Years", specialty: "Continental & Mediterranean Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Pretty_Chef.jpg", fullDescription: "Pretty Chef is a refined culinary professional specializing in private fine dining experiences. With five years of expertise in Continental and Mediterranean cuisine, she crafts intimate multi-course menus that transport guests through the flavours of Southern Europe and North Africa, paired with impeccable service and presentation." },
-      { name: "Chef Oyin", role: "Professional Chef", experience: "4+ Years", specialty: "Catering, À La Carte Service & Core Culinary Techniques", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Oyin.jpg", fullDescription: "A passionate professional chef with over four years of experience in catering, à la carte service, and core culinary techniques. Committed to delivering quality cuisine, exceptional service, and memorable dining experiences with precision and creativity." },
-      { name: "Chef James", role: "Fine Dining & Sushi Chef", experience: "6+ Years", specialty: "Japanese Cuisine, Culinary Fusion & Sushi Artistry", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_James.jpg", fullDescription: "Chef James is a master of Japanese culinary arts with over six years of experience specializing in sushi craftsmanship and fusion cuisine. He blends traditional Edomae techniques with contemporary West African ingredients, creating unique omakase experiences that have earned him a dedicated following among Lagos fine dining connoisseurs." },
-      { name: "Chef Prosper", role: "Chef de Partie", experience: "5 Years", specialty: "Cuisine Preparation, Menu R&D & Innovative Food Concepts", location: "Nigeria", availability: "Available", image: "/images/chefs/Chef_Prosper.jpg", fullDescription: "Chef Prosper is a creative Chef de Partie with five years of experience driving menu research and development. He thrives on experimenting with flavour profiles, textures, and plating techniques, bringing innovative food concepts to life in both à la carte and tasting menu formats across contemporary dining venues." },
+      { name: "Pretty Chef", role: "Sous Chef | Private Fine Dining Chef", experience: "5 Years", specialty: "Continental & Mediterranean Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Pretty_Chef.jpeg", fullDescription: "Pretty Chef is a refined culinary professional specializing in private fine dining experiences. With five years of expertise in Continental and Mediterranean cuisine, she crafts intimate multi-course menus that transport guests through the flavours of Southern Europe and North Africa, paired with impeccable service and presentation." },
+      { name: "Chef Oyin", role: "Professional Chef", experience: "4+ Years", specialty: "Catering, À La Carte Service & Core Culinary Techniques", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Oyin.jpeg", imagePosition: "object-center", fullDescription: "A passionate professional chef with over four years of experience in catering, à la carte service, and core culinary techniques. Committed to delivering quality cuisine, exceptional service, and memorable dining experiences with precision and creativity." },
+      { name: "Chef James", role: "Fine Dining & Sushi Chef", experience: "6+ Years", specialty: "Japanese Cuisine, Culinary Fusion & Sushi Artistry", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_James.jpeg", fullDescription: "Chef James is a master of Japanese culinary arts with over six years of experience specializing in sushi craftsmanship and fusion cuisine. He blends traditional Edomae techniques with contemporary West African ingredients, creating unique omakase experiences that have earned him a dedicated following among Lagos fine dining connoisseurs." },
+      { name: "Chef Prosper", role: "Chef de Partie", experience: "5 Years", specialty: "Cuisine Preparation, Menu R&D & Innovative Food Concepts", location: "Nigeria", availability: "Available", image: "/images/chefs/Chef_Prosper.jpeg", fullDescription: "Chef Prosper is a creative Chef de Partie with five years of experience driving menu research and development. He thrives on experimenting with flavour profiles, textures, and plating techniques, bringing innovative food concepts to life in both à la carte and tasting menu formats across contemporary dining venues." },
     ],
   },
   {
@@ -29,8 +29,8 @@ const chefCategories = [
     description:
       "Experts in authentic African culinary traditions, celebrating indigenous ingredients, time-honoured techniques, and rich cultural heritage.",
     chefs: [
-      { name: "Chef Ifunanya Eunice", role: "African Cuisine Cook", experience: "7 Years", specialty: "Authentic African Cuisine & Kitchen Supervision", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Ifunanya_Eunice.jpg", fullDescription: "Chef Ifunanya Eunice is a passionate guardian of authentic African cuisine with seven years of experience cooking and supervising kitchens. She brings deep knowledge of traditional Nigerian recipes, spice blends, and cooking methods, ensuring that every dish honours the cultural roots while meeting modern kitchen standards." },
-      { name: "Chef phizzle", role: "Chef de Partie", experience: "7 Years", specialty: "Authentic Nigerian Cuisine & Kitchen Standards", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_phizzle.jpg", fullDescription: "Chef phizzle is a dedicated Chef de Partie with seven years of experience specializing in authentic Nigerian cuisine. He takes pride in upholding the highest kitchen standards while preparing beloved local dishes — from rich egusi soups and perfectly grilled suya to fluffy jollof rice — with consistency and pride." },
+      { name: "Chef Ifunanya Eunice", role: "African Cuisine Cook", experience: "7 Years", specialty: "Authentic African Cuisine & Kitchen Supervision", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Ifunanya_Eunice.jpeg", fullDescription: "Chef Ifunanya Eunice is a passionate guardian of authentic African cuisine with seven years of experience cooking and supervising kitchens. She brings deep knowledge of traditional Nigerian recipes, spice blends, and cooking methods, ensuring that every dish honours the cultural roots while meeting modern kitchen standards." },
+      { name: "Chef phizzle", role: "Chef de Partie", experience: "7 Years", specialty: "Authentic Nigerian Cuisine & Kitchen Standards", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_phizzle.jpeg", fullDescription: "Chef phizzle is a dedicated Chef de Partie with seven years of experience specializing in authentic Nigerian cuisine. He takes pride in upholding the highest kitchen standards while preparing beloved local dishes — from rich egusi soups and perfectly grilled suya to fluffy jollof rice — with consistency and pride." },
     ],
   },
   {
@@ -38,8 +38,8 @@ const chefCategories = [
     description:
       "Professionals skilled in pastry arts, grilling techniques, and everyday meal services for a wide range of culinary needs.",
     chefs: [
-      { name: "Chef Thompson", role: "Sous Chef", experience: "11 Years", specialty: "Pastry, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Thompson.jpg", fullDescription: "A skilled Sous Chef with 11 years of professional culinary experience, specializing in pastry, Continental, and Nigerian cuisine. Dedicated to culinary excellence, kitchen leadership, and delivering exceptional dining experiences across hotels and fine dining restaurants." },
-      { name: "Chef Adewale", role: "Chef de Partie", experience: "4 Years", specialty: "Breakfast, Grilling, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Adewale.jpg", fullDescription: "Chef Adewale is a versatile Chef de Partie with four years of experience covering breakfast service, grilling, and both Continental and Nigerian cuisine. His adaptability and strong foundational skills make him a reliable asset in busy kitchen environments, from hotel breakfast buffets to live grill stations." },
+      { name: "Chef Thompson", role: "Sous Chef", experience: "11 Years", specialty: "Pastry, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Thompson.jpeg", fullDescription: "A skilled Sous Chef with 11 years of professional culinary experience, specializing in pastry, Continental, and Nigerian cuisine. Dedicated to culinary excellence, kitchen leadership, and delivering exceptional dining experiences across hotels and fine dining restaurants." },
+      { name: "Chef Adewale", role: "Chef de Partie", experience: "4 Years", specialty: "Breakfast, Grilling, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Adewale.jpeg", fullDescription: "Chef Adewale is a versatile Chef de Partie with four years of experience covering breakfast service, grilling, and both Continental and Nigerian cuisine. His adaptability and strong foundational skills make him a reliable asset in busy kitchen environments, from hotel breakfast buffets to live grill stations." },
     ],
   },
 ];
@@ -52,6 +52,7 @@ type Chef = {
   location: string;
   availability: string;
   image: string;
+  imagePosition?: string;
   fullDescription: string;
 };
 
@@ -70,7 +71,7 @@ function ChefCard({
         <img
           src={chef.image}
           alt={chef.name}
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-0 w-full h-full object-cover ${chef.imagePosition ?? 'object-top'}`}
         />
       </div>
       <div className="p-6 space-y-4">
@@ -259,7 +260,7 @@ export default function ChefsPage() {
                 <img
                   src={selectedChef.image}
                   alt={selectedChef.name}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className={`absolute inset-0 w-full h-full object-cover ${selectedChef.imagePosition ?? 'object-top'}`}
                 />
               </div>
               <button
