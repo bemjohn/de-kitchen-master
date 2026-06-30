@@ -4,63 +4,42 @@ import { useState } from 'react';
 
 const chefCategories = [
   {
-    title: "Executive Chefs",
+    title: "Executive & Kitchen Leadership",
     description:
-      "Experienced culinary leaders responsible for managing kitchen operations, menu development, quality control, and team leadership.",
+      "Experienced culinary leaders responsible for managing kitchen operations, menu development, quality control, and team leadership across multiple establishments.",
     chefs: [
-      { name: "Chef Michael Adewale", experience: "10+ Years", specialty: "Local & Intercontinental Cuisine", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Michael Adewale brings over a decade of culinary mastery, blending bold West African flavours with classical French techniques. He has led brigade kitchens in premium hotels across Lagos and Abuja, mentored junior chefs, and designed award-winning tasting menus for high-profile corporate and diplomatic events." },
-      { name: "Chef Sarah Okafor", experience: "8+ Years", specialty: "Continental & Fusion Cuisine", location: "Abuja, Nigeria", availability: "Available", fullDescription: "Chef Sarah Okafor is a creative force in continental and fusion cuisine, known for her inventive flavour pairings and meticulous plating. She has worked across five-star hotels and boutique restaurants, curating bespoke menus for private dinners, embassy receptions, and luxury brand launches throughout Nigeria's capital." },
-      { name: "Chef David Nkwocha", experience: "12+ Years", specialty: "African & International Cuisine", location: "Port Harcourt, Nigeria", availability: "Available", fullDescription: "Chef David Nkwocha is a seasoned culinary leader with over twelve years of experience spanning African, European, and Asian cuisines. He has successfully managed multi-outlet kitchen operations in Port Harcourt's premier hospitality venues and is widely respected for his ability to marry traditional Nigerian ingredients with global cooking techniques." },
+      { name: "Chef David", role: "Senior Sous Chef", experience: "17 Years", specialty: "Nigerian, Continental & International Cuisine", location: "Ibadan, Nigeria", availability: "Available", fullDescription: "An accomplished Senior Sous Chef with 17 years of culinary expertise in Nigerian, Continental, and International cuisines. Recognized for strong kitchen leadership, culinary excellence, team development, and delivering exceptional dining experiences across hotels and restaurants." },
+      { name: "Chef Tosin", role: "Sous Chef", experience: "10 Years", specialty: "Multi-Establishment Guest Experiences & Kitchen Leadership", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Tosin is a dedicated Sous Chef with a decade of experience managing kitchen operations across multiple high-volume establishments. He excels at coordinating brigade teams, maintaining consistency across service periods, and elevating guest experiences through meticulous attention to flavour, presentation, and kitchen discipline." },
+      { name: "Chef Adedeji Samuel Popoola", role: "Executive Sous Chef", experience: "18 Years", specialty: "Nigerian & Continental Cuisine Leadership", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Adedeji Samuel Popoola brings eighteen years of deep culinary wisdom to every kitchen he leads. As an Executive Sous Chef, he has overseen large-scale operations in premier Lagos hotels, mentored scores of junior chefs, and built a reputation for uncompromising standards in both Nigerian and Continental cuisine execution." },
     ],
   },
   {
-    title: "Private & Residential Chefs",
+    title: "Continental & Fine Dining Specialists",
     description:
-      "Professional chefs available for private homes, family residences, executives, expatriates, and VIP clients.",
+      "Specialists in luxury dining experiences, premium menu execution, and elevated culinary presentation with a continental flair.",
     chefs: [
-      { name: "Chef Grace Okonkwo", experience: "7+ Years", specialty: "Home Cooking & Meal Prep", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Grace Okonkwo specialises in bringing restaurant-quality meals into private homes. With seven years of experience in meal preparation and family nutrition, she tailors weekly menus to dietary requirements and personal preferences, ensuring every meal is both nourishing and deeply satisfying for busy families and executives." },
-      { name: "Chef Emmanuel Bello", experience: "6+ Years", specialty: "Family & Nutritional Cuisine", location: "Abuja, Nigeria", availability: "Available", fullDescription: "Chef Emmanuel Bello is a family-focused culinary professional with a deep understanding of nutritional science. He works closely with clients to develop balanced meal plans that support active lifestyles, combining whole foods with globally inspired recipes that even the pickiest eaters enjoy." },
-      { name: "Chef Fatima Usman", experience: "5+ Years", specialty: "Private Dining & Events", location: "Kano, Nigeria", availability: "Available", fullDescription: "Chef Fatima Usman creates intimate and memorable private dining experiences for gatherings of all sizes. From romantic anniversary dinners to lively family celebrations, she brings Northern Nigerian hospitality and contemporary flair to every table, handling everything from menu planning to service with grace and professionalism." },
+      { name: "Pretty Chef", role: "Sous Chef | Private Fine Dining Chef", experience: "5 Years", specialty: "Continental & Mediterranean Cuisine", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Pretty Chef is a refined culinary professional specializing in private fine dining experiences. With five years of expertise in Continental and Mediterranean cuisine, she crafts intimate multi-course menus that transport guests through the flavours of Southern Europe and North Africa, paired with impeccable service and presentation." },
+      { name: "Chef Oyin", role: "Professional Chef", experience: "4+ Years", specialty: "Catering, À La Carte Service & Core Culinary Techniques", location: "Lagos, Nigeria", availability: "Available", fullDescription: "A passionate professional chef with over four years of experience in catering, à la carte service, and core culinary techniques. Committed to delivering quality cuisine, exceptional service, and memorable dining experiences with precision and creativity." },
+      { name: "Chef James", role: "Fine Dining & Sushi Chef", experience: "6+ Years", specialty: "Japanese Cuisine, Culinary Fusion & Sushi Artistry", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef James is a master of Japanese culinary arts with over six years of experience specializing in sushi craftsmanship and fusion cuisine. He blends traditional Edomae techniques with contemporary West African ingredients, creating unique omakase experiences that have earned him a dedicated following among Lagos fine dining connoisseurs." },
+      { name: "Chef Prosper", role: "Chef de Partie", experience: "5 Years", specialty: "Cuisine Preparation, Menu R&D & Innovative Food Concepts", location: "Nigeria", availability: "Available", fullDescription: "Chef Prosper is a creative Chef de Partie with five years of experience driving menu research and development. He thrives on experimenting with flavour profiles, textures, and plating techniques, bringing innovative food concepts to life in both à la carte and tasting menu formats across contemporary dining venues." },
     ],
   },
   {
-    title: "Fine Dining Chefs",
+    title: "African & Local Cuisine Masters",
     description:
-      "Specialists in luxury dining experiences, premium menu execution, and elevated culinary presentation.",
+      "Experts in authentic African culinary traditions, celebrating indigenous ingredients, time-honoured techniques, and rich cultural heritage.",
     chefs: [
-      { name: "Chef Anthony Eze", experience: "9+ Years", specialty: "Fine Dining & Gourmet Cuisine", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Anthony Eze is a fine dining virtuoso who has trained under internationally acclaimed chefs in Europe and the Middle East. He brings exacting standards to every plate, specialising in multi-course tasting menus, wine pairings, and molecular gastronomy techniques that transform meals into unforgettable culinary journeys." },
-      { name: "Chef Victoria Ogun", experience: "7+ Years", specialty: "French & Mediterranean Cuisine", location: "Abuja, Nigeria", availability: "Available", fullDescription: "Chef Victoria Ogun's cuisine is a love letter to the Mediterranean. Trained in France and Italy, she crafts dishes that celebrate sun-ripened tomatoes, fragrant herbs, and the finest olive oils. Her elegant presentations and refined flavour profiles have made her a sought-after chef for embassy galas and luxury retreats." },
-      { name: "Chef Samuel Ibrahim", experience: "8+ Years", specialty: "Modern African Cuisine", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Samuel Ibrahim is at the forefront of the modern African cuisine movement. He reimagines traditional dishes like jollof rice, egusi soup, and suya with contemporary plating and unexpected ingredient pairings, earning acclaim from food critics and a loyal following among Lagos's discerning diners." },
+      { name: "Chef Ifunanya Eunice", role: "African Cuisine Cook", experience: "7 Years", specialty: "Authentic African Cuisine & Kitchen Supervision", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Ifunanya Eunice is a passionate guardian of authentic African cuisine with seven years of experience cooking and supervising kitchens. She brings deep knowledge of traditional Nigerian recipes, spice blends, and cooking methods, ensuring that every dish honours the cultural roots while meeting modern kitchen standards." },
+      { name: "Chef phizzle", role: "Chef de Partie", experience: "7 Years", specialty: "Authentic Nigerian Cuisine & Kitchen Standards", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef phizzle is a dedicated Chef de Partie with seven years of experience specializing in authentic Nigerian cuisine. He takes pride in upholding the highest kitchen standards while preparing beloved local dishes — from rich egusi soups and perfectly grilled suya to fluffy jollof rice — with consistency and pride." },
     ],
   },
   {
-    title: "Grill Chefs",
+    title: "Pastry, Grill & Everyday Services",
     description:
-      "Experts in grilling, barbecue operations, outdoor cooking, and live grill experiences.",
+      "Professionals skilled in pastry arts, grilling techniques, and everyday meal services for a wide range of culinary needs.",
     chefs: [
-      { name: "Chef Joseph Mohammed", experience: "6+ Years", specialty: "Barbecue & Grilling", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Joseph Mohammed is a grill master who commands live-fire cooking with unmatched skill. From smoky Nigerian suya to American-style briskets and Argentine asado, he understands the science of heat, smoke, and seasoning. His outdoor cookouts and barbecue pop-ups are legendary across Lagos." },
-      { name: "Chef Patricia Edeh", experience: "5+ Years", specialty: "Live Grill & Outdoor Cooking", location: "Abuja, Nigeria", availability: "Available", fullDescription: "Chef Patricia Edeh brings energy and expertise to live grilling events, from garden parties to corporate retreats. She specialises in high-volume outdoor cooking without compromising on quality, managing multiple stations while engaging guests with the theatre of open-flame cuisine." },
-      { name: "Chef Paul Okojie", experience: "7+ Years", specialty: "Grill & Rotisserie", location: "Benin, Nigeria", availability: "Available", fullDescription: "Chef Paul Okojie's rotisserie and grill techniques produce succulent, flavour-packed meats every time. With seven years perfecting his craft, he sources the best local cuts and marinades them with proprietary spice blends, delivering a taste that keeps clients returning week after week." },
-    ],
-  },
-  {
-    title: "Pastry Chefs & Bakers",
-    description:
-      "Professionals specializing in pastries, desserts, cakes, breads, and bakery production.",
-    chefs: [
-      { name: "Chef Deborah Ajayi", experience: "8+ Years", specialty: "Pastry & Dessert Artistry", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Deborah Ajayi is an award-winning pastry artist whose creations are as beautiful as they are delicious. Trained in Paris and London, she specialises in intricate sugar work, layered entremets, and artisanal chocolates. Her dessert bars are a staple at high-end weddings, product launches, and VIP galas across Nigeria." },
-      { name: "Chef Esther Obi", experience: "6+ Years", specialty: "Bread & Bakery Production", location: "Enugu, Nigeria", availability: "Available", fullDescription: "Chef Esther Obi is a dedicated baker who treats bread-making as both a science and an art. From crusty sourdough loaves to soft brioche and gluten-free alternatives, she supplies boutique hotels and cafés in Enugu with freshly baked goods that have developed a cult following among local food lovers." },
-      { name: "Chef Caleb Adeyemi", experience: "7+ Years", specialty: "Cakes & Confectionery", location: "Ibadan, Nigeria", availability: "Available", fullDescription: "Chef Caleb Adeyemi designs and bakes show-stopping custom cakes for every occasion — wedding tiers, birthday sculptures, and corporate centrepieces. His fondant work and flavour combinations (think vanilla-hibiscus or chocolate-chili) have made him one of Ibadan's most sought-after confectionery artists." },
-    ],
-  },
-  {
-    title: "Contract & Event Chefs",
-    description:
-      "Available for temporary assignments, special projects, events, seasonal operations, and hospitality support.",
-    chefs: [
-      { name: "Chef Daniel Musa", experience: "7+ Years", specialty: "Event Catering & Buffets", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Daniel Musa is a high-volume event specialist who has catered for crowds of fifty to five thousand. His buffet spreads are celebrated for their variety, freshness, and visual appeal. He coordinates end-to-end event food service, from logistics and staffing to execution, ensuring every guest leaves impressed." },
-      { name: "Chef Rachel Nnamdi", experience: "5+ Years", specialty: "Contract & Festival Support", location: "Abuja, Nigeria", availability: "Available", fullDescription: "Chef Rachel Nnamdi thrives in fast-paced, temporary environments — music festivals, film sets, sports tournaments, and seasonal hospitality pop-ups. She adapts quickly to new kitchens and constraints, delivering consistent quality under pressure. Her resilience and can-do attitude make her a favourite among event producers." },
-      { name: "Chef Timothy Yakubu", experience: "6+ Years", specialty: "Pop-Up & Seasonal Operations", location: "Calabar, Nigeria", availability: "Available", fullDescription: "Chef Timothy Yakubu is the go-to professional for pop-up restaurants and seasonal dining concepts in Calabar. He excels at building temporary kitchen setups, designing limited-time menus that create buzz, and dismantling operations efficiently. His pop-ups have become a hallmark of Calabar's evolving food scene." },
+      { name: "Chef Thompson", role: "Sous Chef", experience: "11 Years", specialty: "Pastry, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", fullDescription: "A skilled Sous Chef with 11 years of professional culinary experience, specializing in pastry, Continental, and Nigerian cuisine. Dedicated to culinary excellence, kitchen leadership, and delivering exceptional dining experiences across hotels and fine dining restaurants." },
+      { name: "Chef Adewale", role: "Chef de Partie", experience: "4 Years", specialty: "Breakfast, Grilling, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", fullDescription: "Chef Adewale is a versatile Chef de Partie with four years of experience covering breakfast service, grilling, and both Continental and Nigerian cuisine. His adaptability and strong foundational skills make him a reliable asset in busy kitchen environments, from hotel breakfast buffets to live grill stations." },
     ],
   },
 ];
@@ -69,6 +48,7 @@ const chefImage = "https://images.unsplash.com/photo-1583394838336-acd977736f90?
 
 type Chef = {
   name: string;
+  role?: string;
   experience: string;
   specialty: string;
   location: string;
@@ -98,7 +78,7 @@ function ChefCard({
         <div>
           <h3 className="text-xl font-black text-gray-900">{chef.name}</h3>
           <p className="text-primary font-bold text-sm uppercase tracking-wider">
-            {position}
+            {chef.role ?? position}
           </p>
         </div>
 
