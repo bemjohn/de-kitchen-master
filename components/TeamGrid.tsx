@@ -53,15 +53,6 @@ const executiveTeam = [
 export default function TeamGrid() {
   return (
     <div id="team" className="mt-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight uppercase">
-          TEAM
-        </h2>
-        <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto italic leading-relaxed">
-          Meet Our Team: The dedicated professionals behind our commitment to culinary excellence and hospitality services.
-        </p>
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {executiveTeam.map((member, index) => (
           <div
