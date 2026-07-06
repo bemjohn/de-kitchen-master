@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
 
 export const metadata = {
@@ -179,12 +180,12 @@ export default function PartnerPage() {
               Every partnership is built on professionalism, transparency, and long-term value creation. We do not focus on one-time transactions, we build lasting hospitality relationships that benefit all parties involved.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="#"
+              <Link
+                href="/become-a-partner"
                 className="inline-block bg-primary hover:bg-primary/90 text-white font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
                 BECOME A PARTNER
-              </a>
+              </Link>
               <a
                 href="#"
                 className="inline-block border-2 border-gray-300 hover:border-primary text-gray-800 hover:text-primary font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1"
