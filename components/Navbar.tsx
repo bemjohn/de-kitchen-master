@@ -177,6 +177,17 @@ export default function Navbar() {
                   >
                     Our Team
                   </Link>
+                  <Link
+                    href="/about"
+                    onClick={() => setAboutOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/about"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Our Story
+                  </Link>
                 </div>
               </div>
 
@@ -504,6 +515,13 @@ export default function Navbar() {
                     className="text-sm font-medium text-gray-600 hover:text-primary"
                   >
                     Our Team
+                  </Link>
+                  <Link
+                    href="/about"
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm font-medium text-gray-600 hover:text-primary"
+                  >
+                    Our Story
                   </Link>
                 </div>
               )}

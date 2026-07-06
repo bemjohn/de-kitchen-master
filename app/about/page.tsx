@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Award, ShieldCheck, Briefcase, Lightbulb, Users, ThumbsUp, Check, Compass, ChefHat, GraduationCap, UserPlus, Settings } from "lucide-react";
 import DistinctivesAccordion, { type Distinctive } from "@/components/About/DistinctivesAccordion";
+import TeamGrid from "@/components/TeamGrid";
 
 export const metadata = {
   title: "About Us | De KITCHEN MASTER Culinary & Hospitality Services Ltd",
@@ -271,7 +272,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. LEADERSHIP TEAM */}
-      <section className="bg-white border-b border-gray-100">
+      <section id="team" className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3">
@@ -289,6 +290,8 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+
+          <TeamGrid />
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12 max-w-6xl mx-auto">
             {leadershipRoles.map((role) => {
