@@ -31,11 +31,11 @@ const executiveTeam = [
   },
   {
     name: "Chef Kimberly (Kimberly Ann Marks)",
-    role: "Hospitality & Food & Beverage Operations Manager | Executive Chef | Restaurant & Catering Operations Manager",
-    image: "/team/chef_kimberly.jpeg",
+    role: "Senior Executive Chef | Director of Food & Beverage Development and Hospitality Services",
+    image: "/chef/Chef_Kimberly.jpeg",
     location: "Accra, Ghana",
     experience: "28+ Years Experience",
-    bio: "Chef Kimberly is a highly accomplished hospitality executive and culinary leader with over 28 years of professional experience in hospitality, food and beverage operations, restaurant management, hotel operations, banquet services, and large-scale catering across Canada and Ghana. Her extensive professional journey includes serving as an Executive Chef, Sous Chef, Banquet Chef, Restaurant Manager, Catering Operations Manager, and Hospitality Operations Manager. Chef Kimberly holds a Master's Degree in Business Administration (MBA) alongside professional qualifications in Hospitality Management and Food & Beverage Operations. As Hospitality & Food & Beverage Operations Manager, Executive Chef, and Restaurant & Catering Operations Manager at De KITCHEN MASTER Culinary & Hospitality Services Ltd, Chef Kimberly provides executive leadership across hospitality operations, service delivery, restaurant consultancy, catering management, and organizational development.",
+    bio: "Chef Kimberly is a distinguished hospitality executive and culinary leader with over 28 years of international experience in food and beverage operations, restaurant management, hotel operations, banquet services, and catering management across Canada and Ghana. Holding a Master's Degree in Business Administration (MBA) alongside professional qualifications in Hospitality Management and Food & Beverage Operations, she combines strategic business leadership with exceptional culinary expertise. Throughout her career, she has successfully served as an Executive Chef, Sous Chef, Banquet Chef, Restaurant Manager, Catering Operations Manager, and Hospitality Operations Manager, consistently driving operational excellence, service quality, and business growth. As Senior Executive Chef & Director of Food & Beverage Development and Hospitality Services at De KITCHEN MASTER Culinary & Hospitality Services Ltd, Chef Kimberly leads hospitality strategy, food and beverage development, operational excellence, staff mentorship, and service innovation, strengthening the company's mission to deliver world-class hospitality solutions across Nigeria, Africa, and the international market.",
   },
   {
     name: "Chef Happiness (Etim Uyime Happiness)",
