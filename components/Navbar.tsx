@@ -34,27 +34,6 @@ export default function Navbar() {
     { name: "Contact Us", href: "/contact" },
   ];
 
-  const leadership = [
-    {
-      name: "Chef David",
-      role: "Senior Sous Chef",
-      image: "/images/chefs/Chef_David.jpeg",
-      bio: "An accomplished Senior Sous Chef with 17 years of culinary expertise in Nigerian, Continental, and International cuisines.",
-    },
-    {
-      name: "Chef Adedeji Samuel Popoola",
-      role: "Executive Sous Chef",
-      image: "/images/chefs/Chef_Adedeji_Samuel_Popoola.jpeg",
-      bio: "A seasoned Executive Sous Chef with 18 years of culinary excellence, specializing in Nigerian and Continental cuisine.",
-    },
-    {
-      name: "Chef Tosin",
-      role: "Sous Chef",
-      image: "/images/chefs/Chef_Tosin.jpeg",
-      bio: "A highly experienced Sous Chef with 10 years of professional culinary expertise across restaurants, hotels, clubs, and private residences.",
-    },
-  ];
-
   const servicePackages = ['Premium Catering & Event Packages', 'Chef Rental Packages', 'Food Service Packages', 'View All Services'];
 
   const isServicesActive =
@@ -181,37 +160,34 @@ export default function Navbar() {
                 </div>
 
                 <div
-                  className={`absolute left-0 mt-1 w-[680px] rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-6 transition-all duration-200 ${
+                  className={`absolute left-0 mt-1 w-56 rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-2 space-y-1 transition-all duration-200 ${
                     aboutOpen
                       ? "opacity-100 visible"
                       : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                   }`}
                 >
-                  <div className="flex flex-row gap-6">
-                    {leadership.map((chef) => (
-                      <Link
-                        key={chef.name}
-                        href="/chefs"
-                        onClick={() => setAboutOpen(false)}
-                        className="flex-1 flex flex-col items-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors"
-                      >
-                        <div className="w-16 h-16 rounded-full overflow-hidden mb-3">
-                          <Image
-                            src={chef.image}
-                            alt={chef.name}
-                            width={64}
-                            height={64}
-                            className="w-16 h-16 object-cover object-top"
-                          />
-                        </div>
-                        <div className="text-center">
-                          <p className="text-sm font-bold text-gray-900">{chef.name}</p>
-                          <p className="text-xs text-gray-500 mt-0.5">{chef.role}</p>
-                          <p className="text-xs text-gray-600 mt-2 leading-relaxed">{chef.bio}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+                  <Link
+                    href="/about#team"
+                    onClick={() => setAboutOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/about"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Our Team
+                  </Link>
+                  <Link
+                    href="/about"
+                    onClick={() => setAboutOpen(false)}
+                    className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                      pathname === "/about"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    Our Story
+                  </Link>
                 </div>
               </div>
 
@@ -532,30 +508,21 @@ export default function Navbar() {
                 </button>
               </div>
               {mobileAboutOpen && (
-                <div className="mt-3 flex flex-col items-start w-full gap-4 text-left pl-4">
-                  {leadership.map((chef) => (
-                    <Link
-                      key={chef.name}
-                      href="/chefs"
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-start gap-3 w-full"
-                    >
-                      <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                        <Image
-                          src={chef.image}
-                          alt={chef.name}
-                          width={48}
-                          height={48}
-                          className="w-12 h-12 object-cover object-top"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-bold text-gray-900">{chef.name}</p>
-                        <p className="text-xs text-gray-500">{chef.role}</p>
-                        <p className="text-xs text-gray-600 mt-1 leading-relaxed">{chef.bio}</p>
-                      </div>
-                    </Link>
-                  ))}
+                <div className="mt-3 flex flex-col items-start w-full gap-3 text-left pl-4">
+                  <Link
+                    href="/about#team"
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm font-medium text-gray-600 hover:text-primary"
+                  >
+                    Our Team
+                  </Link>
+                  <Link
+                    href="/about"
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm font-medium text-gray-600 hover:text-primary"
+                  >
+                    Our Story
+                  </Link>
                 </div>
               )}
             </div>
