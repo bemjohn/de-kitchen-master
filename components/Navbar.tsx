@@ -9,14 +9,17 @@ import { Menu, X, ChevronDown } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [hireOpen, setHireOpen] = useState(false);
   const [careersOpen, setCareersOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileHireOpen, setMobileHireOpen] = useState(false);
   const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
   const [mobileCareersOpen, setMobileCareersOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLDivElement>(null);
   const hireRef = useRef<HTMLDivElement>(null);
   const careersRef = useRef<HTMLDivElement>(null);
@@ -29,6 +32,27 @@ export default function Navbar() {
     { name: "DKM Chef Training", href: "/training-academy" },
     { name: "Blog", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
+  ];
+
+  const leadership = [
+    {
+      name: "Chef David",
+      role: "Senior Sous Chef",
+      image: "/images/chefs/Chef_David.jpeg",
+      bio: "An accomplished Senior Sous Chef with 17 years of culinary expertise in Nigerian, Continental, and International cuisines.",
+    },
+    {
+      name: "Chef Adedeji Samuel Popoola",
+      role: "Executive Sous Chef",
+      image: "/images/chefs/Chef_Adedeji_Samuel_Popoola.jpeg",
+      bio: "A seasoned Executive Sous Chef with 18 years of culinary excellence, specializing in Nigerian and Continental cuisine.",
+    },
+    {
+      name: "Chef Tosin",
+      role: "Sous Chef",
+      image: "/images/chefs/Chef_Tosin.jpeg",
+      bio: "A highly experienced Sous Chef with 10 years of professional culinary expertise across restaurants, hotels, clubs, and private residences.",
+    },
   ];
 
   const servicePackages = ['Premium Catering & Event Packages', 'Chef Rental Packages', 'Food Service Packages', 'View All Services'];
@@ -84,6 +108,16 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (aboutRef.current && !aboutRef.current.contains(event.target as Node)) {
+        setAboutOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="w-full max-w-none px-6 md:px-12">
@@ -99,7 +133,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:block">
             <div className="flex items-center space-x-4">
-              {links.slice(0, 2).map((link) => (
+              {links.slice(0, 1).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -112,6 +146,74 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+
+              {/* About Us Dropdown */}
+              <div ref={aboutRef} className="relative group">
+                <div className="flex items-center">
+                  <Link
+                    href="/about"
+                    className={`px-2 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      pathname === "/about"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                  >
+                    About Us
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setAboutOpen(!aboutOpen);
+                    }}
+                    className={`p-2 rounded-md text-sm font-semibold transition-colors ${
+                      pathname === "/about"
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                    }`}
+                    aria-label="Toggle About Us sub-menu"
+                  >
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        aboutOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div
+                  className={`absolute left-0 mt-1 w-[680px] rounded-2xl bg-white border border-gray-100 shadow-xl shadow-black/5 p-6 transition-all duration-200 ${
+                    aboutOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                  }`}
+                >
+                  <div className="flex flex-row gap-6">
+                    {leadership.map((chef) => (
+                      <Link
+                        key={chef.name}
+                        href="/chefs"
+                        onClick={() => setAboutOpen(false)}
+                        className="flex-1 flex flex-col items-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="w-16 h-16 rounded-full overflow-hidden mb-3">
+                          <Image
+                            src={chef.image}
+                            alt={chef.name}
+                            width={64}
+                            height={64}
+                            className="w-16 h-16 object-cover object-top"
+                          />
+                        </div>
+                        <div className="text-center">
+                          <p className="text-sm font-bold text-gray-900">{chef.name}</p>
+                          <p className="text-xs text-gray-500 mt-0.5">{chef.role}</p>
+                          <p className="text-xs text-gray-600 mt-2 leading-relaxed">{chef.bio}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               {/* Services Dropdown */}
               <div ref={servicesRef} className="relative group">
@@ -417,9 +519,46 @@ export default function Navbar() {
             <Link href="/" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
               Home
             </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="flex flex-row items-center justify-start w-full gap-4 text-left">
-              About Us
-            </Link>
+            <div className="flex flex-col items-start w-full">
+              <div className="flex items-center justify-start gap-2">
+                <Link href="/about" onClick={() => setIsOpen(false)}>
+                  About Us
+                </Link>
+                <button
+                  onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                  aria-label="Toggle About Us sub-menu"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAboutOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {mobileAboutOpen && (
+                <div className="mt-3 flex flex-col items-start w-full gap-4 text-left pl-4">
+                  {leadership.map((chef) => (
+                    <Link
+                      key={chef.name}
+                      href="/chefs"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-start gap-3 w-full"
+                    >
+                      <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                        <Image
+                          src={chef.image}
+                          alt={chef.name}
+                          width={48}
+                          height={48}
+                          className="w-12 h-12 object-cover object-top"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-bold text-gray-900">{chef.name}</p>
+                        <p className="text-xs text-gray-500">{chef.role}</p>
+                        <p className="text-xs text-gray-600 mt-1 leading-relaxed">{chef.bio}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             <div className="flex flex-col items-start w-full">
               <div className="flex items-center justify-start gap-2">
                 <Link href="/services" onClick={() => setIsOpen(false)}>
