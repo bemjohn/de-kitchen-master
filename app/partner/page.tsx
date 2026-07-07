@@ -187,7 +187,8 @@ export default function PartnerPage() {
                 BECOME A PARTNER
               </Link>
               <a
-                href="#"
+                href="/strategic_partnership_proposal.pdf"
+                download
                 className="inline-block border-2 border-gray-300 hover:border-primary text-gray-800 hover:text-primary font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1"
               >
                 DOWNLOAD PARTNERSHIP PROPOSAL
