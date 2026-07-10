@@ -24,10 +24,10 @@ const executiveTeam = [
   {
     name: "Chef Eazzy (Jimoh Ismail Abidemi)",
     role: "Executive Chef & Director of Culinary Innovation",
-    image: "/team/chef_eazzy.jpeg",
-    location: "Lagos, Nigeria",
-    experience: "10+ Years Experience",
-    bio: "Dedicated professional committed to delivering exceptional culinary and hospitality experiences.",
+    location: "Abu Dhabi, United Arab Emirates",
+    experience: "17 Years Experience",
+    image: "/chef/Chef_Eazzy.jpeg",
+    bio: "Chef Eazzy is an accomplished culinary professional with over 17 years of international experience specializing in intercontinental cuisine, global culinary techniques, menu development, and culinary instruction. His career spans renowned hospitality brands including S'wich Restaurant Dubai, Ibis Styles Dubai, Aloft Hotel Al Ain, and his current role as a Private Chef in Abu Dhabi. He holds multiple professional certifications in Professional Culinary Arts, Kitchen Management, Hospitality & Catering Management, HACCP Food Safety Systems, Food Safety & Hygiene, Leadership & Management, Nutrition, and Intercontinental Cuisine. Recognized for excellence in menu innovation, restaurant concept development, high-volume kitchen operations, culinary mentorship, and signature dish creation. Chef Eazzy serves as Executive Chef & Director of Culinary Innovation at De KITCHEN MASTER Culinary & Hospitality Services Ltd, where he leads culinary research, recipe innovation, international menu development, chef training, and strategic culinary excellence, helping position the company as a leading force in Africa's evolving culinary and hospitality industry.",
   },
   {
     name: "Chef Kimberly (Kimberly Ann Marks)",
