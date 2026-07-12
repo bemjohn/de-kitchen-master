@@ -125,6 +125,14 @@ const executiveTeam = [
     experience: "4 Years Experience",
     bio: "Zoe is a dedicated hospitality and operations professional with four years of experience spanning procurement, logistics, customer support, and hospitality operations. She has held key roles at De Phantom Continental Hotel as a Sous Chef, The Frootaz Place Inc. as Supervisor, Nutritionist, and Client Support Officer, and The Sage Lagos as a Procurement Officer. With ongoing CIPS (Chartered Institute of Procurement & Supply) training, HACCP certification, and a Certified Data Entry qualification, she combines technical knowledge with operational excellence. As Procurement, Logistics & Customer Support Manager at De KITCHEN MASTER Culinary & Hospitality Services Ltd, Zoe oversees procurement processes, supply chain coordination, logistics planning, and customer relations across the company's diverse projects.",
   },
+  {
+    name: "Chef B (Blessing Daniel Bassey)",
+    role: "Executive Chef | Assistant Food & Beverage Consultant (Abuja)",
+    image: "/team/chef_b.jpeg",
+    location: "Abuja, Nigeria",
+    experience: "12 Years Experience",
+    bio: "Chef B is a highly accomplished culinary professional with over 12 years of experience in fine dining, restaurant operations, and food and beverage consultancy. Renowned for his expertise in Continental and Nigerian cuisine as well as Professional French Patisserie, he has built an outstanding career leading high-performing kitchen teams and delivering exceptional dining experiences. His extensive professional journey includes eight years at NOK by Alara, two years at Midnight City Abuja, and two years at Kirstos Lounge & Restaurant, Abuja, where he played key roles in kitchen leadership, menu execution, food quality, and operational excellence. A strong advocate for continuous learning and industry best practices, Chef B holds professional qualifications from Wavecrest College of Hospitality, a Diploma in Professional French Patisserie from Reddish Chronicle, HACCP Level 3, and multiple Level 2 Food Safety Certifications from the London Professional Training Center and Boecker Training Center. As Executive Chef & Assistant Food & Beverage Consultant (Abuja) at De KITCHEN MASTER Culinary & Hospitality Services Ltd, he contributes strategic culinary leadership, menu innovation, operational consulting, staff development, and food safety excellence, helping drive the company's mission of redefining hospitality standards across Nigeria and Africa.",
+  },
 ];
 
 export default function TeamGrid() {
