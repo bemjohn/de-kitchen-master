@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type { GalleryItem } from "@/lib/gallery-data";
 
 interface GalleryFilterProps {
@@ -13,6 +13,8 @@ export default function GalleryFilter({
   items,
 }: GalleryFilterProps) {
   const [activeTag, setActiveTag] = useState("All");
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const filtered = activeTag === "All"
     ? Object.values(
@@ -22,6 +24,34 @@ export default function GalleryFilter({
         }, {} as Record<string, GalleryItem>)
       )
     : items.filter((item) => item.category === activeTag);
+
+  const openLightbox = useCallback((index: number) => {
+    setCurrentIndex(index);
+    setIsOpen(true);
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  const goToPrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? filtered.length - 1 : prev - 1));
+  }, [filtered.length]);
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === filtered.length - 1 ? 0 : prev + 1));
+  }, [filtered.length]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") goToPrev();
+      if (e.key === "ArrowRight") goToNext();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [isOpen, closeLightbox, goToPrev, goToNext]);
 
   return (
     <div>
@@ -47,10 +77,11 @@ export default function GalleryFilter({
           key={activeTag}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filtered.map((item) => (
+          {filtered.map((item, index) => (
             <div
               key={item.id}
-              className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              onClick={() => openLightbox(index)}
+              className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               <div className="relative h-56 overflow-hidden bg-neutral-100">
                 <img
@@ -74,6 +105,49 @@ export default function GalleryFilter({
             📸 No items match this category yet. Check back as we update our
             gallery.
           </p>
+        </div>
+      )}
+
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
+            className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white text-xl font-bold transition-colors"
+          >
+            ✕
+          </button>
+
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); goToPrev(); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white text-2xl font-bold transition-colors"
+          >
+            ‹
+          </button>
+
+          <div className="flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={filtered[currentIndex].image}
+              alt={filtered[currentIndex].title}
+              className="max-h-[85vh] max-w-[90vw] object-contain select-none"
+            />
+          </div>
+
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); goToNext(); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white text-2xl font-bold transition-colors"
+          >
+            ›
+          </button>
+
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm font-medium">
+            {currentIndex + 1} / {filtered.length}
+          </div>
         </div>
       )}
     </div>
