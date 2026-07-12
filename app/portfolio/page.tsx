@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import GalleryFilter from "@/components/Portfolio/GalleryFilter";
 import TestimonialCarousel from "@/components/Portfolio/TestimonialCarousel";
+import { getGalleryData } from "@/lib/gallery-data";
 
 export const metadata = {
   title: "Portfolio | De KITCHEN MASTER Culinary & Hospitality Services Ltd",
@@ -62,6 +63,8 @@ const industries = [
 ];
 
 export default function PortfolioPage() {
+  const { categories, items } = getGalleryData();
+
   return (
     <div className="pt-20 bg-white">
       {/* ============================================================ */}
@@ -231,7 +234,7 @@ export default function PortfolioPage() {
             </p>
           </div>
 
-          <GalleryFilter />
+          <GalleryFilter categories={categories} items={items} />
         </div>
       </section>
 
