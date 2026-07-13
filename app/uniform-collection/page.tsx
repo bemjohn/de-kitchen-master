@@ -35,7 +35,7 @@ const collectionItems = [
     description:
       "Professional chef jackets designed for comfort, durability, and a clean professional appearance.",
     image:
-      "https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1592498546551-222538011a27?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Chef Aprons",
@@ -49,21 +49,21 @@ const collectionItems = [
     description:
       "Designed to promote hygiene, safety, and professionalism in every kitchen environment.",
     image:
-      "https://images.unsplash.com/photo-1604329430698-7e6e1eb0f45a?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1709396759790-9051f0c1801a?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Kitchen Staff Uniforms",
     description:
       "Customized uniforms for chefs, cooks, kitchen assistants, stewards, and food production teams.",
     image:
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1499971644409-aeed9e7b7404?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Restaurant & Hospitality Uniforms",
     description:
       "Professional apparel solutions for restaurants, lounges, hotels, catering businesses, and hospitality establishments.",
     image:
-      "https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1571805529673-0f56b922b359?q=80&w=600&auto=format&fit=crop",
   },
 ];
 
@@ -202,16 +202,16 @@ export default function UniformCollectionPage() {
                 <div className="space-y-3">
                   <div className="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group">
                     <img
-                      src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=crop"
-                      alt="Chef in professional uniform"
+                      src="https://images.unsplash.com/photo-1731576089290-e6230a18dcb4?q=80&w=600&auto=format&fit=crop"
+                      alt="Woman in apron standing in kitchen"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
                   </div>
                   <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 group">
                     <img
-                      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=600&auto=format&fit=crop"
-                      alt="Kitchen team in uniform"
+                      src="https://images.unsplash.com/photo-1488905971602-47901d26961b?q=80&w=600&auto=format&fit=crop"
+                      alt="Man chopping garlic with gloves"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
@@ -220,16 +220,16 @@ export default function UniformCollectionPage() {
                 <div className="space-y-3 pt-6">
                   <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 group">
                     <img
-                      src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600&auto=format&fit=crop"
-                      alt="Chef apron detail"
+                      src="https://images.unsplash.com/photo-1603252109612-24fa03d145c8?q=80&w=600&auto=format&fit=crop"
+                      alt="Man in white dress shirt"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
                   </div>
                   <div className="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group">
                     <img
-                      src="https://images.unsplash.com/photo-1604329430698-7e6e1eb0f45a?q=80&w=600&auto=format&fit=crop"
-                      alt="Chef cap"
+                      src="https://images.unsplash.com/photo-1609348954993-bc615fa8694f?q=80&w=600&auto=format&fit=crop"
+                      alt="Man in black shirt holding white mug"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
@@ -484,27 +484,33 @@ export default function UniformCollectionPage() {
             Elevate your professional image with premium chef uniforms designed for comfort, durability, and style. Whether you need a single jacket or bulk team uniforms, we deliver across Nigeria.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20want%20to%20place%20an%20order%20for%20a%20chef%20uniform."
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-between px-6 py-4 bg-white text-primary font-bold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <span>Place an Order</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
-            </Link>
-            <Link
-              href="/contact"
+            </a>
+            <a
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20want%20to%20inquire%20about%20custom%20branding%20and%20embroidery%20options%20for%20chef%20uniforms."
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-between px-6 py-4 bg-white/10 border-2 border-white text-white font-bold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary hover:shadow-xl"
             >
               <span>Request Customization</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
-            </Link>
-            <Link
-              href="/contact"
+            </a>
+            <a
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20want%20to%20request%20a%20quote%20for%20a%20bulk%2Fwholesale%20uniform%20order."
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-between px-6 py-4 bg-white/10 border-2 border-white text-white font-bold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary hover:shadow-xl"
             >
               <span>Bulk Supply</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
-            </Link>
+            </a>
           </div>
           <p className="mt-10 text-base text-white/80 font-medium">
             Nationwide delivery to Lagos, Abuja, and all states within Nigeria.

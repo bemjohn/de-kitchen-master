@@ -573,7 +573,7 @@ export default function Home() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              href="/partner-proposal"
+              href="/strategic_partnership_proposal.pdf"
               className="inline-flex items-center px-10 py-5 bg-primary/20 text-white font-bold rounded-xl hover:bg-primary/40 hover:-translate-y-1 transition-all shadow-lg text-lg border border-white/30"
             >
               Download Partnership Proposal

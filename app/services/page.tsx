@@ -202,7 +202,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Row B — Kitchen Setup & Restaurant Development (image left, text right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20">
+          <div id="kitchen-setup" className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20">
             <div className="lg:col-span-5">
               <div className="relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <img
@@ -352,7 +352,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 — Private Chef Services */}
-            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-8 rounded-2xl flex flex-col">
+            <article id="private-chef" className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-8 rounded-2xl flex flex-col">
               <div className="relative h-40 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1694821144277-7d9d5e0b0522?q=80&w=800&auto=format&fit=crop&fm=jpg"
@@ -602,7 +602,7 @@ export default function ServicesPage() {
             </article>
 
             {/* Panel 3 — Outdoor Catering Services */}
-            <article className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-primary/30">
+            <article id="catering" className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-primary/30">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
                   <Truck className="w-6 h-6" strokeWidth={2.25} />
@@ -679,7 +679,7 @@ export default function ServicesPage() {
             </article>
 
             {/* Card D — Food Business Consultation */}
-            <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-6 rounded-2xl flex flex-col">
+            <article id="consulting" className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-6 rounded-2xl flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
                 <Compass className="w-6 h-6" strokeWidth={2.25} />
               </div>
