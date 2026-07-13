@@ -42,6 +42,24 @@ const chefCategories = [
     chefs: [
       { name: "Chef Thompson", role: "Sous Chef", experience: "11 Years", specialty: "Pastry, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Thompson.jpeg", fullDescription: "A skilled Sous Chef with 11 years of professional culinary experience, specializing in pastry, Continental, and Nigerian cuisine. Dedicated to culinary excellence, kitchen leadership, and delivering exceptional dining experiences across hotels and fine dining restaurants." },
       { name: "Chef Adewale", role: "Chef de Partie", experience: "4 Years", specialty: "Breakfast, Grilling, Continental & Nigerian Cuisine", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/Chef_Adewale.jpeg", fullDescription: "Chef Adewale is a versatile Chef de Partie with four years of experience covering breakfast service, grilling, and both Continental and Nigerian cuisine. His adaptability and strong foundational skills make him a reliable asset in busy kitchen environments, from hotel breakfast buffets to live grill stations." },
+      { name: "Nnadi Favour Oluwatobi (Tobi)", role: "Caterer", experience: "3 Years", specialty: "Cake Baking, Pastries, Small Chops & Nigerian Cuisine", location: "Delta State, Nigeria", availability: "Available", image: "/images/chefs/chef_tobi.jpeg", fullDescription: "A creative and dedicated caterer with over three years of experience in cake baking and decoration, pastries, small chops, and Nigerian cuisine. Tobi is passionate about delivering quality food products with excellent presentation and attention to detail. Known for creativity, consistency, and professionalism, she has successfully catered for a variety of events and special occasions, building a reputation for producing delicious baked goods and memorable culinary experiences while maintaining high standards of hygiene and customer satisfaction." },
+    ],
+  },
+  {
+    title: "Bar, Beverage & Mixology Specialists",
+    description:
+      "Expert mixologists and beverage professionals skilled in cocktail creation, bar operations, beverage program development, and premium guest experiences.",
+    chefs: [
+      { name: "Peter Kadafi Edogi (Peter)", role: "Mixologist", experience: "15 Years", specialty: "Cocktail Creation, Beverage Service & Bar Operations", location: "Ibadan, Nigeria", availability: "Available", image: "/images/chefs/peter.jpeg", fullDescription: "A skilled mixologist with over 15 years of experience in cocktail creation, beverage service, and bar operations. Peter has worked with leading hospitality brands including Spice Route Victoria Island, Twinwaters Ikate Lekki, Shaunz Bar Victoria Island, ZEE Lounge Ghana, The Lime Restaurant Ibadan, and The Seed Akobo Ibadan. He is known for crafting signature cocktails, delivering exceptional guest experiences, and maintaining high standards of bar service. His expertise in mixology, beverage presentation, and bar operations makes him a valuable asset for premium hospitality establishments." },
+      { name: "Olowo Anifowose Adeoyo (The Lagos Mixologist)", role: "Beverage Expert — Bartender & Coffee Barista", experience: "8–9 Years", specialty: "Mixology, Bar Operations, Coffee Preparation & Beverage Management", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/The_Lagos_Mixologist.jpeg", fullDescription: "A highly skilled beverage professional with over 8 years of experience in mixology, bar operations, coffee preparation, and beverage management. He has served at Park Inn by Radisson, Victoria Island, Oakspring Hotel, and is the founder of The Lagos Mixologist, providing premium cocktail services for corporate and private events. An HND graduate in Hospitality Management from YABATECH, he specializes in beverage menu development, bar inventory management, staff training, and delivering exceptional guest experiences, backed by multiple professional certifications and the Best Mixology Award (2024–2025)." },
+    ],
+  },
+  {
+    title: "Kitchen Equipment & Technical Specialists",
+    description:
+      "Experienced technicians and engineers specialized in installation, servicing, maintenance, and repair of commercial and domestic kitchen equipment.",
+    chefs: [
+      { name: "Tajudeen Abiodun Akeem (Abbey Gas)", role: "Kitchen Equipment Installation, Servicing & Repair Specialist", experience: "26 Years", specialty: "Installation, Servicing, Maintenance & Repair of Kitchen Equipment", location: "Lagos, Nigeria", availability: "Available", image: "/images/chefs/abbey_gas.jpeg", fullDescription: "A highly experienced kitchen equipment specialist with over 26 years of expertise in the installation, servicing, maintenance, and repair of commercial and domestic kitchen equipment. Abiodun has supported the operations of renowned establishments including Sentertony Hotel, Black Bell Restaurant, Treasure Palace Hotel, Saraty Hotel, and Hardrock Hotel. His extensive experience covers gas cookers, ovens, burners, kitchen appliances, and other commercial kitchen equipment. He is recognized for delivering reliable technical solutions, preventive maintenance, and efficient repair services that keep hospitality businesses and private kitchens operating safely and efficiently." },
     ],
   },
 ];
@@ -117,7 +135,7 @@ function ChefCard({
             href="#"
             className="flex-1 text-center bg-primary hover:bg-primary/90 text-white font-bold rounded-xl px-4 py-2.5 text-sm transition-all duration-300 shadow-md hover:shadow-lg"
           >
-            Request This Chef
+            {position === "Bar, Beverage & Mixology Specialists" || position === "Kitchen Equipment & Technical Specialists" ? "Request" : "Request This Chef"}
           </a>
         </div>
       </div>

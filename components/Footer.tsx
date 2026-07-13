@@ -87,8 +87,8 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} De Kitchen Master. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 space-x-6">
-              <Link href="/" className="text-gray-500 hover:text-primary text-sm font-bold">Privacy Policy</Link>
-              <Link href="/" className="text-gray-500 hover:text-primary text-sm font-bold">Terms of Service</Link>
+              <Link href="/privacy-policy" className="text-gray-500 hover:text-primary text-sm font-bold">Privacy Policy</Link>
+              <Link href="/terms-conditions" className="text-gray-500 hover:text-primary text-sm font-bold">Terms of Service</Link>
             </div>
           </div>
         </div>

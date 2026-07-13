@@ -74,36 +74,31 @@ const distinctives: Distinctive[] = [
     title: "Complete Hospitality Partner",
     description:
       "We provide solutions across the hospitality value chain, from recruitment and consulting to catering, training, operations, and business support.",
-    image:
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop",
+    image: "/others/5.jpeg",
   },
   {
     title: "Proven Industry Experience",
     description:
       "Our recommendations are based on real-world hospitality experience, not theory.",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2000&auto=format&fit=crop",
+    image: "/others/5.jpeg",
   },
   {
     title: "Strong Professional Network",
     description:
       "We maintain access to qualified chefs, kitchen professionals, hospitality specialists, consultants, and trainers.",
-    image:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2000&auto=format&fit=crop",
+    image: "/others/5.jpeg",
   },
   {
     title: "Customized Solutions",
     description:
       "Every client is unique. We tailor our services to meet specific business goals and operational requirements.",
-    image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop",
+    image: "/others/5.jpeg",
   },
   {
     title: "Results-Driven & Long-Term",
     description:
       "We focus on building partnerships, delivering measurable value, and driving sustainable growth.",
-    image:
-      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=2000&auto=format&fit=crop",
+    image: "/others/5.jpeg",
   },
 ];
 
@@ -147,7 +142,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 h-full">
               <div className="relative h-[420px] lg:h-full lg:min-h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
                 <img
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop"
+                  src="/others/4.jpeg"
                   alt="Professional culinary team at work"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -192,13 +187,15 @@ export default function AboutPage() {
 
             <aside className="md:col-span-1">
               <div className="md:sticky md:top-28 relative rounded-2xl overflow-hidden shadow-xl border-l-4 border-primary min-h-[420px]">
-                <img
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop"
-                  alt="Luxury hospitality atmosphere"
+                <video
+                  src="/others/1.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
               </div>
             </aside>
           </div>

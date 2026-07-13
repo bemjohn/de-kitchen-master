@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   Check,
@@ -162,19 +161,16 @@ const whyChooseItems = [
 
 export default function HireAChefPage() {
   return (
-    <div className="pt-20 bg-white">
+    <div className="bg-white">
       {/* ============================================================ */}
       {/* PHASE 1 — HERO BANNER & INTRO                                    */}
       {/* ============================================================ */}
       <section className="bg-white">
         <div className="w-full h-[250px] md:h-[300px] relative overflow-hidden bg-slate-900">
-          <Image
-            src="/images/chef-hero-banner.jpg"
+          <img
+            src="https://images.unsplash.com/photo-1765448808635-6ca2613d7273?q=80&w=2000&auto=format&fit=crop"
             alt="Professional chef service"
-            fill
-            className="object-cover w-full h-full absolute inset-0"
-            sizes="100vw"
-            priority
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="bg-black/20 absolute inset-0" />
         </div>

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const metadata = {
   title: "Full Kitchen Setup Benefits | De KITCHEN MASTER",
   description:
@@ -35,11 +33,9 @@ export default function FullSetupBenefitsPage() {
           </div>
           <div className="lg:col-span-5">
             <div className="w-full aspect-[3/4] relative rounded-3xl overflow-hidden border-4 border-amber-600 shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
-                alt="Professional commercial kitchen setup"
-                width={600}
-                height={800}
+              <img
+                src="https://images.unsplash.com/photo-1600684388091-627109f3cd60?q=80&w=800&auto=format&fit=crop"
+                alt="Modern black kitchen interior"
                 className="w-full h-full object-cover"
               />
             </div>

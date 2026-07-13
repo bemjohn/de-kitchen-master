@@ -71,8 +71,8 @@ export default function CareersPage() {
             <div className="w-full h-[600px] md:h-[650px] lg:h-[700px] relative bg-amber-50 p-4 border border-amber-200/60 rounded-3xl shadow-lg -ml-4 rotate-1 hover:rotate-0 transition-transform duration-300">
               <div className="relative w-full h-full overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200&auto=format&fit=crop"
-                  alt="DKM hospitality team"
+                  src="https://images.unsplash.com/photo-1565608087341-404b25492fee?q=80&w=1200&auto=format&fit=crop"
+                  alt="Chef in white top with gray apron holding pot"
                   className="absolute inset-0 w-full h-full object-cover sepia-[.3] brightness-90 contrast-125"
                 />
                 <div className="absolute inset-0 bg-amber-900/10 mix-blend-overlay pointer-events-none" />

@@ -167,15 +167,15 @@ export default function EventsCommunityPage() {
               <div className="space-y-3">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 group">
                   <img
-                    src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=600&auto=format&fit=crop"
-                    alt="Community gathering"
+                    src="https://images.unsplash.com/photo-1463183547458-6a2c760d0912?q=80&w=600&auto=format&fit=crop"
+                    alt="Long wooden table with plates of food"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group">
                   <img
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop"
-                    alt="Professional networking"
+                    src="https://images.unsplash.com/photo-1577308856961-8e9ec50d0c67?q=80&w=600&auto=format&fit=crop"
+                    alt="Assorted type foods"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -183,15 +183,15 @@ export default function EventsCommunityPage() {
               <div className="space-y-3 pt-6">
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group">
                   <img
-                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop"
-                    alt="Event celebration"
+                    src="https://images.unsplash.com/photo-1723853310545-b657f3e36396?q=80&w=600&auto=format&fit=crop"
+                    alt="Group of people sitting around a table full of food"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 group">
                   <img
-                    src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=600&auto=format&fit=crop"
-                    alt="Team collaboration"
+                    src="https://images.unsplash.com/photo-1543168256-8133cc8e3ee4?q=80&w=600&auto=format&fit=crop"
+                    alt="Fruits on table"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -302,8 +302,8 @@ export default function EventsCommunityPage() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative overflow-hidden rounded-3xl bg-gray-100 aspect-[4/5] group">
                 <img
-                  src="https://images.unsplash.com/photo-1590650151155-6c5f9a5f8b3c?q=80&w=800&auto=format&fit=crop"
-                  alt="Professional masterclass session"
+                  src="https://images.unsplash.com/photo-1564638305579-5e395c9b62c7?q=80&w=800&auto=format&fit=crop"
+                  alt="Cooked food on table"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

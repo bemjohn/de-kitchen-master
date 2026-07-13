@@ -182,13 +182,13 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-48 rounded-2xl overflow-hidden shadow-md group">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2670&auto=format&fit=crop" alt="Commercial kitchen" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/others/2.jpeg" alt="Commercial kitchen" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
               <div className="relative h-48 rounded-2xl overflow-hidden shadow-md group">
                 <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2670&auto=format&fit=crop" alt="Catering buffet" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
               <div className="relative h-48 rounded-2xl overflow-hidden shadow-md group">
-                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2677&auto=format&fit=crop" alt="Chef plating" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/others/3.jpeg" alt="Chef plating" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
               <div className="relative h-48 rounded-2xl overflow-hidden shadow-md group">
                 <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" alt="Culinary team" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
@@ -258,7 +258,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
             <div className="relative h-full min-h-[560px] rounded-3xl overflow-hidden shadow-md group">
-              <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop" alt="Modern culinary experience" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="/others/1.jpeg" alt="Modern culinary experience" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent"></div>
             </div>
 

@@ -17,6 +17,8 @@ import {
   Heart,
   ArrowRight,
   Users,
+  Wine,
+  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -136,7 +138,7 @@ export default function ServicesPage() {
             <div className="lg:col-span-6">
               <div className="relative h-[420px] lg:h-full lg:min-h-[560px] rounded-2xl overflow-hidden shadow-md">
                 <img
-                  src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2000&auto=format&fit=crop"
+                  src="/others/6.jpeg"
                   alt="Professional executive chef team in a commercial kitchen"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -200,11 +202,11 @@ export default function ServicesPage() {
           </div>
 
           {/* Row B — Kitchen Setup & Restaurant Development (image left, text right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20">
             <div className="lg:col-span-5">
               <div className="relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <img
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop"
+                  src="/others/7.jpeg"
                   alt="Modern professional industrial kitchen with stainless steel setup"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -226,6 +228,108 @@ export default function ServicesPage() {
                 <p>
                   Our services cover kitchen workflow design, equipment planning, staffing structure, operational systems, production flow, and pre-opening support to ensure efficiency, safety, and profitability from day one.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row C — Bar, Beverage & Mixology Consultancy (text left, image right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20">
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
+                <Wine className="w-4 h-4" strokeWidth={2.5} />
+                <span>Row C</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight mb-6">
+                Bar, Beverage &amp; Mixology Consultancy
+              </h3>
+              <div className="space-y-5 text-base md:text-lg text-gray-300 leading-relaxed font-medium mb-8">
+                <p>
+                  We provide end-to-end bar and beverage consultancy for restaurants, lounges, hotels, cafés, clubs, resorts, and hospitality businesses. From concept development to full operational setup, we help clients build profitable, efficient, and memorable beverage programs that enhance guest experiences and maximize revenue.
+                </p>
+              </div>
+              <p className="text-primary font-bold uppercase tracking-widest text-sm mb-5">Our services include:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                {[
+                  "Full Bar & Lounge Setup",
+                  "Beverage Menu Development",
+                  "Signature Cocktail & Mocktail Recipe Creation",
+                  "Wine, Spirits & Beverage Selection",
+                  "Bar Layout & Workflow Planning",
+                  "Beverage Costing & Pricing",
+                  "Inventory Control & Stock Management",
+                  "Bartender Recruitment",
+                  "Bartender Training & Skills Development",
+                  "Bar Standard Operating Procedures (SOPs)",
+                  "Bar Equipment Procurement & Setup",
+                  "Pre-Opening & Operational Support",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2.5">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/15 flex-shrink-0">
+                      <Check className="w-3 h-3 text-primary" strokeWidth={3.5} />
+                    </span>
+                    <span className="text-sm md:text-base text-gray-200 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+                <img
+                  src="https://images.unsplash.com/photo-1678724172078-3259ce6a6019?q=80&w=2000&auto=format&fit=crop"
+                  alt="Bartender pouring a cocktail drink into a glass"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+              </div>
+            </div>
+          </div>
+
+          {/* Row D — Kitchen Equipment Installation, Servicing & Repair (image left, text right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-5">
+              <div className="relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+                <img
+                  src="https://images.unsplash.com/photo-1663790776711-9283bf614ac2?q=80&w=2000&auto=format&fit=crop"
+                  alt="Modern commercial kitchen with stainless steel appliances"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-[0.25em] uppercase text-xs mb-4">
+                <Wrench className="w-4 h-4" strokeWidth={2.5} />
+                <span>Row D</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight mb-6">
+                Kitchen Equipment Installation, Servicing &amp; Repair
+              </h3>
+              <div className="space-y-5 text-base md:text-lg text-gray-300 leading-relaxed font-medium mb-8">
+                <p>
+                  We provide professional installation, preventive maintenance, servicing, troubleshooting, and repair of domestic and commercial kitchen equipment for restaurants, hotels, bakeries, cafés, cloud kitchens, corporate kitchens, and private residences. Our experienced technicians ensure your equipment operates safely, efficiently, and reliably, helping to minimize downtime and extend its lifespan.
+                </p>
+              </div>
+              <p className="text-primary font-bold uppercase tracking-widest text-sm mb-5">Our services include:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                {[
+                  "Commercial & domestic oven installation and repair",
+                  "Gas cooker and burner installation & servicing",
+                  "Microwave installation & repair",
+                  "Grills, fryers & salamander servicing",
+                  "Bakery equipment installation & maintenance",
+                  "Kitchen equipment diagnostics & fault detection",
+                  "Preventive maintenance",
+                  "Equipment replacement & upgrades",
+                  "Routine servicing contracts",
+                  "Emergency repair support",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2.5">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/15 flex-shrink-0">
+                      <Check className="w-3 h-3 text-primary" strokeWidth={3.5} />
+                    </span>
+                    <span className="text-sm md:text-base text-gray-200 font-medium">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -251,8 +355,8 @@ export default function ServicesPage() {
             <article className="group transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white border border-slate-100 p-8 rounded-2xl flex flex-col">
               <div className="relative h-40 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2000&auto=format&fit=crop"
-                  alt="Artfully plated private dining dish"
+                  src="https://images.unsplash.com/photo-1694821144277-7d9d5e0b0522?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                  alt="Professional private chef in kitchen"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const metadata = {
   title: "Private Residence Chef Benefits | De KITCHEN MASTER",
   description:
@@ -38,11 +36,9 @@ export default function PrivateResidenceBenefitsPage() {
           </div>
           <div className="lg:col-span-5">
             <div className="w-full aspect-[3/4] relative rounded-3xl overflow-hidden border-4 border-amber-600 shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"
+              <img
+                src="https://images.unsplash.com/photo-1694821144277-7d9d5e0b0522?q=80&w=800&auto=format&fit=crop"
                 alt="Professional private chef in kitchen"
-                width={600}
-                height={800}
                 className="w-full h-full object-cover"
               />
             </div>

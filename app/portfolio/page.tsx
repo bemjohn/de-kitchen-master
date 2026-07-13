@@ -21,7 +21,7 @@ const featuredProjects = [
     title: "Chef Recruitment & Professional Placement",
     description:
       "Successfully connecting skilled chefs and culinary professionals with private residences, restaurants, hotels, lounges, and corporate organizations.",
-    image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Private Chef & Residential Services",
@@ -45,7 +45,7 @@ const featuredProjects = [
     title: "Kitchen Setup & Hospitality Projects",
     description:
       "Supporting the development and organization of professional kitchens designed for efficiency, productivity, and operational excellence.",
-    image: "https://images.unsplash.com/photo-1583394283838-89745a30ed34?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=600&auto=format&fit=crop",
   },
 ];
 
@@ -106,8 +106,8 @@ export default function PortfolioPage() {
               <div className="grid grid-cols-4 grid-rows-2 gap-3 h-[420px] lg:h-[520px]">
                 <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop"
-                    alt="Professional kitchen team at work"
+                    src="https://images.unsplash.com/photo-1709837167686-a2e33aad1bf0?q=80&w=800&auto=format&fit=crop"
+                    alt="Woman chef in hat holding a wooden spoon"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
