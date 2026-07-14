@@ -34,36 +34,31 @@ const collectionItems = [
     title: "Chef Jackets",
     description:
       "Professional chef jackets designed for comfort, durability, and a clean professional appearance.",
-    image:
-      "https://images.unsplash.com/photo-1592498546551-222538011a27?q=80&w=600&auto=format&fit=crop",
+    image: "/uniform/Chef Jackets.jpeg",
   },
   {
     title: "Chef Aprons",
     description:
       "Premium aprons suitable for kitchen operations, grilling, catering services, and food production.",
-    image:
-      "https://images.unsplash.com/photo-1633528888094-08d1f209aa5a?q=80&w=600&auto=format&fit=crop",
+    image: "/uniform/Chef Aprons.jpeg",
   },
   {
     title: "Chef Caps & Headwear",
     description:
       "Designed to promote hygiene, safety, and professionalism in every kitchen environment.",
-    image:
-      "https://images.unsplash.com/photo-1745172423068-c838259b6700?q=80&w=600&auto=format&fit=crop",
+    image: "/uniform/Chef Caps & Headwear2.jpeg",
   },
   {
     title: "Kitchen Staff Uniforms",
     description:
       "Customized uniforms for chefs, cooks, kitchen assistants, stewards, and food production teams.",
-    image:
-      "https://images.unsplash.com/photo-1499971644409-aeed9e7b7404?q=80&w=600&auto=format&fit=crop",
+    image: "/uniform/Kitchen Staff Uniforms.jpeg",
   },
   {
     title: "Restaurant & Hospitality Uniforms",
     description:
       "Professional apparel solutions for restaurants, lounges, hotels, catering businesses, and hospitality establishments.",
-    image:
-      "https://images.unsplash.com/photo-1571805529673-0f56b922b359?q=80&w=600&auto=format&fit=crop",
+    image: "/uniform/Restaurant & Hospitality Uniforms.jpeg",
   },
 ];
 
@@ -110,12 +105,12 @@ const whoWeServeItems = [
 ];
 
 const galleryItems = [
-  { label: "CHEF JACKETS PHOTOS", aspect: "aspect-[4/3]" },
-  { label: "APRONS PHOTOS", aspect: "aspect-[4/3]" },
-  { label: "CHEF CAPS PHOTOS", aspect: "aspect-[4/3]" },
-  { label: "CUSTOMIZED UNIFORMS PHOTOS", aspect: "aspect-[4/5]" },
-  { label: "KITCHEN TEAM UNIFORMS PHOTOS", aspect: "aspect-[4/3]" },
-  { label: "BRANDING & EMBROIDERY SAMPLES", aspect: "aspect-[4/3]" },
+  { label: "CHEF JACKETS PHOTOS", image: "/uniform/1.jpeg", aspect: "aspect-[4/3]" },
+  { label: "APRONS PHOTOS", image: "/uniform/2.jpeg", aspect: "aspect-[4/3]" },
+  { label: "CHEF CAPS PHOTOS", image: "/uniform/3.jpeg", aspect: "aspect-[4/3]" },
+  { label: "CUSTOMIZED UNIFORMS PHOTOS", image: "/uniform/4.jpeg", aspect: "aspect-[4/5]" },
+  { label: "KITCHEN TEAM UNIFORMS PHOTOS", image: "/uniform/5.jpeg", aspect: "aspect-[4/3]" },
+  { label: "BRANDING & EMBROIDERY SAMPLES", image: "/uniform/6.jpeg", aspect: "aspect-[4/3]" },
 ];
 
 const customizationFeatures = [
@@ -441,20 +436,12 @@ export default function UniformCollectionPage() {
                 key={item.label}
                 className={`group relative overflow-hidden rounded-2xl bg-gray-100 border border-gray-200 ${item.aspect}`}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors duration-300">
-                      <Eye className="w-6 h-6 text-gray-400 group-hover:text-primary transition-colors duration-300" strokeWidth={2} />
-                    </div>
-                    <p className="text-sm font-bold text-gray-400 group-hover:text-primary transition-colors duration-300">
-                      {item.label}
-                    </p>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
-                  <span className="text-xs font-bold text-primary">{item.label}</span>
-                </div>
+                <img
+                  src={item.image}
+                  alt={item.label}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+
               </div>
             ))}
           </div>

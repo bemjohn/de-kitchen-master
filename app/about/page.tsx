@@ -211,12 +211,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-5">
-              {/* TODO: Replace placeholder image with the official profile asset of Chef Bishop. */}
-              <div className="relative h-[480px] rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[520px] rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2000&auto=format&fit=crop"
+                  src="/team/chef_bishop2.jpeg"
                   alt="Chef Bishop, Founder & CEO"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
               </div>
