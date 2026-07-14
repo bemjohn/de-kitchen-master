@@ -303,19 +303,23 @@ export default function CareersPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8 max-w-xl mx-auto">
             <a
-              href="#"
+              href="/careers#apply"
               className="inline-block bg-primary hover:bg-primary/90 text-white font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
             >
               APPLY NOW
             </a>
             <a
-              href="#"
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20would%20like%20to%20submit%20my%20CV%2FResume%20for%20open%20culinary%20and%20hospitality%20roles.%20I%20have%20attached%20my%20document%20below."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block border-2 border-gray-300 hover:border-primary text-gray-800 hover:text-primary font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1"
             >
               SUBMIT YOUR CV
             </a>
             <a
-              href="#"
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20am%20a%20culinary%2Fhospitality%20professional%20and%20I%20want%20to%20join%20your%20freelance%20talent%20network%20database."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-primary hover:text-primary-dark font-bold px-8 py-4 transition-all duration-300 hover:-translate-y-1 underline underline-offset-4 decoration-primary/30"
             >
               JOIN OUR NETWORK
