@@ -207,7 +207,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. FOUNDER STORY + 7-YEAR TIMELINE */}
-      <section className="relative bg-gray-900 text-white overflow-hidden">
+      <section id="chef-bishop" className="relative bg-gray-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-5">

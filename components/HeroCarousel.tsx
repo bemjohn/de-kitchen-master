@@ -13,7 +13,7 @@ const slides = [
     description: "Your Trusted Partner for Culinary Excellence, Hospitality Solutions, Chef Recruitment, Catering Services, Restaurant Development, and Professional Hospitality Support in Lagos, Abuja Across Africa.",
     image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2677&auto=format&fit=crop",
     ctaText: "View Our Chefs",
-    ctaLink: "/hire-a-chef",
+    ctaLink: "/chefs",
   },
   {
     id: 2,

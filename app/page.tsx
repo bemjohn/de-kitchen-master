@@ -295,7 +295,7 @@ export default function Home() {
               </div>
               <div className="mt-8">
                 <Link
-                  href="/about"
+              href="/about#chef-bishop"
                   className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-lg"
                 >
                   Learn More About Us
@@ -397,7 +397,7 @@ export default function Home() {
               His vision goes beyond food, it is about building people, strengthening businesses, and shaping the future of Africa's culinary industry. The vision. The leadership. The passion behind De KITCHEN MASTER.
             </p>
             <Link
-              href="/about"
+              href="/about#chef-bishop"
               className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-lg"
             >
               Read More About Chef Bishop
