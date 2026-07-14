@@ -298,19 +298,25 @@ export default function TrainingAcademyPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="#"
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20am%20ready%20to%20enroll%20and%20would%20like%20to%20join%20the%20next%20DKM%20Professional%20Chef%20Training%20cohort.%20Please%20guide%20me%20through%20the%20registration%20steps!"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-primary hover:bg-primary/90 text-white font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
             >
               JOIN THE NEXT TRAINING COHORT
             </a>
             <a
-              href="#"
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20am%20interested%20in%20the%20Professional%20Chef%20Training%20Program.%20Please%20send%20me%20the%20latest%20brochure%2C%20syllabus%2C%20and%20fee%20structure%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block border-2 border-gray-300 hover:border-primary text-gray-800 hover:text-primary font-bold rounded-xl px-8 py-4 transition-all duration-300 hover:-translate-y-1"
             >
               REQUEST PROGRAM INFORMATION
             </a>
             <a
-              href="#"
+              href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor%20to%20ask%20a%20few%20questions%20about%20the%20chef%20training%20courses."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-primary hover:text-primary-dark font-bold px-8 py-4 transition-all duration-300 hover:-translate-y-1 underline underline-offset-4 decoration-primary/30"
             >
               SPEAK WITH OUR TEAM

@@ -42,14 +42,14 @@ const collectionItems = [
     description:
       "Premium aprons suitable for kitchen operations, grilling, catering services, and food production.",
     image:
-      "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1633528888094-08d1f209aa5a?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Chef Caps & Headwear",
     description:
       "Designed to promote hygiene, safety, and professionalism in every kitchen environment.",
     image:
-      "https://images.unsplash.com/photo-1709396759790-9051f0c1801a?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1745172423068-c838259b6700?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Kitchen Staff Uniforms",
