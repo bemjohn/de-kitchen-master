@@ -6,32 +6,55 @@ import StatsCounter from "@/components/StatsCounter";
 
 const servicesSummary = [
   {
-    title: "Staffing & Recruitment",
+    title: "CHEF RECRUITMENT & HOSPITALITY STAFFING",
     content:
-      "Sourcing, screening, and deploying qualified chefs and hospitality professionals to ensure the highest industry standards.",
-    highlights: ["Executive Chefs", "Head Chefs", "Sous Chefs", "Front-of-House Personnel"],
+      "We specialize in sourcing, screening, and deploying highly skilled chefs and hospitality professionals to meet the staffing needs of restaurants, hotels, lounges, catering companies, and corporate organizations. Our recruitment process ensures that every candidate is professionally evaluated for skill, experience, hygiene standards, discipline, and operational efficiency. We provide both short-term and long-term staffing solutions tailored to client requirements.",
+    highlights: [
+      "Executive & Sous Chefs",
+      "Chef de Partie & Pastry Chefs",
+      "Cooks & Kitchen Assistants",
+      "Stewards & Hospitality Staff",
+    ],
     Icon: UserPlus,
   },
   {
-    title: "Hospitality Consultancy",
+    title: "CHEF RENTAL & PRIVATE CHEF SERVICES",
+    subtitle: "Bringing Restaurant-Quality Dining to Your Home",
     content:
-      "Strategic operational planning, kitchen workflow design, and equipment planning to build strong foundations for long-term business success.",
-    highlights: ["Concept Development", "Kitchen Setup", "SOP Systems"],
+      "Whether you need a live-in chef, a private chef for a special occasion, or professional culinary support for your family or guests, our Chef Rental & Private Chef Services provide convenience, luxury, and exceptional dining experiences. Available for daily, weekly, monthly, festive, and long-term bookings, with 24/7 response to enquiries.",
+    highlights: [
+      "Live-in Chef Services",
+      "Private Dining & Date Nights",
+      "Birthdays & Family Gatherings",
+      "Christmas & Holiday Bookings",
+    ],
+    Icon: ChefHat,
+    showHireButton: true,
+  },
+  {
+    title: "RESTAURANT, HOTEL & HOSPITALITY CONSULTANCY",
+    subtitle: "Helping Hospitality Businesses Grow with Confidence",
+    content:
+      "We partner with restaurants, hotels, lounges, cafés, bakeries, and hospitality investors to build, improve, and transform hospitality businesses through practical, innovative, and results-driven consultancy.",
+    highlights: [
+      "Restaurant & Kitchen Setup",
+      "Operational Improvement",
+      "Menu Engineering & Recipes",
+      "Procurement & Staff Training",
+    ],
     Icon: Compass,
   },
   {
-    title: "Bespoke Culinary Services",
+    title: "CORPORATE LUNCH SERVICES",
     content:
-      "Personalized culinary experiences for individuals, families, corporate organizations, and exclusive luxury events.",
-    highlights: ["Private Chef Services", "Contract Chef Rentage", "Fine Dining"],
-    Icon: ChefHat,
-  },
-  {
-    title: "Business Transformation",
-    content:
-      "Implementing food costing controls, inventory systems, staff training, and restructuring underperforming hospitality venues to achieve sustainable growth.",
-    highlights: ["Staff Training", "Food Costing", "Restaurant Revamps"],
-    Icon: Sparkles,
+      "We provide structured corporate meal solutions for companies, banks, offices, and institutions. Our services include daily staff meals, executive lunches, canteen management, and scheduled corporate catering designed for consistency, nutrition, and quality service delivery.",
+    highlights: [
+      "Daily Staff Meals",
+      "Executive Lunches",
+      "Canteen Management",
+      "Scheduled Corporate Catering",
+    ],
+    Icon: Briefcase,
   },
 ];
 
@@ -105,8 +128,19 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-5 transition-colors duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
                     <Icon className="w-6 h-6" strokeWidth={2.25} />
                   </div>
-                  <h3 className="text-lg font-black text-gray-900 mb-3 tracking-tight">{service.title}</h3>
+                  <h3 className="text-lg font-black text-gray-900 mb-1 tracking-tight">{service.title}</h3>
+                  {service.subtitle && (
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider mb-3">{service.subtitle}</p>
+                  )}
                   <p className="text-sm text-gray-700 leading-relaxed font-medium mb-5">{service.content}</p>
+                  {service.showHireButton && (
+                    <Link
+                      href="/hire-a-chef"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl text-xs transition-all duration-300 w-fit mb-4"
+                    >
+                      Hire a Chef <ArrowRight className="w-3 h-3" strokeWidth={2.5} />
+                    </Link>
+                  )}
                   <div className="mt-auto pt-4 border-t border-slate-100">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Highlight</p>
                     <ul className="space-y-1.5">

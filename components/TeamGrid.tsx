@@ -6,14 +6,6 @@ import { MapPin, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const executiveTeam = [
   {
-    name: "Chef Bishop",
-    role: "Chief Executive Officer (CEO) & Founder",
-    image: "/team/chef_bishop.jpeg",
-    location: "Lagos, Nigeria",
-    experience: "15+ Years Experience",
-    bio: "Dedicated professional committed to delivering exceptional culinary and hospitality experiences.",
-  },
-  {
     name: "HRH Amb. Executive MasterChef Emmanuel Ekong (Chef Emmatosky)",
     role: "Chief Operating Officer (COO) & Head of Culinary Development",
     image: "/team/chef_emmatosky.jpeg",

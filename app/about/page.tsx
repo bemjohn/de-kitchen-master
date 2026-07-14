@@ -213,7 +213,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 sticky top-28 self-start">
               <div className="relative h-[520px] rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="/team/chef_bishop2.jpeg"
+                  src="/team/chef_bishop.jpeg"
                   alt="Chef Bishop, Founder & CEO"
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />
