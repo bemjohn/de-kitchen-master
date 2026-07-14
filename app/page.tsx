@@ -516,43 +516,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 12. Testimonies Section */}
-      <section className="py-24 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">What Our Clients Say</h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-            <p className="mt-6 text-gray-600 font-medium max-w-2xl mx-auto">The satisfaction of our clients is the true measure of our success. Discover why homeowners, hospitality businesses, and corporate clients continue to trust De KITCHEN MASTER for professional culinary and hospitality solutions.</p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TestimonialCard
-              name="Rose"
-              role="Private Dining Client"
-              content="The culinary experience provided by De Kitchen Master was nothing short of extraordinary. The flavors, the presentation, and the warm service completely blew my guests away!"
-            />
-            <TestimonialCard
-              name="Tunde Adeyemi"
-              role="Corporate Director"
-              content="I hired them for a corporate retreat and it genuinely transformed the entire event. The chefs were highly professional, and the food was undeniably five-star."
-            />
-            <TestimonialCard
-              name="Daniel Mike"
-              role="Wedding Client"
-              content="We truly could not have chosen a better team for our wedding catering. They took out all the stress and just delivered pure magic on a plate. Absolutely immaculate."
-            />
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/testimonials"
-              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-lg"
-            >
-              Read Testimonials
-              <ArrowRight className="w-5 h-5 ml-2" strokeWidth={2.5} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* 13. Partner With Us */}
       <section className="py-24 bg-primary relative overflow-hidden">
@@ -602,6 +566,40 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* Some of Our Previous Projects */}
+      <section className="py-24 bg-gray-50 border-t border-gray-100 overflow-hidden relative group">
+        <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none" />
+        <div className="flex marquee-container">
+          {["1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg","6.png","1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg","6.png"].map((src, i) => (
+            <div key={i} className="flex-shrink-0 w-48 mx-4 rounded-2xl bg-white border border-gray-200 shadow-sm">
+              <div className="aspect-[4/3] flex items-center justify-center p-6">
+                <img
+                  src={`/logos/${src}`}
+                  alt={`Project ${(i % 6) + 1}`}
+                  className="max-h-full w-auto object-contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-container {
+            animation: marquee 30s linear infinite;
+            display: flex;
+            flex-wrap: nowrap;
+            width: max-content;
+          }
+          .group:hover .marquee-container {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
     </>
   );
