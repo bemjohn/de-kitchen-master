@@ -13,7 +13,7 @@ const slides = [
     description: "Your Trusted Partner for Culinary Excellence, Hospitality Solutions, Chef Recruitment, Catering Services, Restaurant Development, and Professional Hospitality Support in Lagos, Abuja Across Africa.",
     image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2677&auto=format&fit=crop",
     ctaText: "View Our Chefs",
-    ctaLink: "/about",
+    ctaLink: "/hire-a-chef",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const slides = [
     description: "Bespoke culinary experiences and seamless service execution tailored for private events, corporate gatherings, and exclusive dining moments. Every detail is handled with precision, excellence, and professionalism.",
     image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2670&auto=format&fit=crop",
     ctaText: "Make a Reservation Today",
-    ctaLink: "/contact",
+    ctaLink: "https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20would%20like%20to%20make%20a%20catering%20reservation%20or%20inquiry%20for%20an%20upcoming%20event.",
   }
 ];
 
@@ -91,12 +91,23 @@ export default function HeroCarousel() {
                 {slides[current].description}
               </p>
               <div className="pt-8">
-                <Link
-                  href={slides[current].ctaLink}
-                  className="px-10 py-5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:-translate-y-1 inline-block text-lg"
-                >
-                  {slides[current].ctaText}
-                </Link>
+                {slides[current].ctaLink.startsWith("http") ? (
+                  <a
+                    href={slides[current].ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-10 py-5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:-translate-y-1 inline-block text-lg"
+                  >
+                    {slides[current].ctaText}
+                  </a>
+                ) : (
+                  <Link
+                    href={slides[current].ctaLink}
+                    className="px-10 py-5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:-translate-y-1 inline-block text-lg"
+                  >
+                    {slides[current].ctaText}
+                  </Link>
+                )}
               </div>
             </motion.div>
           </div>
