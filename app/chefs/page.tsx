@@ -132,7 +132,9 @@ function ChefCard({
             View Profile
           </button>
           <a
-            href="#"
+            href="https://wa.me/2347066035210?text=Hello%20De%20KITCHEN%20MASTER%2C%20I%20want%20to%20request%20a%20chef.%20Please%20guide%20me%20through%20the%20process."
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 text-center bg-primary hover:bg-primary/90 text-white font-bold rounded-xl px-4 py-2.5 text-sm transition-all duration-300 shadow-md hover:shadow-lg"
           >
             {position === "Bar, Beverage & Mixology Specialists" || position === "Kitchen Equipment & Technical Specialists" ? "Request" : "Request This Chef"}

@@ -135,7 +135,7 @@ export default function Home() {
                   <p className="text-sm text-gray-700 leading-relaxed font-medium mb-5">{service.content}</p>
                   {service.showHireButton && (
                     <Link
-                      href="/hire-a-chef"
+                      href="/chefs"
                       className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl text-xs transition-all duration-300 w-fit mb-4"
                     >
                       Hire a Chef <ArrowRight className="w-3 h-3" strokeWidth={2.5} />
