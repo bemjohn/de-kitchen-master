@@ -29,7 +29,7 @@ function PackageHero() {
           </h1>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto font-medium">
             Carefully curated service packages designed to deliver excellence, consistency, and
-            value — whether you are hosting an event, renting a chef, or managing daily food
+            value whether you are hosting an event, renting a chef, or managing daily food
             operations.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-10">

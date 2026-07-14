@@ -159,7 +159,7 @@ export default function EventsCommunityPage() {
                   An initiative by De KITCHEN MASTER&reg; to bring together chefs, hospitality professionals, food entrepreneurs, and industry stakeholders who are passionate about raising the standards of the culinary and hospitality industry across Nigeria and beyond.
                 </p>
                 <p>
-                  It is more than an event space &mdash; it is a growing professional community built to educate, inspire, connect, and elevate the standards of the hospitality industry.
+                  It is more than an event space   it is a growing professional community built to educate, inspire, connect, and elevate the standards of the hospitality industry.
                 </p>
               </div>
             </div>
@@ -373,7 +373,7 @@ export default function EventsCommunityPage() {
                   DKM Annual Chefs Get-Together: Connecting Nigeria and Beyond
                 </h2>
                 <p className="text-base md:text-lg text-gray-300 leading-relaxed font-medium mb-8">
-                  The most anticipated culinary gathering of the year &mdash; bringing together chefs, hospitality leaders, and industry stakeholders for a celebration of excellence, collaboration, and community.
+                  The most anticipated culinary gathering of the year   bringing together chefs, hospitality leaders, and industry stakeholders for a celebration of excellence, collaboration, and community.
                 </p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -420,7 +420,7 @@ export default function EventsCommunityPage() {
             </h2>
             <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
               <p>
-                The hospitality industry thrives when people are connected, trained, and supported. At De KITCHEN MASTER, we recognized a gap in the market &mdash; there was no central platform where chefs, hospitality professionals, and industry leaders could come together to share knowledge, collaborate on projects, and grow collectively.
+                The hospitality industry thrives when people are connected, trained, and supported. At De KITCHEN MASTER, we recognized a gap in the market   there was no central platform where chefs, hospitality professionals, and industry leaders could come together to share knowledge, collaborate on projects, and grow collectively.
               </p>
               <p>
                 The DKM Events &amp; Community initiative was created to raise industry standards, bridge gaps, promote professional development, and strengthen hospitality networks across Africa.
@@ -491,7 +491,7 @@ export default function EventsCommunityPage() {
             </Link>
           </div>
           <p className="mt-10 text-lg md:text-xl text-white/90 leading-relaxed font-medium max-w-2xl mx-auto">
-            Whether you are a chef, a student, a business owner, or an industry partner &mdash; there is a place for you in the DKM community.
+            Whether you are a chef, a student, a business owner, or an industry partner   there is a place for you in the DKM community.
           </p>
         </div>
       </section>

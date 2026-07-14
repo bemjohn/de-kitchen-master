@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Private Residence Chef Benefits | De KITCHEN MASTER",
   description:
-    "What you get when you hire a private chef from De KITCHEN MASTER — professional service, uniformity, and a four-month satisfaction guarantee.",
+    "What you get when you hire a private chef from De KITCHEN MASTER professional service, uniformity, and a four-month satisfaction guarantee.",
 };
 
 export default function PrivateResidenceBenefitsPage() {

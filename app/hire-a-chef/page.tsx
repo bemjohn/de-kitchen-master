@@ -208,7 +208,7 @@ export default function HireAChefPage() {
               </h2>
               <div className="space-y-5 text-base md:text-lg text-slate-300 leading-relaxed font-medium">
                 <p>
-                  We understand that hiring a chef is more than filling a position—it&apos;s about trust, professionalism, reliability, and performance.
+                  We understand that hiring a chef is more than filling a position it&apos;s about trust, professionalism, reliability, and performance.
                 </p>
                 <p>
                   Our recruitment process is designed to ensure that every chef we recommend possesses the technical skills, work ethic, professionalism, and character required to succeed in their role.

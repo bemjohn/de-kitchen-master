@@ -25,7 +25,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | De KITCHEN MASTER Culinary & Hospitality Services Ltd",
   description:
-    "Comprehensive culinary and hospitality solutions — chef recruitment, restaurant consultancy, private chef services, catering, training, menu engineering, and business transformation across Africa.",
+    "Comprehensive culinary and hospitality solutions chef recruitment, restaurant consultancy, private chef services, catering, training, menu engineering, and business transformation across Africa.",
 };
 
 const recruitmentPositions = [

@@ -68,7 +68,7 @@ export default function TermsConditionsPage() {
 
             <div>
               <h2 className="text-2xl font-black text-gray-900 mb-4">3. Intellectual Property</h2>
-              <p>Unless otherwise stated, all content on this website—including text, graphics, photographs, branding, logos, designs, blog articles, documents, videos, and other materials—is the intellectual property of De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd.</p>
+              <p>Unless otherwise stated, all content on this website including text, graphics, photographs, branding, logos, designs, blog articles, documents, videos, and other materials—is the intellectual property of De KITCHEN MASTER Culinary &amp; Hospitality Services Ltd.</p>
               <p className="mt-3">No content may be copied, reproduced, republished, distributed, modified, or used for commercial purposes without our prior written consent.</p>
             </div>
 

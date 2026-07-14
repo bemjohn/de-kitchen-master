@@ -385,7 +385,7 @@ export default function Home() {
               The Visionary Building Africa's Next Generation Hospitality Brand
             </p>
             <p className="max-w-4xl mx-auto text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-6">
-              At the heart of De KITCHEN MASTER is Chef Bishop — a young hospitality entrepreneur, culinary expert, and visionary leader transforming the way culinary professionals and hospitality businesses connect, grow, and succeed.
+              At the heart of De KITCHEN MASTER is Chef Bishop a young hospitality entrepreneur, culinary expert, and visionary leader transforming the way culinary professionals and hospitality businesses connect, grow, and succeed.
             </p>
             <p className="max-w-4xl mx-auto text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-6">
               Driven by a passion for excellence and impact, Chef Bishop founded De KITCHEN MASTER with a clear mission: to build a trusted hospitality institution that develops exceptional chefs, supports food businesses, and delivers world-class culinary solutions.

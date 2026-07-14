@@ -79,7 +79,7 @@ export default function CareersPage() {
               </div>
             </div>
             <p className="mt-3 text-center text-sm text-slate-500 font-medium italic">
-              Join the Elite Hospitality Network — DKM
+              Join the Elite Hospitality Network DKM
             </p>
           </div>
 

@@ -109,7 +109,7 @@ export default function TrainingAcademyPage() {
               </div>
             </div>
             <p className="mt-3 text-center text-sm text-slate-500 font-medium italic">
-              The Journey of Excellence — Chef Bishop
+              The Journey of Excellence Chef Bishop
             </p>
           </div>
         </div>

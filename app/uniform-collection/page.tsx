@@ -185,7 +185,7 @@ export default function UniformCollectionPage() {
               </h2>
               <div className="space-y-5 text-base md:text-lg text-gray-600 leading-relaxed font-medium">
                 <p>
-                  At De KITCHEN MASTER, we understand that the right uniform is more than just clothing — it is a statement of professionalism, discipline, and pride. With years of practical kitchen experience, we have developed a collection of chef uniforms and hospitality apparel that prioritizes comfort, functionality, and a polished professional appearance.
+                  At De KITCHEN MASTER, we understand that the right uniform is more than just clothing it is a statement of professionalism, discipline, and pride. With years of practical kitchen experience, we have developed a collection of chef uniforms and hospitality apparel that prioritizes comfort, functionality, and a polished professional appearance.
                 </p>
                 <p>
                   Whether you are an individual chef, a restaurant, a lounge, a catering company, a hotel, or a culinary student, our collection is designed to meet the demands of the modern kitchen while projecting the highest standards of professionalism.

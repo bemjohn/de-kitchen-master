@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Full Kitchen Setup Benefits | De KITCHEN MASTER",
   description:
-    "What you get when you engage De KITCHEN MASTER for full kitchen, restaurant, or lounge setup projects — uniforms, post-launch supervision, and operational stability.",
+    "What you get when you engage De KITCHEN MASTER for full kitchen, restaurant, or lounge setup projects uniforms, post-launch supervision, and operational stability.",
 };
 
 export default function FullSetupBenefitsPage() {
