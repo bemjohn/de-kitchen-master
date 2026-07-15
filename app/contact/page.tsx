@@ -30,6 +30,27 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const body = new URLSearchParams({
+        "form-name": "contact",
+        ...formData,
+      });
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+      if (res.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", service: "", details: "" });
+      }
+    } catch {
+      // fallback — form did not submit
+    }
+  };
+
   return (
     <div className="pt-20 bg-white">
       {/* ───── SECTION 1: HERO ───── */}
@@ -91,7 +112,8 @@ export default function ContactPage() {
                     </button>
                   </div>
                 ) : (
-                  <form action="https://formsubmit.co/dekitchenmasterltd@gmail.com" method="POST" className="space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div>
                       <label htmlFor="name" className="text-sm font-bold text-gray-700 mb-1 block">
                         Full Name
