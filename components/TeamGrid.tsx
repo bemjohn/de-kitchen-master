@@ -54,14 +54,6 @@ const executiveTeam = [
     bio: "Chef V is a highly experienced culinary leader with over 15 years of professional experience spanning hotels, offshore catering, aviation catering, and large-scale kitchen operations. His career reflects consistent growth through leadership, dedication, and operational excellence. Beginning as a Demi Chef at Wellington Hotel, Delta State, he earned promotion to Chef de Partie before advancing to Sous Chef and later Head Chef with Jad Catering Company in Delta and Bayelsa States. He also served as Senior Sous Chef at Pellegrini Catering Company in Port Harcourt and Executive Chef at Orion Hotel, where he led kitchen teams, trained staff, and developed innovative recipes. Currently serving with Newest Aviation Catering Company, Chef V manages high-volume food production for leading international airlines, including Qatar Airways, British Airways, Turkish Airlines, Ethiopian Airlines, and Lufthansa. As Senior Executive Sous Chef & Abuja Operations Manager at De KITCHEN MASTER Culinary & Hospitality Services Ltd, he oversees operational excellence, kitchen management, staff development, and culinary consistency while supporting the company's expansion and commitment to world-class hospitality services.",
   },
   {
-    name: "Chef Kola (Kolawole Segun Gabriel)",
-    role: "Sous Chef | Marketing, Media & Business Development Manager",
-    image: "/team/chef_kola.jpeg",
-    location: "Lagos, Nigeria",
-    experience: "9 Years Experience",
-    bio: "Chef Kola is a dynamic culinary professional and creative business strategist with over nine years of experience spanning culinary operations, marketing, media, and brand development. His unique combination of kitchen expertise and digital media skills has enabled him to bridge the gap between culinary excellence and modern brand communication. With experience in content creation, advertising, videography, photography, and media influence, he has contributed to promoting culinary brands while strengthening customer engagement and business visibility. Having gained valuable exposure in Nigeria, Ghana, and Dubai, Chef Kola brings a global perspective to culinary marketing and business growth. As Sous Chef and Marketing, Media & Business Development Manager at De KITCHEN MASTER Culinary & Hospitality Services Ltd, he leads the company's marketing strategy, digital storytelling, and brand expansion.",
-  },
-  {
     name: "Chef DadyK (Kevin Ãmènõwãése)",
     role: "Senior Sous Chef | Talent Manager",
     image: "/team/chef_dadyk.jpeg",
